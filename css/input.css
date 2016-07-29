@@ -1,0 +1,112 @@
+/* css for buttons and inputs */
+input,
+select,
+button {
+    font: inherit;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+textarea {
+    font: inherit;
+    vertical-align: top;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+input:disabled,
+input.disabled {
+    opacity: 0.6;
+}
+
+button,
+.button,
+input[type=submit] {
+    margin: 0;
+    padding: 3px 5px;
+    font: inherit;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none !important;
+    letter-spacing: normal;
+    cursor: pointer;
+    display: inline; /* fallback */
+    display: inline-block;
+    white-space: nowrap;
+    color: #222;
+    background: #ddd;
+    border: 1px solid #999;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    box-sizing: border-box;
+    transition: background-color 0.2s, color 0.2s;
+}
+.button {
+    padding: 4px 6px;
+}
+button i.fa,
+.button i.fa {
+    display: inline;
+}
+button i.fa-spin,
+.button i.fa-spin {
+    display: inline-block;
+}
+/*
+button.main,
+.button.main,
+input[type=submit].main {
+    background: #8fa;
+}
+button.danger,
+.button.danger,
+input[type=submit].danger {
+    background: #f77;
+}
+*/
+button:hover,
+.button:hover,
+input[type=submit]:hover {
+    color: #333;
+    background: #fff;
+}
+button:active,
+.button:active,
+input[type=submit]:active {
+    color: #fff;
+    background: #295c9c;
+}
+button:disabled,
+button.disabled,
+.button:disabled,
+.button.disabled,
+input[type=submit]:disabled,
+input[type=submit].disabled {
+    color: #222;
+    background: #ddd;
+    opacity: 0.6;
+}
+
+.label {
+    line-height: 22px;
+    white-space: nowrap;
+    vertical-align: top;
+    font-weight: bold;
+    text-align: right;
+}
+td.input { width: 100%; }
+input.small,
+textarea.small {
+    width: 40px;
+}
+input.medium,
+textarea.medium {
+    width: 150px;
+}
+input.large,
+textarea.large {
+    width: 100%;
+}
+textarea.large {
+    height: 150px;
+}

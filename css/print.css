@@ -1,0 +1,7 @@
+/* Print mode stylesheet */
+
+#header,
+#body #sub_menu {
+    display: none;
+}
+
