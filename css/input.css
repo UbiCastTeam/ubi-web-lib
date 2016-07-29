@@ -12,6 +12,15 @@ textarea {
     max-width: 100%;
     box-sizing: border-box;
 }
+input,
+select,
+textarea {
+    line-height: 1.5;
+    background: white;
+    border: 1px solid #CCC;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
 input:disabled,
 input.disabled {
     opacity: 0.6;
@@ -19,7 +28,8 @@ input.disabled {
 
 button,
 .button,
-input[type=submit] {
+input[type=submit],
+input[type=button] {
     margin: 0;
     padding: 3px 5px;
     font: inherit;
@@ -109,4 +119,22 @@ textarea.large {
 }
 textarea.large {
     height: 150px;
+}
+.select::after {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-family: "FontAwesome";
+    content: "\f107";
+    color: #222;
+    pointer-events: none;
+}
+.select {
+    position: relative;
+}
+.select select {
+    padding-right: 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
