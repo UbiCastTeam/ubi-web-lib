@@ -21,7 +21,38 @@ header.header .header-logo {
     height: 50px;
     margin: 0 10px;
 }
-
+/* nav */
+nav.navbar {
+    background: white;
+    border-bottom: 1px solid #DDD;
+    text-align: center;
+    vertical-align: middle;
+}
+nav.navbar .links {
+    font-size: 1.3em;
+    list-style-type: none;
+    display: inline-block;
+    width: 64%;
+    padding: 0;
+    margin: 0;
+    line-height: 2.5;
+}
+nav.navbar .buttons-left,
+nav.navbar .buttons-right {
+    display: inline-block;
+    margin: 0;
+}
+nav.navbar .buttons-left {
+    width: 10%;
+    margin: 0;
+}
+nav.navbar .buttons-right {
+    width: 25%;
+    margin: 0;
+}
+nav.navbar .links li {
+    display: inline-block;
+}
 /* Aside */
 aside.aside {
     top: 71px;
@@ -64,10 +95,10 @@ aside.aside ul.active.green .aside-list-btn {
     background: #0B0;
 }
 aside.aside ul.yellow {
-    border-left-color: #EE0;
+    border-left-color: #DD0;
 }
 aside.aside ul.active.yellow .aside-list-btn {
-    background: #EE0;
+    background: #DD0;
 }
 aside.aside ul.purple {
     border-left-color: #D0D;
