@@ -22,9 +22,16 @@ input[type=button] {
     border-radius: 4px;
     color: #666;
 }
-input:disabled,
-input.disabled {
-    opacity: 0.6;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+.button:focus,
+input[type=submit]:focus,
+input[type=button]:focus
+input:disabled:focus,
+input.disabled:focus {
+    outline: none;
 }
 
 button,
