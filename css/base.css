@@ -5,12 +5,6 @@ html {
     background: white;
     font-size: 14px;
     font-family: Arial, sans-serif;
-}
-html,
-button,
-.button,
-input[type=submit],
-input[type=button] {
     color: #666;
 }
 h1 {
@@ -48,8 +42,8 @@ legend h2,
 legend h3 { margin: 0; }
 
 .hidden {
-    display: none;
+    display: none!important;
 }
 .not-visible {
-    visibility: hidden;
+    visibility: hidden!important;
 }

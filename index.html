@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/vendors/normalize.css" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="vendors/css/normalize.css" />
+    <link rel="stylesheet" href="vendors/css/animate.min.css" />
+    <link rel="stylesheet" href="vendors/fonts/fa/font-awesome.min.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/structure.css" />
     <link rel="stylesheet" href="css/input.css" />
     <link rel="stylesheet" href="css/print.css" />
     <link rel="stylesheet" href="css/table.css" />
-    <link rel="stylesheet" href="fonts/fa/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+
+    <script src="vendors/js/jquery-latest.min.js"></script>
+    <script src="vendors/js/utils.js"></script>
+    <script src="js/ubi-web-lib-base.js"></script>
+    <script>
+        /* globals UbiWebLibBase */
+        var ublb = new UbiWebLibBase();
+    </script>
     <title>How ubi-web-lib works?</title>
 </head>
 <body class="global">
     <header class="header">
-        <button class="button-text" title="Open menu"><i class="header-block fa fa-2x fa-fw fa-bars" aria-hidden="true"></i></button>
+        <button class="button-text js-toogle-menu" title="Open menu" data-menu-id="main_menu"><i class="header-block fa fa-2x fa-fw fa-bars" aria-hidden="true"></i></button>
         <img class="header-block header-logo" src="images/logo_mediaserver.png"/>
     </header>
-    <aside class="aside aside-left">
-        <h3 class="aside-title">Menu</h3>
-        <ul>
-            <li><a href="#structures">Structures</a></li>
-            <li><a href="#forms">Forms</a></li>
-            <li><a href="#buttons">Buttons</a></li>
-            <li><a href="#tables">Tables</a></li>
-        </ul>
-    </aside>
     <main class="container">
         <h1 class="title">Framework example</h1>
         <section id="structures">
@@ -61,7 +63,7 @@
             <p>button <button type="button">Send</button></p>
             <p>input button <input type="button" value="Send"/></p>
             <p>input submit <input type="submit" value="Send"/></p>
-            <p>span.button <span class="button">Send</span></p>
+            <p>a.button <a class="button">Send</a></p>
             <p>
                 button.default
                 <button type="button" class="default"><i class="fa fa-fw fa-bars" aria-hidden="true"></i> Default</button>
@@ -110,6 +112,44 @@
             </table>
         </section>
     </main>
+    <aside id="main_menu" class="aside aside-left hidden animated js-active">
+        <ul class="js-active-item red"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
+            <li><a href="#structures">Structures</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#tables">Tables</a></li>
+        </ul>
+        <ul class="js-active-item blue"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
+            <li><a href="#structures">Structures</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#tables">Tables</a></li>
+        </ul>
+        <ul class="js-active-item green"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
+            <li><a href="#structures">Structures</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#tables">Tables</a></li>
+        </ul>
+        <ul class="js-active-item yellow"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
+            <li><a href="#structures">Structures</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#tables">Tables</a></li>
+        </ul>
+        <ul class="js-active-item purple"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
+            <li><a href="#structures">Structures</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#tables">Tables</a></li>
+        </ul>
+        <ul class="js-active-item orange"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
+            <li><a href="#structures">Structures</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#tables">Tables</a></li>
+        </ul>
+    </aside>
     <footer class="footer">
         <p class="container">Powered by UbiCast</p>
     </footer>

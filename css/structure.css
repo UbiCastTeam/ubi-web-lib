@@ -7,8 +7,6 @@
 
     width: 100%;
     margin: 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
 }
 header.header {
     background: white;
@@ -26,13 +24,92 @@ header.header .header-logo {
 
 /* Aside */
 aside.aside {
+    top: 71px;
     display: inline-block;
-    margin: 15px;
-    padding: 15px;
-    position: fixed;
+    width: 100%;
+    max-width: 320px;
+    bottom: 0;
+    position: absolute;
+    background: #FFF;
 }
 aside.aside ul {
     list-style-type: none;
+    padding: 0;
+    border-left: 10px solid #CCC;
+}
+aside.aside ul.active.red .aside-list-btn,
+aside.aside ul.active.blue .aside-list-btn,
+aside.aside ul.active.purple .aside-list-btn,
+aside.aside ul.active.green .aside-list-btn,
+aside.aside ul.active.orange .aside-list-btn,
+aside.aside ul.active.yellow .aside-list-btn {
+    color: white;
+}
+aside.aside ul.red {
+    border-left-color: #D00;
+}
+aside.aside ul.active.red .aside-list-btn {
+    background: #D00;
+}
+aside.aside ul.blue {
+    border-left-color: #00D;
+}
+aside.aside ul.active.blue .aside-list-btn {
+    background: #00D;
+}
+aside.aside ul.green {
+    border-left-color: #0B0;
+}
+aside.aside ul.active.green .aside-list-btn {
+    background: #0B0;
+}
+aside.aside ul.yellow {
+    border-left-color: #EE0;
+}
+aside.aside ul.active.yellow .aside-list-btn {
+    background: #EE0;
+}
+aside.aside ul.purple {
+    border-left-color: #D0D;
+}
+aside.aside ul.active.purple .aside-list-btn {
+    background: #D0D;
+}
+aside.aside ul.orange {
+    border-left-color: #FB0;
+}
+aside.aside ul.active.orange .aside-list-btn {
+    background: #FB0;
+}
+aside.aside .aside-list-btn,
+aside.aside ul li a  {
+    padding: 5px 10px;
+}
+aside.aside .aside-list-btn,
+aside.aside ul li {
+    font-size: 1.2em;
+    line-height: 1.9;
+    font-weight: bold;
+    margin: 0;
+    vertical-align: middle;
+}
+aside.aside .aside-list-btn .fa {
+    font-size: 1.5em;
+    line-height: 1.2;
+    vertical-align: middle;
+}
+aside.aside .aside-list-btn:hover,
+aside.aside ul li a:hover {
+    background: #EEE;
+}
+aside.aside ul li {
+    display: none;
+}
+aside.aside ul li a {
+    display: block;
+}
+aside.aside ul.active li {
+    display: block;
 }
 aside.aside.aside-left {
     border-right: 1px solid #DDD;
@@ -51,6 +128,7 @@ aside.aside.aside-right {
 }
 .container {
     max-width: 1170px;
+    padding: 0 15px;
 }
 .wide-1280 .container {
     max-width: 1280px;

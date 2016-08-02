@@ -1,0 +1,24 @@
+.animated {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+}
+.fa-rotate-90,
+.fa-rotate-180,
+.fa-rotate-270 {
+    transition: all .5s;
+}

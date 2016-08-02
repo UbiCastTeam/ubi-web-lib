@@ -20,6 +20,7 @@ input[type=button] {
     border: 1px solid #CCC;
     padding: 3px 5px;
     border-radius: 4px;
+    color: #666;
 }
 input:disabled,
 input.disabled {
@@ -58,6 +59,7 @@ button:hover,
 .button:hover,
 input[type=submit]:hover,
 input[type=button]:hover {
+    color: #666;
     background: #EEE;
     border-color: #EEE;
 }
@@ -65,6 +67,7 @@ button:active,
 .button:active,
 input[type=submit]:active,
 input[type=button]:active {
+    color: #666;
     background: #DDD;
     border-color: #DDD;
     -webkit-box-shadow: none;
