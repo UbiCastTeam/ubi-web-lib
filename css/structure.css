@@ -1,7 +1,7 @@
 /* Structure stylesheet - Used in non iframe pages */
 
 /* header */
-.container, .header {
+.container, header.header {
     position: relative;
     display: block;
 
@@ -10,34 +10,34 @@
     padding-right: 15px;
     padding-left: 15px;
 }
-.header {
+header.header {
     background: white;
     border-bottom: 1px solid #DDD;
 }
-.header .header-block {
+header.header .header-block {
     vertical-align: middle;
     display: inline-block;
     padding: 10px;
 }
-.header .header-logo {
+header.header .header-logo {
     height: 50px;
     margin: 0 10px;
 }
 
 /* Aside */
-.aside {
+aside.aside {
     display: inline-block;
     margin: 15px;
     padding: 15px;
     position: fixed;
 }
-.aside ul {
+aside.aside ul {
     list-style-type: none;
 }
-.aside.aside-left {
+aside.aside.aside-left {
     border-right: 1px solid #DDD;
 }
-.aside.aside-right {
+aside.aside.aside-right {
     border-left: 1px solid #DDD;
 }
 

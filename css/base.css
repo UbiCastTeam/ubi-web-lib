@@ -3,9 +3,15 @@ html, body, div, table, h1, h2, h3, h4, tr, th, td, img, ul, ol, li, form, pre {
 
 html {
     background: white;
-    color: #333;
     font-size: 14px;
     font-family: Arial, sans-serif;
+}
+html,
+button,
+.button,
+input[type=submit],
+input[type=button] {
+    color: #666;
 }
 h1 {
     margin: 0 10px;
@@ -40,3 +46,10 @@ legend {
 legend h1,
 legend h2,
 legend h3 { margin: 0; }
+
+.hidden {
+    display: none;
+}
+.not-visible {
+    visibility: hidden;
+}

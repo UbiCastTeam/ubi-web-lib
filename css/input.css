@@ -2,19 +2,19 @@
 input,
 select,
 button {
-    font: inherit;
     vertical-align: middle;
-    box-sizing: border-box;
 }
 textarea {
-    font: inherit;
     vertical-align: top;
     max-width: 100%;
-    box-sizing: border-box;
 }
 input,
 select,
-textarea {
+textarea,
+button,
+.button,
+input[type=submit],
+input[type=button] {
     line-height: 1.5;
     background: white;
     border: 1px solid #CCC;
@@ -30,29 +30,21 @@ button,
 .button,
 input[type=submit],
 input[type=button] {
-    margin: 0;
-    padding: 3px 5px;
-    font: inherit;
     font-weight: bold;
-    font-size: 14px;
-    line-height: normal;
     text-align: center;
     text-decoration: none !important;
-    letter-spacing: normal;
     cursor: pointer;
     display: inline; /* fallback */
     display: inline-block;
-    white-space: nowrap;
-    color: #222;
-    background: #ddd;
-    border: 1px solid #999;
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-    box-sizing: border-box;
+    
     transition: background-color 0.2s, color 0.2s;
-}
-.button {
-    padding: 4px 6px;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    -moz-transition: background-color 0.2s, color 0.2s;
+    -o-transition: background-color 0.2s, color 0.2s;
+    
+    -webkit-box-shadow: 1px 1px #AAA;
+    -moz-box-shadow: 1px 1px #AAA;
+    box-shadow: 1px 1px #AAA;
 }
 button i.fa,
 .button i.fa {
@@ -62,43 +54,150 @@ button i.fa-spin,
 .button i.fa-spin {
     display: inline-block;
 }
-/*
-button.main,
-.button.main,
-input[type=submit].main {
-    background: #8fa;
-}
-button.danger,
-.button.danger,
-input[type=submit].danger {
-    background: #f77;
-}
-*/
 button:hover,
 .button:hover,
-input[type=submit]:hover {
-    color: #333;
-    background: #fff;
+input[type=submit]:hover,
+input[type=button]:hover {
+    background: #EEE;
+    border-color: #EEE;
 }
 button:active,
 .button:active,
-input[type=submit]:active {
-    color: #fff;
-    background: #295c9c;
+input[type=submit]:active,
+input[type=button]:active {
+    background: #DDD;
+    border-color: #DDD;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -ms-transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
 }
 button:disabled,
 button.disabled,
 .button:disabled,
 .button.disabled,
 input[type=submit]:disabled,
-input[type=submit].disabled {
-    color: #222;
+input[type=button]:disabled {
     background: #ddd;
     opacity: 0.6;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/*************** default button **************/
+button.default,
+.button.default,
+input[type=submit].default,
+input[type=button].default {
+    color: white;
+    background: #3D6B7F;
+    border-color: #3D6B7F;
+}
+button.default:hover,
+.button.default:hover,
+input[type=submit].default:hover,
+input[type=button].default:hover {
+    background: #1D4B5F;
+    border-color: #1D4B5F;
+}
+button.default:active,
+.button.default:active,
+input[type=submit].default:active,
+input[type=button].default:active {
+    background: #0D3B4F;
+    border-color: #0D3B4F;
+}
+/*************** main button **************/
+button.main,
+.button.main,
+input[type=submit].main,
+input[type=button].main {
+    color: white;
+    background: #0A0;
+    border-color: #0A0;
+}
+button.main:hover,
+.button.main:hover,
+input[type=submit].main:hover,
+input[type=button].main:hover {
+    background: #090;
+    border-color: #090;
+}
+button.main:active,
+.button.main:active,
+input[type=submit].main:active,
+input[type=button].main:active {
+    background: #080;
+    border-color: #080;
+}
+/*************** danger button **************/
+button.danger,
+.button.danger,
+input[type=submit].danger,
+input[type=button].danger {
+    color: white;
+    background: #E00;
+    border-color: #E00;
+}
+button.danger:hover,
+.button.danger:hover,
+input[type=submit].danger:hover,
+input[type=button].danger:hover {
+    background: #D00;
+    border-color: #D00;
+}
+button.danger:active,
+.button.danger:active,
+input[type=submit].danger:active,
+input[type=button].danger:active {
+    background: #C00;
+    border-color: #C00;
+}
+/*************** warning button **************/
+button.warning,
+.button.warning,
+input[type=submit].warning,
+input[type=button].warning {
+    color: white;
+    background: #EEAA50;
+    border-color: #EEAA50;
+}
+button.warning:hover,
+.button.warning:hover,
+input[type=submit].warning:hover,
+input[type=button].warning:hover {
+    background: #DD9940;
+    border-color: #DD9940;
+}
+button.warning:active,
+.button.warning:active,
+input[type=submit].warning:active,
+input[type=button].warning:active {
+    background: #CC8830;
+    border-color: #CC8830;
+}
+/******** button with only text effects *******/
+.button-text {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.button-text:hover {
+    color: #1D4B5F;
+    background: inherit;
+}
+.button-text:active {
+    background: inherit;
+    transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
 }
 
 .label {
-    line-height: 22px;
+    line-height: 1.8;
     white-space: nowrap;
     vertical-align: top;
     font-weight: bold;
@@ -122,18 +221,17 @@ textarea.large {
 }
 .select::after {
     position: absolute;
-    right: 10px;
-    top: 2px;
+    right: 0.5em;
+    top: 0.2em;
     font-family: "FontAwesome";
     content: "\f107";
-    color: #222;
     pointer-events: none;
 }
 .select {
     position: relative;
 }
 .select select {
-    padding-right: 15px;
+    padding-right: 1.5em;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;

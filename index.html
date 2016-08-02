@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/vendors/normalize.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/structure.css" />
     <link rel="stylesheet" href="css/input.css" />
@@ -11,7 +12,7 @@
 </head>
 <body class="global">
     <header class="header">
-        <i class="header-block fa fa-2x fa-fw fa-bars"></i>
+        <button class="button-text" title="Open menu"><i class="header-block fa fa-2x fa-fw fa-bars" aria-hidden="true"></i></button>
         <img class="header-block header-logo" src="images/logo_mediaserver.png"/>
     </header>
     <aside class="aside aside-left">
@@ -57,9 +58,56 @@
         </section>
         <section id="buttons">
             <h2 class="title">Buttons</h2>
+            <p>button <button type="button">Send</button></p>
+            <p>input button <input type="button" value="Send"/></p>
+            <p>input submit <input type="submit" value="Send"/></p>
+            <p>span.button <span class="button">Send</span></p>
+            <p>
+                button.default
+                <button type="button" class="default"><i class="fa fa-fw fa-bars" aria-hidden="true"></i> Default</button>
+                button.main
+                <button type="button" class="main"><i class="fa fa-fw fa-check" aria-hidden="true"></i> Ok!</button>
+                button.danger
+                <button type="button" class="danger"><i class="fa fa-fw fa-close" aria-hidden="true"></i> No</button>
+                button.warning
+                <button type="button" class="warning"><i class="fa fa-fw fa-exclamation" aria-hidden="true"></i> Warning</button>
+            </p>
         </section>
         <section id="tables">
             <h2 class="title">Tables</h2>
+            <table class="even-odd">
+                <caption>People</caption>
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th class="header"><span>Age</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Result</td>
+                        <td>50</td>
+                    </tr>
+                </tfoot>
+            </table>
         </section>
     </main>
     <footer class="footer">
