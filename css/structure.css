@@ -4,8 +4,6 @@
 .container, header.header {
     position: relative;
     display: block;
-
-    width: 100%;
     margin: 0 auto;
 }
 header.header {
@@ -23,35 +21,63 @@ header.header .header-logo {
 }
 /* nav */
 nav.navbar {
-    background: white;
+    padding: 0 25px;
+    position: relative;
     border-bottom: 1px solid #DDD;
-    text-align: center;
     vertical-align: middle;
 }
+nav.navbar .buttons-left,
+nav.navbar .buttons-right,
 nav.navbar .links {
-    font-size: 1.3em;
-    list-style-type: none;
     display: inline-block;
-    width: 64%;
     padding: 0;
     margin: 0;
-    line-height: 2.5;
+    vertical-align: middle;
+    text-align: center;
 }
-nav.navbar .buttons-left,
-nav.navbar .buttons-right {
+nav.navbar .links {
+    width: 40%;
+    list-style-type: none;
+    line-height: 3;
+}
+nav.navbar .links .next,
+nav.navbar .links .prev {
     display: inline-block;
-    margin: 0;
+    font-size: 2em;
 }
-nav.navbar .buttons-left {
-    width: 10%;
-    margin: 0;
+nav.navbar .links .next {
+    float: right;
 }
-nav.navbar .buttons-right {
-    width: 25%;
-    margin: 0;
+nav.navbar .links .prev {
+    float: left;
 }
 nav.navbar .links li {
     display: inline-block;
+    padding: 0 10px;
+}
+nav.navbar .buttons-left {
+    width: 40%;
+    font-size: 1.7em;
+}
+nav.navbar .buttons-right {
+    text-align: right;
+    width: 20%;
+}
+nav.navbar .buttons-left,
+nav.navbar .buttons-right {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+nav.navbar .buttons-left h1 {
+    font-size: 1.2em;
+    display: inline-block;
+    padding: 5px;
+    white-space: nowrap;
+    max-width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
 }
 /* Aside */
 aside.aside {

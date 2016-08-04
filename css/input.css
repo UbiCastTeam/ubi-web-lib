@@ -20,7 +20,7 @@ input[type=button] {
     border: 1px solid #CCC;
     padding: 3px 5px;
     border-radius: 4px;
-    color: #666;
+    color: inherit;
 }
 input:focus,
 select:focus,
@@ -66,7 +66,7 @@ button:hover,
 .button:hover,
 input[type=submit]:hover,
 input[type=button]:hover {
-    color: #666;
+    color: inherit;
     background: #EEE;
     border-color: #EEE;
 }
@@ -74,7 +74,7 @@ button:active,
 .button:active,
 input[type=submit]:active,
 input[type=button]:active {
-    color: #666;
+    color: inherit;
     background: #DDD;
     border-color: #DDD;
     -webkit-box-shadow: none;
@@ -194,9 +194,9 @@ input[type=button].warning:active {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    background: inherit;
 }
 .button-text:hover {
-    color: #1D4B5F;
     background: inherit;
 }
 .button-text:active {
