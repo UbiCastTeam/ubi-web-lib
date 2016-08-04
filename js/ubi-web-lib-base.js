@@ -72,7 +72,10 @@ UbiWebLibBase.prototype.init_nav = function () {
         var hide_array = [];
         $next_button.addClass("hidden");
         $("li", $next_menu).each(function () {
-            $nav_links.append($(this).detach());
+            var $item = $(this).detach();
+            $nav_links.append($item.addClass("animated fadeInRight").one(obj.animation_end_event, function () {
+                $(this).removeClass("animated fadeInRight");
+            }));
         });
         $nav_links.append($next_button.detach());
         var menu_width = $nav_links.width() - $next_button.outerWidth() - $prev_button.outerWidth() - 30;
@@ -110,19 +113,10 @@ UbiWebLibBase.prototype.init_nav = function () {
         var nb_menu = $("li", $nav_links).length;
         var ready = true;
         $("li", $nav_links).each(function () {
-            prev_menu.push($(this));
-            $(this).addClass("animated fadeOutLeft").one(obj.animation_end_event, function () {
-                ready = false;
-                i++;
-                $(this).removeClass("animated fadeOutLeft");
-                $(this).detach();
-                if (i == nb_menu) {
-                    prev_menus_hidden.push(prev_menu);
-                    resize_check();
-                }
-                ready = true;
-            });
+            prev_menu.push($(this).detach());
         });
+        prev_menus_hidden.push(prev_menu);
+        resize_check();
     });
     $prev_button.click(function () {
         if (!prev_menus_hidden.length)
