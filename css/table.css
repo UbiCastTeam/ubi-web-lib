@@ -136,3 +136,13 @@ table th.form-section {
 table tr:first-child th.form-section {
     border-top: 0 none;
 }
+table td.input {
+    text-align: left;
+    width: 100%;
+}
+table td.label {
+    text-align: right;
+}
+table td.tooltip {
+    text-align: center;
+}

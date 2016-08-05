@@ -47,3 +47,17 @@ legend h3 { margin: 0; }
 .not-visible {
     visibility: hidden!important;
 }
+.right, .left {
+    display: block;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.btn-bar,
+.top-bar,
+.bottom-bar { line-height: 24px; overflow: hidden; }
+.top-bar { margin-bottom: 8px; }
+.bottom-bar { margin-top: 8px; }
