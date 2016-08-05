@@ -44,12 +44,12 @@ input[type=button] {
     cursor: pointer;
     display: inline; /* fallback */
     display: inline-block;
-    
+
     transition: background-color 0.2s, color 0.2s;
     -webkit-transition: background-color 0.2s, color 0.2s;
     -moz-transition: background-color 0.2s, color 0.2s;
     -o-transition: background-color 0.2s, color 0.2s;
-    
+
     -webkit-box-shadow: 1px 1px #AAA;
     -moz-box-shadow: 1px 1px #AAA;
     box-shadow: 1px 1px #AAA;
@@ -245,4 +245,15 @@ textarea.large {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+}
+.input-group input,
+.input-group button {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    border-right: 0px;
+}
+.input-group input:last-child,
+.input-group button:last-child {
+    border-right: 1px solid #999;
 }
