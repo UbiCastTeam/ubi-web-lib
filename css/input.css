@@ -21,6 +21,9 @@ input[type=button] {
     padding: 3px 5px;
     border-radius: 4px;
     color: inherit;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 input:focus,
 select:focus,
@@ -302,3 +305,8 @@ input[type=button]:disabled {
     margin-left: 0;
     margin-right: 8px;
 }
+.full-input input[type=text],
+.full-input input[type=password],
+.full-input textarea { width: 100%; }
+.full-input textarea { height: 200px; }
+html .mce-path { padding: 0 8px; }

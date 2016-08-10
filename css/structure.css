@@ -11,6 +11,7 @@ header.header {
     border-bottom: 1px solid #DDD;
 }
 header.header .header-block {
+    position: relative;
     vertical-align: middle;
     display: inline-block;
     padding: 10px;
@@ -21,10 +22,26 @@ header.header .header-logo {
 }
 /* nav */
 nav.navbar {
-    padding: 0 25px;
+    padding: 2px 25px 0 25px;
     position: relative;
     border-bottom: 1px solid #DDD;
     vertical-align: middle;
+    margin-bottom: 10px;
+}
+nav.navbar .buttons-left .nav-title-block {
+    position: relative;
+    vertical-align: middle;
+}
+nav.navbar h1 {
+    font-size: 2em;
+    display: inline-block;
+    padding: 5px;
+    padding-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    max-width: 75%;
 }
 nav.navbar .buttons-left,
 nav.navbar .buttons-right,
@@ -34,6 +51,10 @@ nav.navbar .links {
     margin: 0;
     vertical-align: middle;
     text-align: center;
+}
+nav.navbar .buttons-left .back {
+    font-size: 0.9em;
+    vertical-align: bottom;
 }
 nav.navbar .links {
     width: 40%;
@@ -54,30 +75,18 @@ nav.navbar .links .prev {
 nav.navbar .links li {
     display: inline-block;
     padding: 0 10px;
+    margin: 0;
+}
+nav.navbar .links li.active {
+    font-weight: bold;
+    border-bottom: 5px solid #CCC;
 }
 nav.navbar .buttons-left {
     width: 40%;
-    font-size: 1.7em;
 }
 nav.navbar .buttons-right {
     text-align: right;
     width: 20%;
-}
-nav.navbar .buttons-left,
-nav.navbar .buttons-right {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-nav.navbar .buttons-left h1 {
-    font-size: 1.2em;
-    display: inline-block;
-    padding: 5px;
-    white-space: nowrap;
-    max-width: 75%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    vertical-align: top;
 }
 /* Aside */
 aside.aside {
@@ -198,9 +207,35 @@ aside.aside.aside-right {
 .container .title {
     padding-bottom: 9px;
     margin: 40px 0 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #EEE;
 }
-
+.breadcrumb {
+    display: block;
+    margin: 0 30px;
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 10px;
+}
+.breadcrumb .tree:before {
+    content: " > ";
+}
+/* paragraph blocks */
+.paragraph-block {
+    margin: 5px;
+    padding: 5px;
+    display: block;
+    background: #eee;
+    border-radius: 4px;
+}
+.paragraph-block.white, .paragraph-block .paragraph-block {
+    background: #fff;
+}
+.paragraph-block.margin-32 {
+    margin: 32px;
+}
+/* common classes for blocks */
+.block-padding {
+    padding: 5px;
+}
 /* Footer block */
 .footer {
     position: relative;
