@@ -217,13 +217,13 @@ aside.aside ul {
     border-left-color: #DDD;
 }
 aside.aside ul.red {
-    border-left-color: #D00;
+    border-left-color: #E00;
 }
 aside.aside ul.blue {
-    border-left-color: #00D;
+    border-left-color: #3D6B7F;
 }
 aside.aside ul.green {
-    border-left-color: #0B0;
+    border-left-color: #090;
 }
 aside.aside ul.yellow {
     border-left-color: #DD0;
@@ -232,7 +232,7 @@ aside.aside ul.purple {
     border-left-color: #D0D;
 }
 aside.aside ul.orange {
-    border-left-color: #FB0;
+    border-left-color: #EEAA50;
 }
 input,
 select,
