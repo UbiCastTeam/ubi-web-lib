@@ -1,14 +1,15 @@
 /* Structure stylesheet - Used in non iframe pages */
 
 /* header */
-.container, header.header {
+.container,
+header.header,
+nav.navbar {
     position: relative;
     display: block;
     margin: 0 auto;
 }
 header.header {
-    background: white;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid;
 }
 header.header .header-block {
     position: relative;
@@ -16,35 +17,26 @@ header.header .header-block {
     display: inline-block;
     padding: 10px;
 }
+header.header .logo-block {
+    margin-left: 15px;
+    min-width: 270px;
+}
 header.header .header-logo {
-    height: 50px;
+    height: 40px;
     margin: 0 10px;
+}
+header.header .search-block {
+    width: 60%;
+    max-width: 800px;
 }
 /* nav */
 nav.navbar {
     padding: 2px 25px 0 25px;
-    position: relative;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid;
     vertical-align: middle;
     margin-bottom: 10px;
 }
-nav.navbar .buttons-left .nav-title-block {
-    position: relative;
-    vertical-align: middle;
-}
-nav.navbar h1 {
-    font-size: 2em;
-    display: inline-block;
-    padding: 5px;
-    padding-bottom: 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    vertical-align: top;
-    max-width: 75%;
-}
 nav.navbar .buttons-left,
-nav.navbar .buttons-right,
 nav.navbar .links {
     display: inline-block;
     padding: 0;
@@ -56,8 +48,11 @@ nav.navbar .buttons-left .back {
     font-size: 0.9em;
     vertical-align: bottom;
 }
+nav.navbar .buttons-left {
+    width: 10%;
+}
 nav.navbar .links {
-    width: 40%;
+    width: 80%;
     list-style-type: none;
     line-height: 3;
 }
@@ -72,80 +67,41 @@ nav.navbar .links .next {
 nav.navbar .links .prev {
     float: left;
 }
-nav.navbar .links li {
+nav.navbar .links .item {
     display: inline-block;
     padding: 0 10px;
     margin: 0;
 }
-nav.navbar .links li.active {
+nav.navbar .links .item a {
+    display: inline-block;
+    line-height: 3;
+}
+nav.navbar .links .item a:hover,
+nav.navbar .links .item a:active {
+    text-decoration: none;
+}
+nav.navbar .links .item.active a {
     font-weight: bold;
-    border-bottom: 5px solid #CCC;
 }
-nav.navbar .buttons-left {
-    width: 40%;
-}
-nav.navbar .buttons-right {
-    text-align: right;
-    width: 20%;
+nav.navbar .links .item:hover,
+nav.navbar .links .item.active {
+    border-bottom: 5px solid;
+    text-decoration: none;
+    cursor: pointer;
 }
 /* Aside */
 aside.aside {
-    top: 71px;
+    top: 61px;
     display: inline-block;
     width: 100%;
     max-width: 320px;
     bottom: 0;
     position: absolute;
-    background: #FFF;
 }
 aside.aside ul {
     list-style-type: none;
     padding: 0;
-    border-left: 10px solid #CCC;
-}
-aside.aside ul.active.red .aside-list-btn,
-aside.aside ul.active.blue .aside-list-btn,
-aside.aside ul.active.purple .aside-list-btn,
-aside.aside ul.active.green .aside-list-btn,
-aside.aside ul.active.orange .aside-list-btn,
-aside.aside ul.active.yellow .aside-list-btn {
-    color: white;
-}
-aside.aside ul.red {
-    border-left-color: #D00;
-}
-aside.aside ul.active.red .aside-list-btn {
-    background: #D00;
-}
-aside.aside ul.blue {
-    border-left-color: #00D;
-}
-aside.aside ul.active.blue .aside-list-btn {
-    background: #00D;
-}
-aside.aside ul.green {
-    border-left-color: #0B0;
-}
-aside.aside ul.active.green .aside-list-btn {
-    background: #0B0;
-}
-aside.aside ul.yellow {
-    border-left-color: #DD0;
-}
-aside.aside ul.active.yellow .aside-list-btn {
-    background: #DD0;
-}
-aside.aside ul.purple {
-    border-left-color: #D0D;
-}
-aside.aside ul.active.purple .aside-list-btn {
-    background: #D0D;
-}
-aside.aside ul.orange {
-    border-left-color: #FB0;
-}
-aside.aside ul.active.orange .aside-list-btn {
-    background: #FB0;
+    border-left: 10px solid;
 }
 aside.aside .aside-list-btn,
 aside.aside ul li a  {
@@ -164,10 +120,6 @@ aside.aside .aside-list-btn .fa {
     line-height: 1.2;
     vertical-align: middle;
 }
-aside.aside .aside-list-btn:hover,
-aside.aside ul li a:hover {
-    background: #EEE;
-}
 aside.aside ul li {
     display: none;
 }
@@ -178,56 +130,53 @@ aside.aside ul.active li {
     display: block;
 }
 aside.aside.aside-left {
-    border-right: 1px solid #DDD;
+    border-right: 1px solid;
 }
 aside.aside.aside-right {
-    border-left: 1px solid #DDD;
+    border-left: 1px solid;
 }
 
 /* container block */
 .global {
     width: 100%;
     text-align: left;
-    background: white;
     position: relative;
     display: block;
 }
 .container {
     max-width: 1170px;
-    padding: 0 15px;
+    padding: 15px;
+    margin: 15px auto;
 }
-.wide-1280 .container {
+.wide-1280.container {
     max-width: 1280px;
     width: auto;
 }
-.wide-1600 .container {
+.wide-1600.container {
     max-width: 1600px;
     width: auto;
 }
 .container .title {
     padding-bottom: 9px;
     margin: 40px 0 20px;
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid;
 }
 .breadcrumb {
     display: block;
     margin: 0 30px;
-    border-bottom: 1px solid #EEE;
     margin-bottom: 10px;
 }
 .breadcrumb .tree:before {
     content: " > ";
 }
+.commands-place {
+    text-align: right;
+}
 /* paragraph blocks */
 .paragraph-block {
-    margin: 5px;
-    padding: 5px;
+    padding: 10px 20px;
     display: block;
-    background: #eee;
     border-radius: 4px;
-}
-.paragraph-block.white, .paragraph-block .paragraph-block {
-    background: #fff;
 }
 .paragraph-block.margin-32 {
     margin: 32px;
@@ -235,6 +184,36 @@ aside.aside.aside-right {
 /* common classes for blocks */
 .block-padding {
     padding: 5px;
+}
+/* tabs */
+.tab-window .tab-button {
+    margin: 0;
+    padding: 4px 6px;
+    color: inherit;
+    white-space: normal;
+    font-family: inherit;
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: normal;
+    display: inline; /* fallback */
+    display: inline-block;
+    cursor: pointer;
+    border: 0 none;
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-sizing: content-box;
+    transition-duration: .3s;
+    transition-property: background;
+}
+.tab-window .tab-button + .tab-button {
+    margin-left: 2px;
+}
+.tab-window .tab-button.active {
+    cursor: default;
+    font-weight: bold;
 }
 /* Footer block */
 .footer {
@@ -245,9 +224,6 @@ aside.aside.aside-right {
     margin-top: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
-
-    background: #1D4B5F;
-    color: white;
 
     overflow: hidden;
     text-align: center;

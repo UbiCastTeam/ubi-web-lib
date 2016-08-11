@@ -12,7 +12,7 @@ table td,
 table th,
 table tr {
     padding: 4px 6px;
-    border-left: 1px solid #fff;
+    border-left: 1px solid;
 }
 table td:first-child,
 table th:first-child {
@@ -32,7 +32,6 @@ table tfoot tr {
     text-align: left;
     font-weight: bold;
     color: white;
-    background: #999;
 }
 table th.header {
     cursor: pointer;
@@ -49,61 +48,11 @@ table th.headerSortUp > span:before {
     content: "\f0dc"; /* fa-sort */
     font: normal normal normal 14px/1 FontAwesome;
 }
-table th.header:hover {
-    background: #AAA;
-}
-table th.header:active {
-    background: #CCC;
-}
 table th.headerSortDown > span:before {
     content: "\f0dd"; /* fa-sort-down */
 }
 table th.headerSortUp > span:before {
     content: "\f0de"; /* fa-sort-up */
-}
-table tr.even > td,
-table.even-odd > tbody > tr:nth-child(even) > td,
-table.even-odd-2 > tbody > tr:nth-child(4n) > td,
-table.even-odd-2 > tbody > tr:nth-child(4n-1) > td {
-    background: rgba(220, 220, 220, 0.5);
-}
-table tr.odd > td,
-table.even-odd > tbody > tr:nth-child(odd) > td,
-table.even-odd-2 > tbody > tr:nth-child(4n-2) > td,
-table.even-odd-2 > tbody > tr:nth-child(4n-3) > td {
-    background: rgba(190, 190, 190, 0.5);
-}
-table tr.even.marked > td,
-table.even-odd > tbody > tr.marked:nth-child(even) > td,
-table.even-odd-2 > tbody > tr.marked:nth-child(4n) > td,
-table.even-odd-2 > tbody > tr.marked:nth-child(4n-1) > td {
-    background: rgba(255, 255, 200, 0.5);
-}
-table tr.odd.marked > td,
-table.even-odd > tbody > tr.marked:nth-child(odd) > td,
-table.even-odd-2 > tbody > tr.marked:nth-child(4n-2) > td,
-table.even-odd-2 > tbody > tr.marked:nth-child(4n-3) > td {
-    background: rgba(255, 255, 140, 0.5);
-}
-table tr.even.selected > td,
-table.even-odd > tbody > tr.selected:nth-child(even) > td,
-table.even-odd-2 > tbody > tr.selected:nth-child(4n) > td,
-table.even-odd-2 > tbody > tr.selected:nth-child(4n-1) > td {
-    background: rgba(205, 255, 205, 0.5);
-}
-table tr.odd.selected > td,
-table.even-odd > tbody > tr.selected:nth-child(odd) > td,
-table.even-odd-2 > tbody > tr.selected:nth-child(4n-2) > td,
-table.even-odd-2 > tbody > tr.selected:nth-child(4n-3) > td {
-    background: rgba(190, 255, 190, 0.5);
-}
-table.even-odd.hoverable > tbody > tr:hover > td,
-table.even-odd.hoverable > tbody > tr:hover.marked > td,
-table.even-odd.hoverable > tbody > tr:hover.selected > td,
-table.even-odd-2.hoverable > tbody > tr:hover > td,
-table.even-odd-2.hoverable > tbody > tr:hover.marked > td,
-table.even-odd-2.hoverable > tbody > tr:hover.selected > td  {
-    background: rgba(170, 190, 240, 0.5);
 }
 table.even-odd.clickable > tbody > tr:hover > td,
 table.even-odd.clickable > tbody > tr:hover.marked > td,
@@ -111,7 +60,6 @@ table.even-odd.clickable > tbody > tr:hover.selected > td,
 table.even-odd-2.clickable > tbody > tr:hover > td,
 table.even-odd-2.clickable > tbody > tr:hover.marked > td,
 table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
-    background: rgba(170, 190, 240, 0.5);
     cursor: pointer;
 }
 table th.transparent,
@@ -130,8 +78,8 @@ table th.form-section {
     font-weight: bold;
     font-size: 120%;
     background: transparent !important;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
 table tr:first-child th.form-section {
     border-top: 0 none;

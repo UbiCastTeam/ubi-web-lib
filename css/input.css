@@ -20,7 +20,6 @@ input[type=button] {
     border: 1px solid;
     padding: 3px 5px;
     border-radius: 4px;
-    color: inherit;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -61,21 +60,6 @@ button i.fa-spin,
 .button i.fa-spin {
     display: inline-block;
 }
-button:hover,
-.button:hover,
-input[type=submit]:hover,
-input[type=button]:hover {
-    color: inherit;
-}
-button:active,
-.button:active,
-input[type=submit]:active,
-input[type=button]:active {
-    color: inherit;
-    -webkit-box-shadow: inset 0px 0px 5px -2px #999;
-    -moz-box-shadow: inset 0px 0px 5px -2px #999;
-    box-shadow: inset 0px 0px 5px -2px #999;
-}
 button:disabled,
 button.disabled,
 .button:disabled,
@@ -87,99 +71,8 @@ input[type=button]:disabled {
     -moz-box-shadow: none;
     box-shadow: none;
 }
-/*************** default button **************/
-button.default,
-.button.default,
-input[type=submit].default,
-input[type=button].default {
-    color: white;
-    background: #3D6B7F;
-    border-color: #3D6B7F;
-}
-button.default:hover,
-.button.default:hover,
-input[type=submit].default:hover,
-input[type=button].default:hover {
-    background: #1D4B5F;
-    border-color: #1D4B5F;
-}
-button.default:active,
-.button.default:active,
-input[type=submit].default:active,
-input[type=button].default:active {
-    background: #0D3B4F;
-    border-color: #0D3B4F;
-}
-/*************** main button **************/
-button.main,
-.button.main,
-input[type=submit].main,
-input[type=button].main {
-    color: white;
-    background: #0A0;
-    border-color: #0A0;
-}
-button.main:hover,
-.button.main:hover,
-input[type=submit].main:hover,
-input[type=button].main:hover {
-    background: #090;
-    border-color: #090;
-}
-button.main:active,
-.button.main:active,
-input[type=submit].main:active,
-input[type=button].main:active {
-    background: #080;
-    border-color: #080;
-}
-/*************** danger button **************/
-button.danger,
-.button.danger,
-input[type=submit].danger,
-input[type=button].danger {
-    color: white;
-    background: #E00;
-    border-color: #E00;
-}
-button.danger:hover,
-.button.danger:hover,
-input[type=submit].danger:hover,
-input[type=button].danger:hover {
-    background: #D00;
-    border-color: #D00;
-}
-button.danger:active,
-.button.danger:active,
-input[type=submit].danger:active,
-input[type=button].danger:active {
-    background: #C00;
-    border-color: #C00;
-}
-/*************** warning button **************/
-button.warning,
-.button.warning,
-input[type=submit].warning,
-input[type=button].warning {
-    color: white;
-    background: #EEAA50;
-    border-color: #EEAA50;
-}
-button.warning:hover,
-.button.warning:hover,
-input[type=submit].warning:hover,
-input[type=button].warning:hover {
-    background: #DD9940;
-    border-color: #DD9940;
-}
-button.warning:active,
-.button.warning:active,
-input[type=submit].warning:active,
-input[type=button].warning:active {
-    background: #CC8830;
-    border-color: #CC8830;
-}
 /******** button with only text effects *******/
+.button.button-text,
 .button-text {
     border: none;
     -webkit-box-shadow: none;
@@ -187,9 +80,11 @@ input[type=button].warning:active {
     box-shadow: none;
     background: inherit;
 }
+.button.button-text:hover,
 .button-text:hover {
     background: inherit;
 }
+.button.button-text:active,
 .button-text:active {
     background: inherit;
     -webkit-box-shadow: none;
@@ -253,43 +148,6 @@ textarea.large {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-/********* Colors **********/
-input,
-select,
-textarea,
-button,
-.button,
-input[type=submit],
-input[type=button],
-.input-group input:last-child,
-.input-group button:last-child {
-    border-color: #CCC;
-}
-button:hover,
-.button:hover,
-input[type=submit]:hover,
-input[type=button]:hover {
-    background: #EEE;
-    border-color: #EEE;
-}
-button:active,
-.button:active,
-input[type=submit]:active,
-input[type=button]:active {
-    border-color: #DDD;
-}
-button:active,
-.button:active,
-input[type=submit]:active,
-input[type=button]:active,
-button:disabled,
-button.disabled,
-.button:disabled,
-.button.disabled,
-input[type=submit]:disabled,
-input[type=button]:disabled {
-    background: #DDD;
-}
 .button.marged {
     margin-left: 24px;
 }
@@ -310,3 +168,22 @@ input[type=button]:disabled {
 .full-input textarea { width: 100%; }
 .full-input textarea { height: 200px; }
 html .mce-path { padding: 0 8px; }
+
+button.default,
+.button.default,
+input[type=submit].default,
+input[type=button].default,
+button.main,
+.button.main,
+input[type=submit].main,
+input[type=button].main,
+button.danger,
+.button.danger,
+input[type=submit].danger,
+input[type=button].danger,
+button.warning,
+.button.warning,
+input[type=submit].warning,
+input[type=button].warning {
+    border: none;
+}
