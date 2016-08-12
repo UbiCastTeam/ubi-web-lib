@@ -4,12 +4,8 @@ nav.navbar,
 header.header,
 aside.aside,
 .paragraph-block.white,
-.paragraph-block .paragraph-block,
-.container {
+.paragraph-block .paragraph-block {
     background: #FFF;
-}
-html {
-    background: #F1F5F8;
 }
 button:hover,
 .button:hover,
@@ -258,11 +254,6 @@ input[type=button]:active {
     border-color: #DDD;
 }
 /****** Shadows ********/
-.container {
-    -webkit-box-shadow: 0px 0px 2px 1px #DDD;
-    -moz-box-shadow: 0px 0px 2px 1px #DDD;
-    box-shadow: 0px 0px 2px 1px #DDD;
-}
 button:active,
 .button:active,
 input[type=submit]:active,
@@ -318,6 +309,7 @@ aside.aside ul.active.purple .aside-list-btn,
 aside.aside ul.active.green .aside-list-btn,
 aside.aside ul.active.orange .aside-list-btn,
 aside.aside ul.active.yellow .aside-list-btn,
-.footer {
+.footer,
+.footer a {
     color: #FFF;
 }
