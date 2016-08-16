@@ -69,12 +69,13 @@ nav.navbar .links .prev {
 }
 nav.navbar .links .item {
     display: inline-block;
-    padding: 0 10px;
     margin: 0;
+    padding: 0;
 }
 nav.navbar .links .item a {
     display: inline-block;
     line-height: 3;
+    padding: 0 10px;
 }
 nav.navbar .links .item a:hover,
 nav.navbar .links .item a:active {
