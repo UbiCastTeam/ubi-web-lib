@@ -149,6 +149,10 @@ aside.aside.aside-right {
     padding: 15px;
     margin: 15px auto;
 }
+.small-640.container {
+    max-width: 640px;
+    width: auto;
+}
 .wide-1280.container {
     max-width: 1280px;
     width: auto;
