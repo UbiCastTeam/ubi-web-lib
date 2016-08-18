@@ -1,0 +1,14 @@
+.dropdown {
+	line-height: 1;
+	position: absolute;
+	z-index: 2;
+	display: none;
+	border: 1px solid;
+	border-radius: 4px;
+	text-align: left;
+	list-style-type: none;
+	padding: 5px;
+}
+.dropdown.active {
+	display: block;
+}

@@ -59,6 +59,16 @@ UbiWebLibBase.prototype.init_aside = function () {
             }
         });
     });
+    $(".js-display").click(function () {
+        var id = $(this).attr("data-display-id");
+        if (!id || !$("#" + id).length)
+            return;
+        if ($("#" + id).hasClass("active")) {
+            $("#" + id).removeClass("active");
+        } else {
+            $("#" + id).addClass("active");
+        }
+    });
 };
 UbiWebLibBase.prototype.init_nav = function () {
     var obj = this;

@@ -1,5 +1,6 @@
 /************* Colors *************/
 /**** Backgrounds ******/
+.dropdown,
 nav.navbar,
 header.header,
 aside.aside,
@@ -230,6 +231,7 @@ aside.aside ul.purple {
 aside.aside ul.orange {
     border-left-color: #EEAA50;
 }
+.dropdown,
 input,
 select,
 textarea,

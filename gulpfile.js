@@ -26,8 +26,9 @@ gulp.task("build", function() {
     "css/input.css",
     "css/structure.css",
     "css/table.css",
-    "css/colors.css",
-    "css/responsive.css"
+    "css/responsive.css",
+    "css/tools.css",
+    "css/colors.css"
   ])
   .pipe(concat("ubi-web-lib.min.css"))
   .pipe(cleanCSS({ compatibility: "ie8" }))
