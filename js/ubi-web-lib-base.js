@@ -66,6 +66,7 @@ UbiWebLibBase.prototype.init_aside = function () {
         if ($("#" + id).hasClass("active")) {
             $("#" + id).removeClass("active");
         } else {
+            $(".dropdown").removeClass("active");
             $("#" + id).addClass("active");
         }
     });
