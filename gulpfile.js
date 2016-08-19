@@ -19,8 +19,8 @@ gulp.task("build", function() {
   }))
   .pipe(gulp.dest("./dist/js"));
   return gulp.src([
-    "vendors/css/animate.min.css",
     "vendors/css/normalize.css",
+    "vendors/css/animate.min.css",
     "css/animation.css",
     "css/base.css",
     "css/input.css",
