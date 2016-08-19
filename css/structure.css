@@ -11,12 +11,13 @@ nav.navbar {
 header.header {
     border-bottom: 1px solid;
     text-align: center;
+    padding: 10px;
 }
 header.header .header-block {
     position: relative;
     vertical-align: middle;
     display: inline-block;
-    padding: 10px;
+    padding: 0px;
     line-height: 45px;
 }
 header.header .logo-block {
@@ -102,7 +103,8 @@ nav.navbar .links .item.active {
 }
 /* Aside */
 aside.aside {
-    top: 66px;
+    margin-top: 20px;
+    top: 45px;
     display: inline-block;
     width: 100%;
     max-width: 320px;
@@ -186,7 +188,7 @@ aside.aside.aside-right {
 }
 .commands-place {
     text-align: right;
-    margin: 0 10px;
+    padding: 10px;
 }
 /* paragraph blocks */
 .paragraph-block {
