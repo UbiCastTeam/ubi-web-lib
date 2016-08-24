@@ -85,10 +85,12 @@ table tr:first-child th.form-section {
     border-top: 0 none;
 }
 table td.input {
+    vertical-align: middle;
     text-align: left;
     width: 100%;
 }
 table td.label {
+    vertical-align: middle;
     text-align: right;
 }
 table td.tooltip {
