@@ -22,15 +22,18 @@ aside.aside ul li a:hover,
 button:active,
 .button:active,
 input[type=submit]:active,
-input[type=button]:active,
+input[type=button]:active
+.tab-window .tab-button {
+    background: #DDD;
+}
 button:disabled,
 button.disabled,
 .button:disabled,
 .button.disabled,
 input[type=submit]:disabled,
 input[type=button]:disabled,
-.tab-window .tab-button {
-    background: #DDD;
+input:disabled {
+    background: #DDD!important;
 }
 table th.header:active {
     background: #CCC;
@@ -271,6 +274,15 @@ button,
 input[type=submit],
 input[type=button] {
     color: #666;
+}
+button:disabled,
+button.disabled,
+.button:disabled,
+.button.disabled,
+input[type=submit]:disabled,
+input[type=button]:disabled,
+input:disabled {
+    color: #666!important;
 }
 h1 small {
     color: #999;
