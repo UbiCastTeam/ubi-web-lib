@@ -200,8 +200,11 @@ aside.aside.aside-right {
     font-size: 1.5em;
     margin-bottom: 15px;
 }
-.paragraph-block.margin-32 {
+.margin-32 {
     margin: 32px;
+}
+.margin-16 {
+    margin: 16px;
 }
 /* common classes for blocks */
 .block-padding {
