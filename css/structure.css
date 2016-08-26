@@ -210,6 +210,11 @@ aside.aside.aside-right {
 .block-padding {
     padding: 5px;
 }
+.centered {
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+}
 /* tabs */
 .tab-window .tab-button {
     margin: 0;

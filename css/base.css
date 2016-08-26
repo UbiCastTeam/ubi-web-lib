@@ -53,6 +53,11 @@ legend h3 { margin: 0; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
 .block { display: block; }
+.column-2 {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
 .first { margin-top: 0; padding-top: 0; }
 .no-margin { margin: 0; }
 .no-padding { padding: 0; }
@@ -63,9 +68,6 @@ legend h3 { margin: 0; }
 .margin-32 { margin: 32px; }
 .padding-8 { padding: 8px; }
 .padding-32 { padding: 32px; }
-.column-2 { width: 50%; float: left; display: block; }
-.column-3 { width: 33.3%; float: left; display: block; }
-.column-32 { width: 66.6%; float: left; display: block; }
 .top { vertical-align: top; }
 .bottom { vertical-align: bottom; }
 .nowrap { white-space: nowrap; }
