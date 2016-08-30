@@ -18,6 +18,7 @@ UbiWebLibBase.prototype.init = function () {
     this.init_nav();
 };
 UbiWebLibBase.prototype.init_aside = function () {
+    var obj = this;
     $(".js-toogle-menu").click(function () {
         var $this = $(this);
         var menu_id = $this.attr("data-menu-id");
@@ -40,23 +41,9 @@ UbiWebLibBase.prototype.init_aside = function () {
         }
     });
     $(".js-active").each(function () {
-        var $this = $(this);
-        $(".js-active-item .js-active-toogle", $this).click(function () {
-            var $thisItem = $(this).parent();
-            var $icon = $(".fa", $thisItem);
-            if ($thisItem.hasClass("active")) {
-                $thisItem.removeClass("active");
-                if ($icon.length) {
-                    $icon.removeClass("fa-rotate-90");
-                }
-            } else {
-                $(".js-active-item", $this).removeClass("active");
-                $(".js-active-item .js-active-toogle .fa", $this).removeClass("fa-rotate-90");
-                $thisItem.addClass("active");
-                if ($icon.length) {
-                    $icon.addClass("fa-rotate-90");
-                }
-            }
+        var $parent = $(this);
+        $(".js-active-item .js-active-toogle", $parent).click(function () {
+            obj.click_js_active($(this), $parent);
         });
     });
     $(".js-display").click(function () {
@@ -70,6 +57,23 @@ UbiWebLibBase.prototype.init_aside = function () {
             $("#" + id).addClass("active");
         }
     });
+};
+UbiWebLibBase.prototype.click_js_active = function ($this, $parent) {
+    var $thisItem = $this.parent();
+    var $icon = $(".fa", $this);
+    if ($thisItem.hasClass("active")) {
+        $thisItem.removeClass("active");
+        if ($icon.length) {
+            $icon.removeClass("fa-rotate-90");
+        }
+    } else {
+        $(".js-active-item", $parent).removeClass("active");
+        $(".js-active-item .js-active-toogle .fa", $parent).removeClass("fa-rotate-90");
+        $thisItem.addClass("active");
+        if ($icon.length) {
+            $icon.addClass("fa-rotate-90");
+        }
+    }
 };
 UbiWebLibBase.prototype.init_nav = function () {
     var obj = this;

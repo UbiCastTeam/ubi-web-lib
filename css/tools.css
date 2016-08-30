@@ -1,7 +1,7 @@
 .dropdown {
 	line-height: 1;
 	position: absolute;
-	z-index: 2;
+	z-index: 20;
 	display: none;
 	border: 1px solid;
 	border-radius: 4px;

@@ -13,7 +13,7 @@ button:hover,
 input[type=submit]:hover,
 input[type=button]:hover,
 aside.aside .aside-list-btn:hover,
-aside.aside ul li a:hover,
+aside.aside .list li a:hover,
 .tab-window .tab-button:hover,
 .tab-window .tab-button.active,
 .paragraph-block {
@@ -47,12 +47,11 @@ table tfoot tr {
     background: #999;
 }
 .messages .message.info,
-aside.aside ul.active.blue .aside-list-btn,
+aside.aside .list.active.blue > .aside-list-btn,
 button.default,
 .button.default,
 input[type=submit].default,
-input[type=button].default,
-.footer {
+input[type=button].default {
     background: #3D6B7F;
 }
 button.default:hover,
@@ -68,7 +67,7 @@ input[type=button].default:active {
     background: #0D3B4F;
 }
 .messages .message.success,
-aside.aside ul.active.green .aside-list-btn,
+aside.aside .list.active.green > .aside-list-btn,
 button.main,
 .button.main,
 input[type=submit].main,
@@ -88,7 +87,7 @@ input[type=button].main:active {
     background: #080;
 }
 .messages .message.error,
-aside.aside ul.active.red .aside-list-btn,
+aside.aside .list.active.red > .aside-list-btn,
 button.danger,
 .button.danger,
 input[type=submit].danger,
@@ -108,7 +107,7 @@ input[type=button].danger:active {
     background: #C00;
 }
 .messages .message.warning,
-aside.aside ul.active.orange .aside-list-btn,
+aside.aside .list.active.orange > .aside-list-btn,
 button.warning,
 .button.warning,
 input[type=submit].warning,
@@ -128,10 +127,10 @@ input[type=submit].warning:active,
 input[type=button].warning:active {
     background: #CC8830;
 }
-aside.aside ul.active.yellow .aside-list-btn {
+aside.aside .list.active.yellow > .aside-list-btn {
     background: #DD0;
 }
-aside.aside ul.active.purple .aside-list-btn {
+aside.aside .list.active.purple > .aside-list-btn {
     background: #D0D;
 }
 table tr.even > td,
@@ -189,50 +188,41 @@ table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
 /****** Borders ********/
 .form-section,
 table th.form-section {
-    border-top-color: #000;
-}
-.form-section,
-table th.form-section {
-    border-bottom-color: #000;
+    border-color: #000;
 }
 nav.navbar,
 header.header,
-.container .title {
-    border-bottom-color: #DDD;
-}
-nav.navbar .links .item:hover,
-nav.navbar .links .item.active {
-    border-bottom-color: #3D6B7F;
-}
-aside.aside.aside-left {
-    border-right-color: #DDD;
+.container .title,
+aside.aside.aside-left,
+aside.aside.aside-right,
+aside.aside .list,
+.footer {
+    border-color: #DDD;
 }
 table td,
 table th,
 table tr {
-    border-left-color: #FFF;
+    border-color: #FFF;
 }
-aside.aside.aside-right,
-aside.aside ul {
-    border-left-color: #DDD;
+aside.aside .list.red {
+    border-color: #E00;
 }
-aside.aside ul.red {
-    border-left-color: #E00;
+nav.navbar .links .item:hover,
+nav.navbar .links .item.active,
+aside.aside .list.blue {
+    border-color: #3D6B7F;
 }
-aside.aside ul.blue {
-    border-left-color: #3D6B7F;
+aside.aside .list.green {
+    border-color: #0A0;
 }
-aside.aside ul.green {
-    border-left-color: #090;
+aside.aside .list.yellow {
+    border-color: #DD0;
 }
-aside.aside ul.yellow {
-    border-left-color: #DD0;
+aside.aside .list.purple {
+    border-color: #D0D;
 }
-aside.aside ul.purple {
-    border-left-color: #D0D;
-}
-aside.aside ul.orange {
-    border-left-color: #EEAA50;
+aside.aside .list.orange {
+    border-color: #EEAA50;
 }
 .dropdown,
 input,
@@ -317,13 +307,11 @@ button.warning,
 .button.warning,
 input[type=submit].warning,
 input[type=button].warning,
-aside.aside ul.active.red .aside-list-btn,
-aside.aside ul.active.blue .aside-list-btn,
-aside.aside ul.active.purple .aside-list-btn,
-aside.aside ul.active.green .aside-list-btn,
-aside.aside ul.active.orange .aside-list-btn,
-aside.aside ul.active.yellow .aside-list-btn,
-.footer,
-.footer a {
+aside.aside .list.active.red > .aside-list-btn,
+aside.aside .list.active.blue > .aside-list-btn,
+aside.aside .list.active.purple > .aside-list-btn,
+aside.aside .list.active.green > .aside-list-btn,
+aside.aside .list.active.orange > .aside-list-btn,
+aside.aside .list.active.yellow > .aside-list-btn {
     color: #FFF;
 }

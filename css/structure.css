@@ -11,41 +11,43 @@ nav.navbar {
 header.header {
     border-bottom: 1px solid;
     text-align: center;
-    padding: 10px;
+    height: 65px;
 }
 header.header .header-block {
     position: relative;
     vertical-align: middle;
     display: inline-block;
-    padding: 0px;
+    padding: 10px;
     line-height: 45px;
 }
-header.header .logo-block {
+header.header .header-block:first-child {
     margin-left: 15px;
-    min-width: 270px;
 }
 header.header .account-block {
     margin-right: 15px;
 }
+header.header .header-logo {
+    max-width: 150px;
+    max-height: 40px;
+}
 header.header .header-account,
 header.header .header-logo-small,
 header.header .header-logo {
-    height: 40px;
     margin: 0 10px;
+    max-height: 40px;
 }
 header.header .header-logo-small {
     display: none;
 }
 header.header .search-block {
     width: 60%;
-    max-width: 800px;
+    max-width: 720px;
 }
 /* nav */
 nav.navbar {
     padding: 2px 25px 0 25px;
     border-bottom: 1px solid;
     vertical-align: middle;
-    margin-bottom: 10px;
 }
 nav.navbar .buttons-left,
 nav.navbar .links {
@@ -104,25 +106,27 @@ nav.navbar .links .item.active {
 /* Aside */
 aside.aside {
     margin-top: 20px;
-    top: 45px;
+    top: 46px;
     display: inline-block;
     width: 100%;
     max-width: 320px;
     bottom: 0;
     position: absolute;
+    z-index: 10;
+    font-size: 1.2em;
 }
-aside.aside ul {
+aside.aside .list {
     list-style-type: none;
     padding: 0;
     border-left: 10px solid;
 }
 aside.aside .aside-list-btn,
-aside.aside ul li a  {
+aside.aside .list li a  {
     padding: 5px 10px;
 }
 aside.aside .aside-list-btn,
-aside.aside ul li {
-    font-size: 1.2em;
+aside.aside .list li {
+    cursor: pointer;
     line-height: 1.9;
     font-weight: bold;
     margin: 0;
@@ -133,13 +137,13 @@ aside.aside .aside-list-btn .fa {
     line-height: 1.2;
     vertical-align: middle;
 }
-aside.aside ul li {
+aside.aside .list li {
     display: none;
 }
-aside.aside ul li a {
+aside.aside .list a {
     display: block;
 }
-aside.aside ul.active li {
+aside.aside .list.active > li {
     display: block;
 }
 aside.aside.aside-left {
@@ -159,7 +163,6 @@ aside.aside.aside-right {
 .container {
     max-width: 1170px;
     padding: 15px;
-    margin: 15px auto;
 }
 .small-640.container {
     max-width: 640px;
@@ -251,10 +254,9 @@ aside.aside.aside-right {
     display: block;
 
     width: 100%;
-    margin-top: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
 
     overflow: hidden;
     text-align: center;
+
+    border-top: 1px solid;
 }
