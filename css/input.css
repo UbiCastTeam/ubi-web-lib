@@ -52,10 +52,6 @@ input[type=button] {
     -moz-transition: background-color 0.2s, color 0.2s;
     -o-transition: background-color 0.2s, color 0.2s;
 }
-button i.fa,
-.button i.fa {
-    display: inline;
-}
 button i.fa-spin,
 .button i.fa-spin {
     display: inline-block;
