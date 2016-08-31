@@ -120,8 +120,8 @@ aside.aside .list {
     padding: 0;
     border-left: 10px solid;
 }
-aside.aside .aside-list-btn,
-aside.aside .list li a  {
+aside.aside .aside-list-btn {
+    display: block;
     padding: 5px 10px;
 }
 aside.aside .aside-list-btn,
@@ -137,11 +137,8 @@ aside.aside .aside-list-btn .fa {
     line-height: 1.2;
     vertical-align: middle;
 }
-aside.aside .list li {
+aside.aside .list > li {
     display: none;
-}
-aside.aside .list a {
-    display: block;
 }
 aside.aside .list.active > li {
     display: block;
