@@ -55,7 +55,6 @@ nav.navbar .links {
     padding: 0;
     margin: 0;
     vertical-align: middle;
-    text-align: center;
 }
 nav.navbar .buttons-left .back {
     font-size: 0.9em;
@@ -68,6 +67,7 @@ nav.navbar .links {
     width: 80%;
     list-style-type: none;
     line-height: 3;
+    text-align: center;
 }
 nav.navbar .links .next,
 nav.navbar .links .prev {
