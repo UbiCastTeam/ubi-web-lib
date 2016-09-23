@@ -72,15 +72,15 @@ input:disabled {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    background: inherit;
+    background: none;
 }
 .button.button-text:hover,
 .button-text:hover {
-    background: inherit;
+    background: none;
 }
 .button.button-text:active,
 .button-text:active {
-    background: inherit;
+    background: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
