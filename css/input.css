@@ -127,7 +127,8 @@ textarea.large {
     appearance: none;
 }
 .input-group input,
-.input-group button {
+.input-group button,
+.input-group a {
     margin-left: 0;
     margin-right: 0;
     border-top-right-radius: 0;
@@ -135,7 +136,8 @@ textarea.large {
     border-right: 0px;
 }
 .input-group input:last-child,
-.input-group button:last-child {
+.input-group button:last-child,
+.input-group a:last-child {
     border-right: 1px solid;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
