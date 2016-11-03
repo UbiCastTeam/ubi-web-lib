@@ -129,6 +129,7 @@ textarea.large {
 .input-group input,
 .input-group button,
 .input-group a {
+    vertical-align: middle;
     margin-left: 0;
     margin-right: 0;
     border-top-right-radius: 0;
