@@ -41,7 +41,7 @@ header.header .header-logo-small {
 }
 header.header .search-block {
     width: 60%;
-    max-width: 720px;
+    max-width: 500px;
 }
 /* nav */
 nav.navbar {
