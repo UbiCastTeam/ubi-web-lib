@@ -51,26 +51,43 @@ UbiWebLibBase.prototype.init_aside = function () {
         var id = $(this).attr("data-display-id");
         if (!id || !$("#" + id).length)
             return;
-        var $icon = $(".fa", $(this));
-        if ($icon.length > 0) {
-            var effect = $(this).attr("data-icon-effect");
-            if ($icon.hasClass(effect)) {
-                $icon.removeClass(effect);
-            } else {
-                $icon.addClass(effect);
-            }
-        }
-        if ($("#" + id).hasClass("active")) {
-            $("#" + id).removeClass("active");
-        } else {
-            $(".dropdown").removeClass("active");
-            $("#" + id).addClass("active").addClass($("#" + id).attr("data-effect"));
-        }
+        obj.toggle_dropdown(this, id);
     });
     $(window).click(function () {
-        $(".dropdown").removeClass("active");
+        obj.hide_all_dropdowns();
     });
     $(".dropdown").click(function(event) { event.stopPropagation(); });
+};
+UbiWebLibBase.prototype.hide_all_dropdowns = function () {
+    $(".dropdown").each(function () {
+        $(this).removeClass("active");
+        $(this).removeClass($(this).attr("data-effect"));
+    });
+    $(".js-display").each(function () {
+        var $icon = $(".fa", $(this));
+        if ($icon.length > 0) {
+            $icon.removeClass($(this).attr("data-icon-effect"));
+        }
+    });
+};
+UbiWebLibBase.prototype.toggle_dropdown = function (button, id) {
+    if (!$("#" + id).hasClass("active")) {
+        this.hide_all_dropdowns();
+    }
+    var $icon = $(".fa", $(button));
+    if ($icon.length > 0) {
+        var effect = $(button).attr("data-icon-effect");
+        if ($icon.hasClass(effect)) {
+            $icon.removeClass(effect);
+        } else {
+            $icon.addClass(effect);
+        }
+    }
+    if ($("#" + id).hasClass("active")) {
+        $("#" + id).removeClass("active");
+    } else {
+        $("#" + id).addClass("active").addClass($("#" + id).attr("data-effect"));
+    }
 };
 UbiWebLibBase.prototype.click_js_active = function ($this, $parent) {
     var $thisItem = $this.parent();
