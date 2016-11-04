@@ -46,17 +46,31 @@ UbiWebLibBase.prototype.init_aside = function () {
             obj.click_js_active($(this), $parent);
         });
     });
-    $(".js-display").click(function () {
+    $(".js-display").click(function (event) {
+        event.stopPropagation();
         var id = $(this).attr("data-display-id");
         if (!id || !$("#" + id).length)
             return;
+        var $icon = $(".fa", $(this));
+        if ($icon.length > 0) {
+            var effect = $(this).attr("data-icon-effect");
+            if ($icon.hasClass(effect)) {
+                $icon.removeClass(effect);
+            } else {
+                $icon.addClass(effect);
+            }
+        }
         if ($("#" + id).hasClass("active")) {
             $("#" + id).removeClass("active");
         } else {
             $(".dropdown").removeClass("active");
-            $("#" + id).addClass("active");
+            $("#" + id).addClass("active").addClass($("#" + id).attr("data-effect"));
         }
     });
+    $(window).click(function () {
+        $(".dropdown").removeClass("active");
+    });
+    $(".dropdown").click(function(event) { event.stopPropagation(); });
 };
 UbiWebLibBase.prototype.click_js_active = function ($this, $parent) {
     var $thisItem = $this.parent();

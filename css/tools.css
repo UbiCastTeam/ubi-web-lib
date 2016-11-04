@@ -9,6 +9,8 @@
 	list-style-type: none;
 	padding: 5px;
 	right: 0;
+	width: 100%;
+	box-shadow: 1px 1px 1px 1px #EEE;
 }
 .dropdown.active {
 	display: block;
