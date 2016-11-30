@@ -322,11 +322,11 @@ button.warning:hover,
 .button.warning:hover,
 input[type=submit].warning:hover,
 input[type=button].warning:hover,
-aside.aside .list.active.red > .aside-list-btn,
-aside.aside .list.active.blue > .aside-list-btn,
-aside.aside .list.active.purple > .aside-list-btn,
-aside.aside .list.active.green > .aside-list-btn,
-aside.aside .list.active.orange > .aside-list-btn,
-aside.aside .list.active.yellow > .aside-list-btn {
+aside.aside .list.active.red > .aside-list-btn *,
+aside.aside .list.active.blue > .aside-list-btn *,
+aside.aside .list.active.purple > .aside-list-btn *,
+aside.aside .list.active.green > .aside-list-btn *,
+aside.aside .list.active.orange > .aside-list-btn *,
+aside.aside .list.active.yellow > .aside-list-btn * {
     color: #FFF;
 }
