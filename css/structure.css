@@ -28,13 +28,12 @@ header.header .account-block {
 }
 header.header .header-logo {
     max-width: 150px;
-    max-height: 40px;
 }
 header.header .header-account,
 header.header .header-logo-small,
 header.header .header-logo {
     margin: 0 10px;
-    max-height: 40px;
+    max-height: 45px;
 }
 header.header .header-logo-small {
     display: none;
