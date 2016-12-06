@@ -28,16 +28,25 @@ UbiWebLibBase.prototype.init_aside = function () {
         if (!$menu.length)
             return;
         var $icon = $(".fa", $this);
+        var $text = $(".text", $this);
         if ($menu.hasClass("hidden")) {
             $menu.removeClass("hidden").addClass("fadeInLeft");
             if ($icon.length) {
-                $icon.addClass("fa-rotate-90");
+                $icon.removeClass("fa-bars").addClass("fa-close");
             }
+            if ($text.length) {
+                $text.text(obj.translate("Close"));
+            }
+            $this.attr("title", obj.translate("Close menu"));
         } else {
             $menu.addClass("hidden").removeClass("fadeInLeft");
             if ($icon.length) {
-                $icon.removeClass("fa-rotate-90");
+                $icon.removeClass("fa-close").addClass("fa-bars");
             }
+            if ($text.length) {
+                $text.text(obj.translate("Menu"));
+            }
+            $this.attr("title", obj.translate("Open menu"));
         }
     });
     $(".js-active").each(function () {
