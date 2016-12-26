@@ -14,8 +14,14 @@ table tr {
     padding: 4px 6px;
     border-left: 1px solid;
 }
-table td:first-child,
-table th:first-child {
+table tr th {
+    border-top: 1px solid;
+}
+table tr:first-child th {
+    border-top: none;
+}
+table tr:first-child td:first-child,
+table tr:first-child th:first-child {
     border-left: 0 none;
 }
 table td:last-child,
@@ -35,6 +41,9 @@ table tfoot tr {
 }
 table th.header {
     cursor: pointer;
+}
+table th.header a {
+    color: white;
 }
 table th.header > span,
 table th.headerSortDown > span,
