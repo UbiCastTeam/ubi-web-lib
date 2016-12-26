@@ -106,6 +106,7 @@ legend h3 { margin: 0; }
 .bottom-bar { line-height: 24px; overflow: hidden; }
 .top-bar { margin-bottom: 8px; }
 .bottom-bar { margin-top: 8px; }
+.btn-bar { margin: 8px; }
 .messages {
     text-align: center;
     margin: 10px 0;

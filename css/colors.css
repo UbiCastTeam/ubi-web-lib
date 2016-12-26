@@ -286,6 +286,7 @@ a:hover,
 .tab-window .tab-button.active {
     color: #0D3B4F;
 }
+.messages .message a,
 .messages .message.warning,
 .messages .message.info,
 .messages .message.error,
@@ -333,6 +334,10 @@ aside.aside .list.active.blue > .aside-list-btn > a,
 aside.aside .list.active.purple > .aside-list-btn > a,
 aside.aside .list.active.green > .aside-list-btn > a,
 aside.aside .list.active.orange > .aside-list-btn > a,
-aside.aside .list.active.yellow > .aside-list-btn > a {
+aside.aside .list.active.yellow > .aside-list-btn > a,
+.title-block,
+table th,
+table tfoot tr,
+table th.header a {
     color: #FFF;
 }
