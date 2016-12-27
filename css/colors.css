@@ -15,7 +15,8 @@ input[type=button]:hover,
 aside.aside .aside-list-btn:hover,
 .tab-window .tab-button:hover,
 .tab-window .tab-button.active,
-.paragraph-block {
+.paragraph-block,
+.paragraph-block.white .paragraph-block {
     background: #EEE;
 }
 button:active,
