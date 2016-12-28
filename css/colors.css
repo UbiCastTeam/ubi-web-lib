@@ -1,6 +1,7 @@
 /************* Colors *************/
 /**** Backgrounds ******/
 .dropdown,
+.tooltip-content,
 nav.navbar,
 header.header,
 aside.aside,
@@ -225,6 +226,7 @@ aside.aside .list.orange {
     border-color: #EEAA50;
 }
 .dropdown,
+.tooltip-content,
 input,
 select,
 textarea,

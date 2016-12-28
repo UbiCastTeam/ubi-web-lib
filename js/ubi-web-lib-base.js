@@ -16,6 +16,7 @@ function UbiWebLibBase (options) {
 UbiWebLibBase.prototype.init = function () {
     this.init_aside();
     this.init_nav();
+    this.init_tooltips();
 };
 UbiWebLibBase.prototype.init_aside = function () {
     var obj = this;
@@ -184,5 +185,31 @@ UbiWebLibBase.prototype.init_nav = function () {
             }));
         }
         resize_check();
+    });
+};
+UbiWebLibBase.prototype.init_tooltips = function () {
+    $(".tooltip").each(function () {
+        if (!$(this).attr("data-tooltip-content")) {
+            return;
+        }
+        $(this).click(function (event) {
+            event.stopPropagation();
+            var text = $(this).attr("data-tooltip-content");
+            var box = $("#tooltip_content");
+            if (!box.length)
+                box = $("<span class=\"tooltip-content\" id=\"tooltip_content\"></span>");
+            box.html(text);
+            box.css({
+                "position": "absolute",
+                "left": event.pageX + "px",
+                "top": event.pageY + "px"
+            });
+            $("body").append(box);
+        });
+    });
+    $(document).click(function (event) {
+        var box = $("#tooltip_content");
+        if (box.length && event.target != box[0])
+            box.remove(); 
     });
 };
