@@ -1,6 +1,7 @@
 /* css for buttons and inputs */
 input,
 select,
+.button,
 button {
     vertical-align: middle;
 }
