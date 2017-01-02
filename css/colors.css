@@ -9,21 +9,16 @@ aside.aside,
 .paragraph-block .paragraph-block {
     background: #FFF;
 }
+.paragraph-block,
+.paragraph-block.white .paragraph-block {
+    background: #EEE;
+}
 button:hover,
 .button:hover,
 input[type=submit]:hover,
 input[type=button]:hover,
 aside.aside .aside-list-btn:hover,
 .tab-window .tab-button:hover,
-.tab-window .tab-button.active,
-.paragraph-block,
-.paragraph-block.white .paragraph-block {
-    background: #EEE;
-}
-button:active,
-.button:active,
-input[type=submit]:active,
-input[type=button]:active
 .tab-window .tab-button {
     background: #DDD;
 }
@@ -36,6 +31,11 @@ input[type=button]:disabled,
 input:disabled {
     background: #DDD!important;
 }
+.tab-window .tab-button.active,
+button:active,
+.button:active,
+input[type=submit]:active,
+input[type=button]:active
 table th.header:active {
     background: #CCC;
 }
@@ -263,6 +263,7 @@ input[type=button]:active {
 html,
 button,
 .button,
+.button:hover,
 input[type=submit],
 input[type=button] {
     color: #666;
