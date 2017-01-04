@@ -59,9 +59,6 @@ nav.navbar .buttons-left .back {
     font-size: 0.9em;
     vertical-align: bottom;
 }
-nav.navbar .buttons-left {
-    width: 10%;
-}
 nav.navbar .links {
     width: 80%;
     list-style-type: none;
@@ -87,7 +84,7 @@ nav.navbar .links .item {
 nav.navbar .links .item a {
     display: inline-block;
     line-height: 3;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 nav.navbar .links .item a:hover,
 nav.navbar .links .item a:active {
