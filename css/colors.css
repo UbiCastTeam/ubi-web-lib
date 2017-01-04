@@ -186,6 +186,9 @@ table.even-odd-2.clickable > tbody > tr:hover.marked > td,
 table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
     background: rgba(170, 190, 240, 0.5);
 }
+table.even-odd.clickable  > tbody > tr.clicked {
+    background: rgba(170, 190, 240, 1);
+}
 /****** Borders ********/
 .form-section,
 table th.form-section {
