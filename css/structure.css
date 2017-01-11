@@ -196,16 +196,17 @@ aside.aside.aside-right {
     font-size: 1.5em;
     margin-bottom: 15px;
 }
-.margin-32 {
+.margin-32,
+.paragraph-block.margin-32 {
     margin: 32px;
 }
 .margin-16 {
     margin: 16px;
 }
-/* common classes for blocks */
-.block-padding {
-    padding: 5px;
+.padding-4 {
+    padding: 4px;
 }
+/* common classes for blocks */
 .centered {
     text-align: center;
     margin: 0 auto;
