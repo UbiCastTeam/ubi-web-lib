@@ -49,14 +49,16 @@ nav.navbar {
     vertical-align: middle;
 }
 nav.navbar .buttons-left,
+nav.navbar .buttons-right,
 nav.navbar .links {
     display: inline-block;
     padding: 0;
     margin: 0;
     vertical-align: middle;
 }
-nav.navbar .buttons-left {
-    width: 10%;
+nav.navbar .buttons-left,
+nav.navbar .buttons-right {
+    width: 15%;
 }
 nav.navbar .buttons-left .back {
     font-size: 0.9em;
@@ -66,7 +68,7 @@ nav.navbar .links {
     list-style-type: none;
     line-height: 3;
     text-align: center;
-    width: 80%;
+    width: 70%;
 }
 nav.navbar .links .next,
 nav.navbar .links .prev {
@@ -187,7 +189,6 @@ aside.aside.aside-right {
 }
 .commands-place {
     text-align: right;
-    padding: 10px;
 }
 /* paragraph blocks */
 .paragraph-block {
