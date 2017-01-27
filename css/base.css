@@ -79,6 +79,7 @@ legend h3 { margin: 0; }
 .hidden { display: none; }
 .relative { position: relative; }
 .mono { font-family: monospace; }
+.rounded { border-radius: 100%; }
 .margin-fix {
     margin-bottom: -1px;
     display: block;

@@ -293,6 +293,18 @@ a:hover,
 .tab-window .tab-button.active {
     color: #0D3B4F;
 }
+.color-blue {
+    color: #3D6B7F;
+}
+.color-green {
+    color: #0A0;
+}
+.color-red {
+    color: #E00;
+}
+.color-orange {
+    color: #EEAA50;
+}
 .messages .message a,
 .messages .message.warning,
 .messages .message.info,
