@@ -5,7 +5,7 @@
 *******************************************/
 /* globals utils */
 function UbiWebLibBase (options) {
-    
+
     utils.setup_class(this, options);
     this.animation_end_event = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
     var obj = this;
@@ -212,6 +212,6 @@ UbiWebLibBase.prototype.init_tooltips = function () {
     $(document).click(function (event) {
         var box = $("#tooltip_content");
         if (box.length && event.target != box[0])
-            box.remove(); 
+            box.remove();
     });
 };

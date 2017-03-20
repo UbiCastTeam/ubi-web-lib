@@ -210,22 +210,22 @@ table th,
 table tr {
     border-color: #FFF;
 }
-aside.aside .list.red {
+aside.aside .list.border-color-red {
     border-color: #E00;
 }
-aside.aside .list.blue {
+aside.aside .list.border-color-blue {
     border-color: #3D6B7F;
 }
-aside.aside .list.green {
+aside.aside .list.border-color-green {
     border-color: #0A0;
 }
-aside.aside .list.yellow {
+aside.aside .list.border-color-yellow {
     border-color: #DD0;
 }
-aside.aside .list.purple {
+aside.aside .list.border-color-purple {
     border-color: #D0D;
 }
-aside.aside .list.orange {
+aside.aside .list.border-color-orange {
     border-color: #EEAA50;
 }
 .dropdown,
