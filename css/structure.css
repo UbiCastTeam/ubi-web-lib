@@ -44,7 +44,7 @@ header.header .search-block {
 }
 /* nav */
 nav.navbar {
-    padding: 2px 25px 0 25px;
+    padding: 0 25px 0 25px;
     border-bottom: 1px solid;
     vertical-align: middle;
 }
@@ -100,7 +100,6 @@ nav.navbar .links .item.active a {
 }
 nav.navbar .links .item:hover,
 nav.navbar .links .item.active {
-    border-bottom: 5px solid;
     text-decoration: none;
     cursor: pointer;
 }
