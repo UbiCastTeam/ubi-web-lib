@@ -293,15 +293,19 @@ a:hover,
 .tab-window .tab-button.active {
     color: #0D3B4F;
 }
+.blue,
 .color-blue {
     color: #3D6B7F;
 }
+.green,
 .color-green {
     color: #0A0;
 }
+.red,
 .color-red {
     color: #E00;
 }
+.orange,
 .color-orange {
     color: #EEAA50;
 }
@@ -322,10 +326,10 @@ button.danger,
 .button.danger,
 input[type=submit].danger,
 input[type=button].danger,
-button.warning:hover,
-.button.warning:hover,
-input[type=submit].warning:hover,
-input[type=button].warning:hover,
+button.warning,
+.button.warning,
+input[type=submit].warning,
+input[type=button].warning,
 button.default:hover,
 .button.default:hover,
 input[type=submit].default:hover,
