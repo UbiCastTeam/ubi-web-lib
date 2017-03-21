@@ -1,7 +1,7 @@
 /************* Colors *************/
 /*
     blue: #1C73BF;
-    hover: #004C5C;
+    hover: #145284;
     green: #008750;
     hover: #00AF66;
     red: #DB263D;
@@ -88,14 +88,14 @@ button.default:hover,
 input[type=submit].default:hover,
 input[type=button].default:hover,
 .bg-hover-blue:hover {
-    background: #004C5C;
+    background: #145284;
 }
 button.default:active,
 .button.default:active,
 input[type=submit].default:active,
 input[type=button].default:active,
 .bg-active-blue:active {
-    background: #004C5C;
+    background: #145284;
 }
 .messages .message.success,
 aside.aside .list.active.green > .aside-list-btn,
@@ -337,7 +337,7 @@ a {
     color: #1C73BF;
 }
 a:hover {
-    color: #004C5C;
+    color: #145284;
 }
 .blue,
 .color-blue {
