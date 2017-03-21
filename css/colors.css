@@ -2,8 +2,8 @@
 /*
     blue: #1C73BF;
     hover: #004C5C;
-    green: #007D2E;
-    hover: #006C5B;
+    green: #008750;
+    hover: #00AF66;
     red: #DB263D;
     hover: #9B1B2B;
     orange: #F7B407;
@@ -103,19 +103,19 @@ button.main,
 .button.main,
 input[type=submit].main,
 input[type=button].main {
-    background: #007D2E;
+    background: #008750;
 }
 button.main:hover,
 .button.main:hover,
 input[type=submit].main:hover,
 input[type=button].main:hover {
-    background: #006C5B;
+    background: #00AF66;
 }
 button.main:active,
 .button.main:active,
 input[type=submit].main:active,
 input[type=button].main:active {
-    background: #006C5B;
+    background: #00AF66;
 }
 .messages .message.error,
 aside.aside .list.active.red > .aside-list-btn,
@@ -255,7 +255,7 @@ aside.aside .list.border-color-blue {
     border-color: #1C73BF;
 }
 aside.aside .list.border-color-green {
-    border-color: #007D2E;
+    border-color: #008750;
 }
 aside.aside .list.border-color-purple {
     border-color: #945498;
@@ -345,7 +345,7 @@ a:hover {
 }
 .green,
 .color-green {
-    color: #007D2E;
+    color: #008750;
 }
 .red,
 .color-red {
