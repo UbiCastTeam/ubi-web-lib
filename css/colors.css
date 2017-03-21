@@ -49,6 +49,7 @@ table tfoot tr {
 }
 input[type="text"]:focus,
 textarea:focus,
+input-group.focused button,
 input-group.focused input[type="button"],
 input-group.focused input[type="submit"] {
     background: #404040;
@@ -261,6 +262,7 @@ input[type=button]:active {
 }
 input[type="text"]:focus,
 textarea:focus,
+input-group.focused button,
 input-group.focused input[type="button"],
 input-group.focused input[type="submit"] {
     border-color: #404040;
@@ -378,6 +380,7 @@ table tfoot tr,
 table th.header a,
 input[type="text"]:focus,
 textarea:focus,
+input-group.focused button,
 input-group.focused input[type="button"],
 input-group.focused input[type="submit"] {
     color: #FFF;
