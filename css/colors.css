@@ -17,9 +17,7 @@ button:hover,
 .button:hover,
 input[type=submit]:hover,
 input[type=button]:hover,
-aside.aside .aside-list-btn:hover,
-.tab-window .tab-button:hover,
-.tab-window .tab-button {
+aside.aside .aside-list-btn:hover {
     background: #DDD;
 }
 button:disabled,
@@ -31,7 +29,6 @@ input[type=button]:disabled,
 input:disabled {
     background: #DDD!important;
 }
-.tab-window .tab-button.active,
 button:active,
 .button:active,
 input[type=submit]:active,
@@ -51,7 +48,9 @@ input[type="text"]:focus,
 textarea:focus,
 .input-group.focused button,
 .input-group.focused input[type="button"],
-.input-group.focused input[type="submit"] {
+.input-group.focused input[type="submit"],
+.tab-window .tab-button.active,
+.tab-window .tab-button:hover {
     background: #404040;
 }
 .messages .message.info,
@@ -264,7 +263,9 @@ input[type="text"]:focus,
 textarea:focus,
 .input-group.focused button,
 .input-group.focused input[type="button"],
-.input-group.focused input[type="submit"] {
+.input-group.focused input[type="submit"],
+.tab-window .tab-button.active,
+.tab-window .tab-button:hover {
     border-color: #404040;
 }
 /****** Shadows ********/
@@ -300,12 +301,8 @@ h1 small {
 a {
     color: #3D6B7F;
 }
-a:hover,
-.tab-window .tab-button:hover {
+a:hover {
     color: #1D4B5F;
-}
-.tab-window .tab-button.active {
-    color: #0D3B4F;
 }
 .blue,
 .color-blue {
@@ -382,6 +379,8 @@ input[type="text"]:focus,
 textarea:focus,
 .input-group.focused button,
 .input-group.focused input[type="button"],
-.input-group.focused input[type="submit"] {
+.input-group.focused input[type="submit"],
+.tab-window .tab-button.active,
+.tab-window .tab-button:hover {
     color: #FFF;
 }

@@ -219,21 +219,14 @@ aside.aside.aside-right {
 .tab-window .tab-button {
     margin: 0;
     padding: 4px 6px;
+    font-size: 1.2em;
+    text-decoration: none;
     color: inherit;
-    white-space: normal;
-    font-family: inherit;
-    font-size: 15px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    line-height: normal;
     display: inline; /* fallback */
     display: inline-block;
     cursor: pointer;
     border: 0 none;
-    border-radius: 0;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-radius: 3px;
     box-sizing: content-box;
     transition-duration: .3s;
     transition-property: background;
