@@ -112,8 +112,8 @@ textarea.large {
 }
 .select::after {
     position: absolute;
-    right: 0.5em;
-    top: 0.2em;
+    right: 0.7em;
+    top: 0.1em;
     font-family: "FontAwesome";
     content: "\f107";
     pointer-events: none;

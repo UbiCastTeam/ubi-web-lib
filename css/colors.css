@@ -47,6 +47,10 @@ table th,
 table tfoot tr {
     background: #999;
 }
+input[type="text"]:focus,
+textarea:focus {
+    background: #404040;
+}
 .messages .message.info,
 aside.aside .list.active.blue > .aside-list-btn,
 button.default,
@@ -253,6 +257,10 @@ input[type=submit]:active,
 input[type=button]:active {
     border-color: #DDD;
 }
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #404040;
+}
 /****** Shadows ********/
 button:active,
 .button:active,
@@ -269,7 +277,7 @@ button,
 .button:hover,
 input[type=submit],
 input[type=button] {
-    color: #666;
+    color: #404040;
 }
 button:disabled,
 button.disabled,
@@ -278,10 +286,10 @@ button.disabled,
 input[type=submit]:disabled,
 input[type=button]:disabled,
 input:disabled {
-    color: #666!important;
+    color: #404040!important;
 }
 h1 small {
-    color: #999;
+    color: #666;
 }
 a {
     color: #3D6B7F;
@@ -363,6 +371,8 @@ aside.aside .list.active.yellow > .aside-list-btn > a,
 .title-block,
 table th,
 table tfoot tr,
-table th.header a {
+table th.header a,
+input[type="text"]:focus,
+textarea:focus {
     color: #FFF;
 }
