@@ -48,7 +48,9 @@ table tfoot tr {
     background: #999;
 }
 input[type="text"]:focus,
-textarea:focus {
+textarea:focus,
+input-group.focused input[type="button"],
+input-group.focused input[type="submit"] {
     background: #404040;
 }
 .messages .message.info,
@@ -258,7 +260,9 @@ input[type=button]:active {
     border-color: #DDD;
 }
 input[type="text"]:focus,
-textarea:focus {
+textarea:focus,
+input-group.focused input[type="button"],
+input-group.focused input[type="submit"] {
     border-color: #404040;
 }
 /****** Shadows ********/
@@ -373,6 +377,8 @@ table th,
 table tfoot tr,
 table th.header a,
 input[type="text"]:focus,
-textarea:focus {
+textarea:focus,
+input-group.focused input[type="button"],
+input-group.focused input[type="submit"] {
     color: #FFF;
 }
