@@ -16,8 +16,7 @@ aside.aside,
 button:hover,
 .button:hover,
 input[type=submit]:hover,
-input[type=button]:hover,
-aside.aside .aside-list-btn:hover {
+input[type=button]:hover {
     background: #DDD;
 }
 button:disabled,
@@ -28,6 +27,9 @@ input[type=submit]:disabled,
 input[type=button]:disabled,
 input:disabled {
     background: #DDD!important;
+}
+aside.aside .aside-list-btn:hover {
+    background: #C5C5C5;
 }
 button:active,
 .button:active,

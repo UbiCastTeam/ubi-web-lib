@@ -131,6 +131,9 @@ aside.aside .list li {
     margin: 0;
     vertical-align: middle;
 }
+aside.aside .list a {
+    color: inherit;
+}
 aside.aside .aside-list-btn .fa {
     font-size: 1.5em;
     line-height: 1.2;
