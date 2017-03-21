@@ -219,7 +219,7 @@ aside.aside.aside-right {
 .tab-window .tab-button {
     margin: 0;
     padding: 4px 6px;
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: none;
     color: inherit;
     display: inline; /* fallback */
