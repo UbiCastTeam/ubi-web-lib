@@ -55,6 +55,7 @@ button i:first-child,
 .button i:first-child,
 input[type=submit] i:first-child,
 input[type=button] i:first-child {
+    padding-left: 3px;
     padding-right: 5px;
 }
 button i.fa-spin,
