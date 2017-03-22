@@ -303,7 +303,7 @@ input[type=submit],
 input[type=button],
 .input-group input:last-child,
 .input-group button:last-child {
-    border-color: #CCC;
+    border-color: #DEDEDE;
 }
 button:hover,
 .button:hover,

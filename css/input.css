@@ -18,7 +18,7 @@ input[type=submit],
 input[type=button] {
     line-height: 1.5;
     border: 1px solid;
-    padding: 3px 5px;
+    padding: 3px 10px;
     border-radius: 4px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -40,7 +40,6 @@ button,
 .button,
 input[type=submit],
 input[type=button] {
-    font-weight: bold;
     text-align: center;
     text-decoration: none !important;
     cursor: pointer;
