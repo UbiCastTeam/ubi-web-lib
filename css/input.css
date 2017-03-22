@@ -18,7 +18,7 @@ input[type=submit],
 input[type=button] {
     line-height: 1.5;
     border: 1px solid;
-    padding: 3px 10px;
+    padding: 3px 8px;
     border-radius: 4px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -50,6 +50,12 @@ input[type=button] {
     -webkit-transition: background-color 0.2s, color 0.2s;
     -moz-transition: background-color 0.2s, color 0.2s;
     -o-transition: background-color 0.2s, color 0.2s;
+}
+button i:first-child,
+.button i:first-child,
+input[type=submit] i:first-child,
+input[type=button] i:first-child {
+    padding-right: 5px;
 }
 button i.fa-spin,
 .button i.fa-spin {
