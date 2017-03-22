@@ -158,6 +158,7 @@ input[type=submit].warning:active,
 input[type=button].warning:active {
     background: #FCD280;
 }
+
 button.black:hover,
 .button.black:hover,
 input[type=submit].black:hover,
@@ -171,9 +172,26 @@ input[type=button].black:active {
     background: #666;
 }
 
-aside.aside .list.active.purple > .aside-list-btn {
+aside.aside .list.active.purple > .aside-list-btn,
+button.purple,
+.button.purple,
+input[type=submit].purple,
+input[type=button].purple {
     background: #945498;
 }
+button.purple:hover,
+.button.purple:hover,
+input[type=submit].purple:hover,
+input[type=button].purple:hover {
+    background: #945498;
+}
+button.purple:active,
+.button.purple:active,
+input[type=submit].purple:active,
+input[type=button].purple:active {
+    background: #945498;
+}
+
 table tr.even > td,
 table.even-odd > tbody > tr:nth-child(even) > td,
 table.even-odd-2 > tbody > tr:nth-child(4n) > td,
@@ -333,12 +351,10 @@ input:disabled {
 h1 small {
     color: #666;
 }
-a {
-    color: #1C73BF;
-}
 a:hover {
     color: #145284;
 }
+a,
 .blue,
 .color-blue {
     color: #1C73BF;
