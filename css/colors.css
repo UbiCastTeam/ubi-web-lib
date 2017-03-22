@@ -18,7 +18,14 @@ nav.navbar,
 header.header,
 aside.aside,
 .paragraph-block.white,
-.paragraph-block .paragraph-block {
+.paragraph-block .paragraph-block,
+input,
+select,
+textarea,
+button,
+.button,
+input[type=submit],
+input[type=button] {
     background: #FFF;
 }
 .paragraph-block,
@@ -58,8 +65,9 @@ table th,
 table tfoot tr {
     background: #999;
 }
-input[type="text"]:focus,
+input:focus,
 textarea:focus,
+select:focus,
 .input-group.focused button,
 .input-group.focused input[type="button"],
 .input-group.focused input[type="submit"],
@@ -424,7 +432,8 @@ aside.aside .list.active.black > .aside-list-btn > a,
 table th,
 table tfoot tr,
 table th.header a,
-input[type="text"]:focus,
+input:focus,
+select:focus,
 textarea:focus,
 .input-group.focused button,
 .input-group.focused input[type="button"],

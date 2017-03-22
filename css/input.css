@@ -17,7 +17,6 @@ button,
 input[type=submit],
 input[type=button] {
     line-height: 1.5;
-    background: white;
     border: 1px solid;
     padding: 3px 5px;
     border-radius: 4px;
