@@ -361,6 +361,9 @@ input:disabled {
 h1 small {
     color: #666;
 }
+a.disabled {
+    color: #DDD!important;
+}
 a:hover {
     color: #145284;
 }

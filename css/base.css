@@ -21,6 +21,7 @@ h2, h3 { margin-bottom: 8px; }
 
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
+a.disabled { text-decoration: line-through; }
 
 img { vertical-align: middle; border: 0 none; }
 
