@@ -34,10 +34,10 @@ header.header .header-logo-small,
 header.header .header-logo {
     margin: 0 10px;
     max-height: 45px;
-    max-width: 50px;
 }
 header.header .header-logo-small {
     display: none;
+    max-width: 50px;
 }
 header.header .search-block {
     width: 60%;
