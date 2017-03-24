@@ -97,7 +97,8 @@ button.default:hover,
 .button.default:hover,
 input[type=submit].default:hover,
 input[type=button].default:hover,
-.bg-hover-blue:hover {
+.bg-hover-blue:hover,
+.bg-focus-blue:focus {
     background: #145284;
 }
 button.default:active,
@@ -392,6 +393,7 @@ a,
 .messages .message.success a,
 .bg-blue,
 .bg-hover-blue:hover,
+.bg-focus-blue:focus,
 .bg-active-blue:active,
 button.default,
 .button.default,
