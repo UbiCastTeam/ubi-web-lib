@@ -14,7 +14,8 @@ gulp.task("build", function() {
   .pipe(concat("ubi-web-lib.js"))
   .pipe(minify({
     compress: {
-      hoist_vars: true
+      hoist_vars: true,
+      screw_ie8: true
     }
   }))
   .pipe(gulp.dest("./dist/js"));
