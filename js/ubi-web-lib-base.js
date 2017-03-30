@@ -200,7 +200,7 @@ UbiWebLibBase.prototype.init_tooltips = function () {
             var box = $("#tooltip_content");
             if (!box.length)
                 box = $("<span class=\"tooltip-content\" id=\"tooltip_content\"></span>");
-            box.html(text);
+            box.text(text);
             box.css({
                 "position": "absolute",
                 "left": event.pageX + "px",
