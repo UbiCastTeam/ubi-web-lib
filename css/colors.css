@@ -269,7 +269,6 @@ header.header,
 .container .title,
 aside.aside.aside-left,
 aside.aside.aside-right,
-aside.aside .list,
 .footer {
     border-color: #DDD;
 }
@@ -278,23 +277,26 @@ table th,
 table tr {
     border-color: #FFF;
 }
-aside.aside .list.border-color-red {
+.border-color-red {
     border-color: #DB263D;
 }
-aside.aside .list.border-color-blue {
+.border-color-blue {
     border-color: #1C73BF;
 }
-aside.aside .list.border-color-green {
+.border-color-green {
     border-color: #008750;
 }
-aside.aside .list.border-color-purple {
+.border-color-purple {
     border-color: #945498;
 }
-aside.aside .list.border-color-orange {
+.border-color-orange {
     border-color: #F7B407;
 }
-aside.aside .list.border-color-black {
+.border-color-black {
     border-color: #404040;
+}
+.border-color-gray {
+    border-color: #D4D4D4;
 }
 .dropdown,
 .tooltip-content,
@@ -329,9 +331,6 @@ textarea:focus,
 .tab-window .tab-button.active,
 .tab-window .tab-button:hover {
     border-color: #404040;
-}
-.border-color-gray {
-    border-color: #D4D4D4;
 }
 /****** Shadows ********/
 button:active,
