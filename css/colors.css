@@ -37,7 +37,8 @@ input[type=button] {
 button:hover,
 .button:hover,
 input[type=submit]:hover,
-input[type=button]:hover {
+input[type=button]:hover,
+aside.aside .aside-list-btn:hover {
     background: #DDD;
 }
 button:disabled,
@@ -48,9 +49,6 @@ input[type=submit]:disabled,
 input[type=button]:disabled,
 input:disabled {
     background: #DDD!important;
-}
-aside.aside .aside-list-btn:hover {
-    background: #C5C5C5;
 }
 button:active,
 .button:active,
@@ -66,6 +64,9 @@ table th.header:hover {
 table th,
 table tfoot tr {
     background: #999;
+}
+.bg-gray {
+    background: #D4D4D4;
 }
 input:focus,
 textarea:focus,
@@ -329,6 +330,9 @@ textarea:focus,
 .tab-window .tab-button:hover {
     border-color: #404040;
 }
+.border-color-gray {
+    border-color: #D4D4D4;
+}
 /****** Shadows ********/
 button:active,
 .button:active,
@@ -361,6 +365,9 @@ input:disabled {
 }
 h1 small {
     color: #666;
+}
+.color-gray {
+    color: #D4D4D4;
 }
 a.disabled {
     color: #DDD!important;
