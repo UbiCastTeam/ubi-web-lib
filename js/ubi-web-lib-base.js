@@ -126,7 +126,7 @@ UbiWebLibBase.prototype.init_nav = function () {
     var resize_check = function () {
         var total_width = 0;
         var hide_array = [];
-        $next_button.addClass("hidden");
+        $next_button.addClass("not-visible");
         $("li", $next_menu).each(function () {
             var $item = $(this).detach();
             $nav_links.append($item.addClass("animated fadeInRight").one(obj.animation_end_event, function () {
@@ -134,8 +134,8 @@ UbiWebLibBase.prototype.init_nav = function () {
             }));
         });
         $nav_links.append($next_button.detach());
-        $next_button.removeClass("hidden");
-        $prev_button.removeClass("hidden");
+        $next_button.removeClass("not-visible");
+        $prev_button.removeClass("not-visible");
         var menu_width = $nav_links.width() - $next_button.outerWidth() - $prev_button.outerWidth();
         $("li", $nav_links).each(function () {
             total_width += $(this).outerWidth();
@@ -148,18 +148,18 @@ UbiWebLibBase.prototype.init_nav = function () {
                 var item = hide_array[index];
                 $next_menu.append(item);
             }
-            $next_button.removeClass("hidden");
+            $next_button.removeClass("not-visible");
         } else {
             for (var index = 0; index < hide_array.length; index++) {
                 var item = hide_array[index];
                 $nav_links.append(item);
             }
-            $next_button.addClass("hidden");
+            $next_button.addClass("not-visible");
         }
         if (prev_menus_hidden.length > 0) {
-            $prev_button.removeClass("hidden");
+            $prev_button.removeClass("not-visible");
         } else {
-            $prev_button.addClass("hidden");
+            $prev_button.addClass("not-visible");
         }
     };
     resize_check();
