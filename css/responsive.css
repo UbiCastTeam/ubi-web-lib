@@ -41,4 +41,13 @@
     .hidden-below-340 {
         display: none;
     }
+    .button,
+    button,
+    input,
+    input[type="button"],
+    input[type="submit"],
+    select,
+    textarea {
+        padding: 3px 5px;
+    }
 }
