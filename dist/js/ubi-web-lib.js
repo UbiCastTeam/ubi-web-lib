@@ -572,14 +572,23 @@ UbiWebLibBase.prototype.init_nav = function () {
             $prev_button.addClass("not-visible");
         }
     };
+    var go_to_current_menu = function () {
+        var prev_menu = [];
+        $("li", $nav_links).each(function () {
+            var link = $("a", $(this)).attr("href");
+            if (window.location.pathname == link) {
+                return false;
+            }
+            prev_menu.push($(this).detach());
+        });
+        prev_menus_hidden.push(prev_menu);
+    };
+    go_to_current_menu();
     resize_check();
     $(window).resize(resize_check);
 
     $next_button.click(function () {
         var prev_menu = [];
-        var i = 0;
-        var nb_menu = $("li", $nav_links).length;
-        var ready = true;
         $("li", $nav_links).each(function () {
             prev_menu.push($(this).detach());
         });
