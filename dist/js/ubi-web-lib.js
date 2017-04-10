@@ -582,7 +582,6 @@ UbiWebLibBase.prototype.init_nav = function () {
             if (window.location.pathname == link) {
                 return false;
             }
-            console.log(total_width, menu_width);
             if (total_width > menu_width) {
                 total_width -= $(this).outerWidth();
                 prev_menu.push($(this).detach());
