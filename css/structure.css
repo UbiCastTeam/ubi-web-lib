@@ -170,6 +170,10 @@ aside.aside.aside-right {
     max-width: 640px;
     width: auto;
 }
+.small-800.container {
+    max-width: 800px;
+    width: auto;
+}
 .wide-1280.container {
     max-width: 1280px;
     width: auto;
