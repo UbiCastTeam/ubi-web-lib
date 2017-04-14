@@ -166,19 +166,23 @@ aside.aside.aside-right {
     max-width: 1170px;
     padding: 15px;
 }
-.small-640.container {
-    max-width: 640px;
+.container.small-400 {
+    max-width: 400px;
     width: auto;
 }
-.small-800.container {
+.container.small-600 {
+    max-width: 600px;
+    width: auto;
+}
+.container.small-800 {
     max-width: 800px;
     width: auto;
 }
-.wide-1280.container {
-    max-width: 1280px;
+.container.wide-1200 {
+    max-width: 1200px;
     width: auto;
 }
-.wide-1600.container {
+.container.wide-1600 {
     max-width: 1600px;
     width: auto;
 }
