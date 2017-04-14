@@ -41,15 +41,6 @@ input[type=button]:hover,
 aside.aside .aside-list-btn:hover {
     background: #DDD;
 }
-button:disabled,
-button.disabled,
-.button:disabled,
-.button.disabled,
-input[type=submit]:disabled,
-input[type=button]:disabled,
-input:disabled {
-    background: #DDD!important;
-}
 button:active,
 .button:active,
 input[type=submit]:active,
@@ -259,6 +250,15 @@ table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
 table.even-odd.clickable  > tbody > tr.clicked {
     background: rgba(170, 190, 240, 1);
 }
+button:disabled,
+button.disabled,
+.button:disabled,
+.button.disabled,
+input[type=submit]:disabled,
+input[type=button]:disabled,
+input:disabled {
+    background: #DDD;
+}
 /****** Borders ********/
 .form-section,
 table th.form-section {
@@ -353,23 +353,11 @@ input[type=button],
 .messages .message.warning a {
     color: #404040;
 }
-button:disabled,
-button.disabled,
-.button:disabled,
-.button.disabled,
-input[type=submit]:disabled,
-input[type=button]:disabled,
-input:disabled {
-    color: #404040!important;
-}
 h1 small {
     color: #666;
 }
 .color-gray {
     color: #D4D4D4;
-}
-a.disabled {
-    color: #DDD!important;
 }
 a:hover {
     color: #145284;
@@ -458,4 +446,17 @@ textarea:focus,
 .tab-window .tab-button.active,
 .tab-window .tab-button:hover {
     color: #FFF;
+}
+
+button:disabled,
+button.disabled,
+.button:disabled,
+.button.disabled,
+input[type=submit]:disabled,
+input[type=button]:disabled,
+input:disabled {
+    color: #404040;
+}
+a.disabled {
+    color: #DDD;
 }
