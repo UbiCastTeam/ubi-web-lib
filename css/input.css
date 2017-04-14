@@ -172,22 +172,3 @@ textarea.large {
 .full-input textarea { width: 100%; }
 .full-input textarea { height: 200px; }
 html .mce-path { padding: 0 8px; }
-
-button.default,
-.button.default,
-input[type=submit].default,
-input[type=button].default,
-button.main,
-.button.main,
-input[type=submit].main,
-input[type=button].main,
-button.danger,
-.button.danger,
-input[type=submit].danger,
-input[type=button].danger,
-button.warning,
-.button.warning,
-input[type=submit].warning,
-input[type=button].warning {
-    border: none;
-}
