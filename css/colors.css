@@ -251,13 +251,15 @@ table.even-odd.clickable  > tbody > tr.clicked {
     background: rgba(170, 190, 240, 1);
 }
 button:disabled,
-button.disabled,
 .button:disabled,
 .button.disabled,
 input[type=submit]:disabled,
 input[type=button]:disabled,
 input:disabled {
-    background: #DDD;
+    background: #DDD !important;
+}
+a.disabled {
+    background: inherit !important;
 }
 /****** Borders ********/
 .form-section,
@@ -449,14 +451,13 @@ textarea:focus,
 }
 
 button:disabled,
-button.disabled,
 .button:disabled,
 .button.disabled,
 input[type=submit]:disabled,
 input[type=button]:disabled,
 input:disabled {
-    color: #404040;
+    color: #404040 !important;
 }
 a.disabled {
-    color: #DDD;
+    color: #DDD !important;
 }

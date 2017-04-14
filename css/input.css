@@ -19,6 +19,7 @@ input[type=button] {
     line-height: 1.5;
     border: 1px solid;
     padding: 3px 8px;
+    cursor: pointer;
     border-radius: 4px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -31,8 +32,7 @@ button:focus,
 .button:focus,
 input[type=submit]:focus,
 input[type=button]:focus
-input:disabled:focus,
-input.disabled:focus {
+input:disabled:focus {
     outline: none;
 }
 
@@ -64,13 +64,13 @@ button i.fa-spin,
     display: inline-block;
 }
 button:disabled,
-button.disabled,
 .button:disabled,
 .button.disabled,
 input[type=submit]:disabled,
 input[type=button]:disabled,
 input:disabled {
     opacity: 0.6;
+    cursor: default;
 }
 /******** button with only text effects *******/
 .button.button-text,
