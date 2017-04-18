@@ -63,10 +63,15 @@ UbiWebLibBase.prototype.init_aside = function () {
             return;
         obj.toggle_dropdown(this, id);
     });
-    $(window).click(function () {
+    $(document).click(function () {
         obj.hide_all_dropdowns();
     });
-    $(".dropdown").click(function(event) { event.stopPropagation(); });
+    $(".dropdown").click(function (event) {
+        event.stopPropagation();
+        var box = $("#tooltip_content");
+        if (box.length && event.target != box[0])
+            box.remove();
+    });
 };
 UbiWebLibBase.prototype.hide_all_dropdowns = function () {
     $(".dropdown").each(function () {
@@ -218,10 +223,27 @@ UbiWebLibBase.prototype.init_tooltips = function () {
             if (!box.length)
                 box = $("<span class=\"tooltip-content\" id=\"tooltip_content\"></span>");
             box.text(text);
+            var left = event.pageX;
+            var min_size = left + 200;
+            if (min_size > $(window).width()) {
+                left = left - 200;
+                if (left < 0) {
+                    left = 0;
+                }
+            }
+            var top = event.pageY;
+            var min_size = top + 200;
+            if (min_size > $(window).height()) {
+                top = top - 200;
+                if (top < 0) {
+                    top = 0;
+                }
+            }
             box.css({
                 "position": "absolute",
-                "left": event.pageX + "px",
-                "top": event.pageY + "px"
+                "left": left + "px",
+                "top": top + "px",
+                "margin-right": "10px"
             });
             $("body").append(box);
         });
