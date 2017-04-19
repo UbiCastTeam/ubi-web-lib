@@ -72,6 +72,18 @@ input:disabled {
     opacity: 0.6;
     cursor: default;
 }
+button.button-block,
+input[type=submit].button-block,
+input[type=button].button-block,
+.button.button-block {
+    display: block;
+}
+button.button-block i:first-child,
+.button.button-block i:first-child,
+input[type=submit].button-block i:first-child,
+input[type=button].button-block i:first-child {
+    padding: 0;
+}
 /******** button with only text effects *******/
 .button.button-text,
 .button-text {
