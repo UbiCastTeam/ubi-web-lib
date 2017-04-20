@@ -54,7 +54,8 @@ input[type=button] {
 button i:first-child,
 .button i:first-child,
 input[type=submit] i:first-child,
-input[type=button] i:first-child {
+input[type=button] i:first-child,
+.button-icon {
     padding-left: 3px;
     padding-right: 5px;
     vertical-align: middle;
