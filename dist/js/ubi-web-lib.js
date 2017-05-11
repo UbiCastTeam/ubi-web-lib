@@ -642,9 +642,9 @@ UbiWebLibBase.prototype.init_tooltips = function () {
                 }
             }
             var top = event.pageY;
-            var min_size = top + 200;
+            var min_size = top + 20;
             if (min_size > $(window).height()) {
-                top = top - 200;
+                top = top - 20;
                 if (top < 0) {
                     top = 0;
                 }
