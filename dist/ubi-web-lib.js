@@ -1008,7 +1008,8 @@ UbiWebLibBase.prototype.init = function () {
 };
 UbiWebLibBase.prototype.init_aside = function () {
     var obj = this;
-    $(".js-toogle-menu").click(function () {
+    $(".js-toogle-menu").click(function (event) {
+        event.stopPropagation();
         var $this = $(this);
         var menu_id = $this.attr("data-menu-id");
         if (!menu_id)
@@ -1028,19 +1029,13 @@ UbiWebLibBase.prototype.init_aside = function () {
             }
             $this.attr("title", obj.translate("Close menu"));
         } else {
-            $menu.addClass("hidden").removeClass("fadeInLeft");
-            if ($icon.length) {
-                $icon.removeClass("fa-close").addClass("fa-bars");
-            }
-            if ($text.length) {
-                $text.text(obj.translate("Menu"));
-            }
-            $this.attr("title", obj.translate("Open menu"));
+            obj.hide_menu(this);
         }
     });
     $(".js-active").each(function () {
         var $parent = $(this);
-        $(".js-active-item .js-active-toogle", $parent).click(function () {
+        $(".js-active-item .js-active-toogle", $parent).click(function (event) {
+            event.stopPropagation();
             obj.click_js_active($(this), $parent);
         });
     });
@@ -1051,8 +1046,13 @@ UbiWebLibBase.prototype.init_aside = function () {
             return;
         obj.toggle_dropdown(this, id);
     });
-    $(document).click(function () {
+    $(document).click(function (event) {
         obj.hide_all_dropdowns();
+        $(".js-toogle-menu").each(function () {
+            var menu = $("#" + $(this).attr("data-menu-id"));
+            if (menu.length && event.target != menu[0])
+                obj.hide_menu(this);
+        });
     });
     $(".dropdown").click(function (event) {
         event.stopPropagation();
@@ -1060,6 +1060,25 @@ UbiWebLibBase.prototype.init_aside = function () {
         if (box.length && event.target != box[0])
             box.remove();
     });
+};
+UbiWebLibBase.prototype.hide_menu = function (menu_btn) {
+    var $this = $(menu_btn);
+    var menu_id = $this.attr("data-menu-id");
+    if (!menu_id)
+        return;
+    var $menu = $("#" + menu_id);
+    if (!$menu.length)
+        return;
+    var $icon = $(".fa", $this);
+    var $text = $(".text", $this);
+    $menu.addClass("hidden").removeClass("fadeInLeft");
+    if ($icon.length) {
+        $icon.removeClass("fa-close").addClass("fa-bars");
+    }
+    if ($text.length) {
+        $text.text(this.translate("Menu"));
+    }
+    $this.attr("title", this.translate("Open menu"));
 };
 UbiWebLibBase.prototype.hide_all_dropdowns = function () {
     $(".dropdown").each(function () {
