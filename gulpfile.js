@@ -9,6 +9,7 @@ gulp.task("build", function() {
   gulp.src([
     "vendors/js/jquery.min.js",
     "vendors/js/utils.js",
+    "vendors/js/odm/odm.js",
     "js/ubi-web-lib-base.js"
   ])
   .pipe(concat("ubi-web-lib.js"))
@@ -18,10 +19,11 @@ gulp.task("build", function() {
       screw_ie8: true
     }
   }))
-  .pipe(gulp.dest("./dist/js"));
+  .pipe(gulp.dest("./dist"));
   return gulp.src([
     "vendors/css/normalize.css",
     "vendors/css/animate.min.css",
+    "vendors/js/odm/odm.css",
     "css/animation.css",
     "css/base.css",
     "css/input.css",
@@ -33,5 +35,5 @@ gulp.task("build", function() {
   ])
   .pipe(concat("ubi-web-lib.min.css"))
   .pipe(cleanCSS({ compatibility: "ie8" }))
-  .pipe(gulp.dest("./dist/css"));
+  .pipe(gulp.dest("./dist"));
 });
