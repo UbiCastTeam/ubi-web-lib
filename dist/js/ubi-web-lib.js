@@ -6,19 +6,23 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 
 /*******************************************
 * Utilities functions                      *
-* Copyright: UbiCast, all rights reserved  *
 * Author: Stephane Diemer                  *
 *******************************************/
+/* globals SparkMD5 */
 
-// add console log function for old browsers
+// add console functions for old browsers
 if (!window.console)
     window.console = {};
 if (!window.console.log)
-    window.console.log = function () {
-        //for (var i=0; i < arguments.length; i++) {
-        //    $("body").append("<p>Argument-" + i + ": " + arguments[i] + "</p>");
-        //}
-    };
+    window.console.log = function () {};
+if (!window.console.error)
+    window.console.error = window.console.log;
+if (!window.console.debug)
+    window.console.debug = window.console.log;
+if (!window.console.info)
+    window.console.info = window.console.log;
+if (!window.console.warn)
+    window.console.warn = window.console.log;
 
 
 var utils = {};
@@ -32,7 +36,7 @@ utils.get_cookie = function (c_name, c_default) {
             var c_end = document.cookie.indexOf(";", c_start);
             if (c_end == -1)
                 c_end = document.cookie.length;
-            return unescape(document.cookie.substring(c_start, c_end));
+            return window.unescape(document.cookie.substring(c_start, c_end));
         }
     }
     return c_default !== undefined ? c_default : "";
@@ -40,7 +44,7 @@ utils.get_cookie = function (c_name, c_default) {
 utils.set_cookie = function (c_name, value, expiredays) {
     var exdate = new Date();
     exdate.setDate(exdate.getDate() + (expiredays ? expiredays : 360));
-    document.cookie = c_name+"="+escape(value)+"; expires="+exdate.toUTCString()+"; path=/";
+    document.cookie = c_name+"="+window.escape(value)+"; expires="+exdate.toUTCString()+"; path=/";
 };
 
 // strip function
@@ -82,6 +86,44 @@ if (!Array.prototype.indexOf) {
         }
         return -1;
     };
+}
+
+// add keys method to Object (for IE < 9)
+// from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+if (!Object.keys) {
+    Object.keys = (function() {
+        "use strict";
+        var hasOwnProperty = Object.prototype.hasOwnProperty,
+            hasDontEnumBug = !({ toString: null }).propertyIsEnumerable("toString"),
+            dontEnums = [
+                "toString",
+                "toLocaleString",
+                "valueOf",
+                "hasOwnProperty",
+                "isPrototypeOf",
+                "propertyIsEnumerable",
+                "constructor"
+            ],
+            dontEnumsLength = dontEnums.length;
+
+        return function(obj) {
+            if (typeof obj !== "object" && (typeof obj !== "function" || obj === null))
+                throw new TypeError("Object.keys called on non-object");
+
+            var result = [], prop, i;
+            for (prop in obj) {
+                if (hasOwnProperty.call(obj, prop))
+                  result.push(prop);
+            }
+            if (hasDontEnumBug) {
+                for (i = 0; i < dontEnumsLength; i++) {
+                    if (hasOwnProperty.call(obj, dontEnums[i]))
+                        result.push(dontEnums[i]);
+                }
+            }
+            return result;
+        };
+    }());
 }
 
 // isinstance
@@ -172,6 +214,10 @@ utils._get_browser_info = function () {
         if (!version)
             version = utils._extract_browser_version(ua, /rv:(\d+\.\d+)/);
     }
+    else if (ua.indexOf("edge") != -1) {
+        name = "edge";
+        version = utils._extract_browser_version(ua, /edge\/(\d+\.\d+)/);
+    }
     else if (ua.indexOf("chromium") != -1) {
         name = "chromium";
         version = utils._extract_browser_version(ua, /chromium\/(\d+\.\d+)/);
@@ -198,7 +244,7 @@ utils._get_browser_info = function () {
     }
     else if (ua.indexOf("trident") != -1) {
         name = "ie";
-        version = utils._extract_browser_version(ua, /rv:(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /rv.{1}(\d+\.\d+)/);
         utils.browser_is_ie9 = true;
     }
     else if (ua.indexOf("opera") != -1) {
@@ -220,7 +266,7 @@ utils._get_browser_info = function () {
     utils.browser_name = name;
     utils["browser_is_"+name] = true;
     utils.browser_version = version;
-    
+
     // detect type of device
     utils.is_phone = ua.indexOf("iphone") != -1 || ua.indexOf("ipod") != -1 || ua.indexOf("android") != -1 || ua.indexOf("iemobile") != -1 || ua.indexOf("opera mobi") != -1 || ua.indexOf("opera mini") != -1 || ua.indexOf("windows ce") != -1 || ua.indexOf("fennec") != -1 || ua.indexOf("series60") != -1 || ua.indexOf("symbian") != -1 || ua.indexOf("blackberry") != -1 || window.orientation !== undefined;
     utils.is_tablet = window.navigator && window.navigator.platform == "iPad";
@@ -376,17 +422,21 @@ utils.setup_class = function (obj, options, allowed_options) {
 };
 
 // MD5 sum computation (requires the SparkMD5 library)
-utils.compute_md5 = function (file, callback) {
-    var blobSlice = File.prototype.slice || File.prototype.mozSlice || File.prototype.webkitSlice;
+utils.compute_md5 = function (file, callback, progress_callback) {
+    if (!window.File)
+        return callback("unsupported");
+    var blobSlice = window.File.prototype.slice || window.File.prototype.mozSlice || window.File.prototype.webkitSlice;
     var chunkSize = 2097152; // Read in chunks of 2MB
     var chunks = Math.ceil(file.size / chunkSize);
     var currentChunk = 0;
     var spark = new SparkMD5.ArrayBuffer();
     var fileReader = new FileReader();
-
     fileReader.onload = function (e) {
         spark.append(e.target.result); // Append array buffer
         ++currentChunk;
+        if (progress_callback) {
+            progress_callback(Math.min(currentChunk * chunkSize, file.size) / file.size);
+        }
 
         if (currentChunk < chunks) {
             loadNext();
@@ -394,17 +444,14 @@ utils.compute_md5 = function (file, callback) {
             callback(spark.end());
         }
     };
-
     fileReader.onerror = function () {
-        console.warn('MD5 computation failed');
+        console.warn("MD5 computation failed");
     };
-
     function loadNext() {
         var start = currentChunk * chunkSize;
         var end = ((start + chunkSize) >= file.size) ? file.size : start + chunkSize;
         fileReader.readAsArrayBuffer(blobSlice.call(file, start, end));
     }
-
     loadNext();
 };
 

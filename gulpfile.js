@@ -7,7 +7,7 @@ var rename = require("gulp-rename");
 
 gulp.task("build", function() {
   gulp.src([
-    "vendors/js/jquery-latest.min.js",
+    "vendors/js/jquery.min.js",
     "vendors/js/utils.js",
     "js/ubi-web-lib-base.js"
   ])
