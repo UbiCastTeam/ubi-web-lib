@@ -17,6 +17,25 @@ UbiWebLibBase.prototype.init = function () {
     this.init_aside();
     this.init_nav();
     this.init_tooltips();
+    var button_place = $(".button-fixed-if-not-visible");
+    if (button_place.length) {
+        var check_button_place = function () {
+            button_place.each(function () {
+                var button_save = $("button", $(this));
+                var button_top = $(this).offset().top;
+                var button_bottom = button_top + $(this).height();
+                var top = $(window).scrollTop();
+                var bottom = top + $(window).height();
+                if (!((button_bottom <= bottom) && (button_top >= top))) {
+                    button_save.addClass("button-fixed-bottom-right");
+                } else {
+                    button_save.removeClass("button-fixed-bottom-right");
+                }
+            });
+        };
+        $(window).scroll(check_button_place);
+        check_button_place();
+    }
 };
 UbiWebLibBase.prototype.init_aside = function () {
     var obj = this;
