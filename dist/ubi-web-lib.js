@@ -1005,6 +1005,21 @@ UbiWebLibBase.prototype.init = function () {
     this.init_aside();
     this.init_nav();
     this.init_tooltips();
+    this.init_buttons();
+    this.init_messages();
+};
+UbiWebLibBase.prototype.init_messages = function () {
+    if ($("#messages_place .message").length) {
+        setTimeout(function () {
+            $("#messages_place").hide(3000, function () {
+                $("#message_box").append($(this).detach());
+                $(this).show();
+                $("#message_box_button").removeClass("hidden");
+            });
+        }, 4000);
+    }
+};
+UbiWebLibBase.prototype.init_buttons = function () {
     var button_place = $(".button-fixed-if-not-visible");
     if (button_place.length) {
         var check_button_place = function () {

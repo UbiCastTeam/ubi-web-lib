@@ -262,3 +262,10 @@ aside.aside.aside-right {
 
     border-top: 1px solid;
 }
+
+#message_box {
+    position: fixed;
+    bottom: 50px;
+    left: 25px;
+    max-width: 295px;
+}
