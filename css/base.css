@@ -117,9 +117,15 @@ legend h3 { margin: 0; }
 .bottom-bar { margin-top: 8px; }
 .btn-bar { margin: 8px; }
 .messages {
-    text-align: center;
     margin: 10px 0;
 }
-.messages .message {
+.messages ul {
+    padding: 0;
+}
+.message {
     padding: 5px;
+    text-align: center;
+}
+li.message {
+    list-style: none;
 }

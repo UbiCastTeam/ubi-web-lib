@@ -74,7 +74,7 @@ input[type=submit].black,
 input[type=button].black {
     background: #404040;
 }
-.messages .message.info,
+.message.info,
 aside.aside .list.active.blue > .aside-list-btn,
 button.default,
 .button.default,
@@ -100,7 +100,7 @@ input[type=button].default:active,
 .bg-active-blue:active {
     background: #145284;
 }
-.messages .message.success,
+.message.success,
 aside.aside .list.active.green > .aside-list-btn,
 button.main,
 .button.main,
@@ -120,7 +120,7 @@ input[type=submit].main:active,
 input[type=button].main:active {
     background: #00AF66;
 }
-.messages .message.error,
+.message.error,
 aside.aside .list.active.red > .aside-list-btn,
 button.danger,
 .button.danger,
@@ -140,7 +140,7 @@ input[type=submit].danger:active,
 input[type=button].danger:active {
     background: #9B1B2B;
 }
-.messages .message.warning,
+.message.warning,
 aside.aside .list.active.orange > .aside-list-btn,
 button.warning,
 .button.warning,
@@ -352,7 +352,7 @@ input[type=submit],
 input[type=button],
 .black,
 .color-black,
-.messages .message.warning a {
+.message.warning a {
     color: #404040;
 }
 h1 small {
@@ -381,12 +381,12 @@ a,
 .color-orange {
     color: #F7B407;
 }
-.messages .message.info,
-.messages .message.info a,
-.messages .message.error,
-.messages .message.error a,
-.messages .message.success,
-.messages .message.success a,
+.message.info,
+.message.info a,
+.message.error,
+.message.error a,
+.message.success,
+.message.success a,
 .bg-blue,
 .bg-hover-blue:hover,
 .bg-focus-blue:focus,
