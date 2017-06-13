@@ -21,15 +21,28 @@ UbiWebLibBase.prototype.init = function () {
     this.init_messages();
 };
 UbiWebLibBase.prototype.init_messages = function () {
+    var hide_msg = function () {
+        $("#messages_place").hide(250, function () {
+            $("#message_box").append($(this).detach());
+            $(this).show();
+            $("#message_box_button").removeClass("hidden");
+        });
+    };
     if ($("#messages_place .message").length) {
-        setTimeout(function () {
-            $("#messages_place").hide(3000, function () {
-                $("#message_box").append($(this).detach());
-                $(this).show();
-                $("#message_box_button").removeClass("hidden");
-            });
-        }, 4000);
+        setTimeout(hide_msg, 7000);
     }
+    $(document).click(function (event) {
+        if ($("#messages_place .message").length) {
+            var hide = true;
+            $("#messages_place .message").each(function () {
+                if (event.target == this) {
+                    hide = false;
+                }
+            });
+            if (hide)
+                hide_msg();
+        }
+    });
 };
 UbiWebLibBase.prototype.init_buttons = function () {
     var button_place = $(".button-fixed-if-not-visible");

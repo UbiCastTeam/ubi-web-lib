@@ -16,7 +16,7 @@ gulp.task("build", function() {
   .pipe(minify({
     compress: {
       hoist_vars: true,
-      screw_ie8: true
+   //   screw_ie8: true
     }
   }))
   .pipe(gulp.dest("./dist"));
