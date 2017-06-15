@@ -125,6 +125,7 @@ legend h3 { margin: 0; }
 .message {
     padding: 5px;
     text-align: center;
+    overflow: auto;
 }
 li.message {
     list-style: none;

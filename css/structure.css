@@ -267,5 +267,7 @@ aside.aside.aside-right {
     position: fixed;
     bottom: 50px;
     left: 25px;
+    right: auto;
+    width: auto;
     max-width: calc(100% - 50px);
 }
