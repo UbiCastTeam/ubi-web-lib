@@ -1014,6 +1014,7 @@ UbiWebLibBase.prototype.init_messages = function () {
             $("#message_box").append($(this).detach());
             $(this).show();
             $("#message_box_button").removeClass("hidden");
+            $("#message_box_count").html("(" + $(".message", this).length + ")");
         });
     };
     if ($("#messages_place .message").length) {
