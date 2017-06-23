@@ -23,25 +23,27 @@ UbiWebLibBase.prototype.init = function () {
 UbiWebLibBase.prototype.init_messages = function () {
     var hide_msg = function () {
         $("#messages_place").hide(250, function () {
-            $("#message_box").append($(this).detach());
-            $(this).show();
             $("#message_box_button").removeClass("hidden");
-            $("#message_box_count").html("(" + $(".message", this).length + ")");
+            $(".message-box-count").html("(" + $(".message", this).length + ")");
         });
     };
     if ($("#messages_place .message").length) {
         setTimeout(hide_msg, 7000);
     }
+    $("#message_box_button").click(function () {
+        $("#messages_place").show();
+    });
     $(document).click(function (event) {
         if ($("#messages_place .message").length) {
             var hide = true;
             $("#messages_place .message").each(function () {
-                if (event.target == this) {
+                if (event.target === this) {
                     hide = false;
                 }
             });
-            if (hide)
+            if (hide) {
                 hide_msg();
+            }
         }
     });
 };

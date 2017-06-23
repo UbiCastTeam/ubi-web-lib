@@ -78,6 +78,7 @@ input[type=submit].button-block,
 input[type=button].button-block,
 .button.button-block {
     display: block;
+    width: 100%;
 }
 button.button-block i:first-child,
 .button.button-block i:first-child,
