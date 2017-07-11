@@ -203,6 +203,7 @@ input[type=button].button-fixed-bottom-left,
     border-bottom-left-radius: 0px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    z-index: 1;
 }
 button.button-fixed-bottom-right,
 nput[type=submit].button-fixed-bottom-right,
