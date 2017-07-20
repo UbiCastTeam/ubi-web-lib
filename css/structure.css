@@ -107,8 +107,7 @@ nav.navbar .links .item.active {
 }
 /* Aside */
 aside.aside {
-    margin-top: 20px;
-    top: 46px;
+    top: 65px;
     display: inline-block;
     width: 100%;
     max-width: 320px;
