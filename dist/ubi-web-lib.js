@@ -1009,6 +1009,7 @@ UbiWebLibBase.prototype.init = function () {
     this.init_messages();
 };
 UbiWebLibBase.prototype.init_messages = function () {
+    var obj = this;
     var hide_msg = function () {
         $("#messages_place").hide(250, function () {
             $("#message_box_button").removeClass("hidden");
@@ -1020,6 +1021,7 @@ UbiWebLibBase.prototype.init_messages = function () {
     }
     $("#message_box_button").click(function () {
         $("#messages_place").show();
+        obj.hide_all_dropdowns();
     });
     $(document).click(function (event) {
         if ($("#messages_place .message").length) {
