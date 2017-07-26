@@ -1,5 +1,8 @@
 /* Structure stylesheet - Used in non iframe pages */
-
+html {
+    position: relative;
+    min-height: 100%;
+}
 /* header */
 .container,
 header.header,
@@ -107,7 +110,7 @@ nav.navbar .links .item.active {
 }
 /* Aside */
 aside.aside {
-    top: 65px;
+    top: 0px;
     display: inline-block;
     width: 100%;
     max-width: 320px;
@@ -158,7 +161,6 @@ aside.aside.aside-right {
 .global {
     width: 100%;
     text-align: left;
-    position: relative;
     display: block;
 }
 .container {
@@ -260,6 +262,8 @@ aside.aside.aside-right {
     text-align: center;
 
     border-top: 1px solid;
+    position: absolute;
+    bottom: 0px;
 }
 
 #message_box {
