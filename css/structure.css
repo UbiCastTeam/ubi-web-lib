@@ -158,6 +158,9 @@ aside.aside.aside-right {
 }
 
 /* container block */
+body > main {
+    z-index: 1;
+}
 .global {
     width: 100%;
     text-align: left;
