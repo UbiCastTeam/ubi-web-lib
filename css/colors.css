@@ -352,6 +352,7 @@ input[type=submit],
 input[type=button],
 .black,
 .color-black,
+.dropdown,
 .message.warning a {
     color: #404040;
 }
