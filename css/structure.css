@@ -257,16 +257,15 @@ body > main {
 }
 /* Footer block */
 .footer {
-    display: block;
-
-    width: 100%;
-
-    overflow: hidden;
-    text-align: center;
-
-    border-top: 1px solid;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 20px;
     position: absolute;
-    bottom: 0px;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    border-top: 1px solid;
 }
 
 #message_box {
