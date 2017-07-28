@@ -290,10 +290,11 @@ UbiWebLibBase.prototype.init_tooltips = function () {
         $(this).click(function (event) {
             event.stopPropagation();
             var text = $(this).attr("data-tooltip-content");
+            text = utils.escape_html(text);
             var box = $("#tooltip_content");
             if (!box.length)
                 box = $("<span class=\"tooltip-content\" id=\"tooltip_content\"></span>");
-            box.text(text);
+            box.html(text);
             var left = event.pageX;
             var min_size = left + 200;
             if (min_size > $(window).width()) {
