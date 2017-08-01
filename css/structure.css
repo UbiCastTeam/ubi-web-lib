@@ -194,26 +194,16 @@ body > main {
     margin: 40px 0 20px;
     border-bottom: 1px solid;
 }
-.breadcrumb {
-    display: block;
-    margin: 0 30px;
-    margin-bottom: 10px;
-}
-.breadcrumb .tree:before {
-    content: " > ";
-}
 .commands-place {
     text-align: right;
 }
 /* paragraph blocks */
 .paragraph-block {
+    margin-top: 10px;
+    margin-bottom: 30px;
     padding: 10px 20px;
     display: block;
     border-radius: 4px;
-}
-.paragraph-block > h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
 }
 .margin-32,
 .paragraph-block.margin-32 {
@@ -224,6 +214,14 @@ body > main {
 }
 .padding-4 {
     padding: 4px;
+}
+/* breadcrumb */
+.breadcrumb {
+    margin: 40px 0 0 0;
+    display: block;
+}
+.breadcrumb .tree:before {
+    content: " > ";
 }
 /* common classes for blocks */
 .centered {
