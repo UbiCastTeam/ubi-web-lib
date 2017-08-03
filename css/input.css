@@ -187,17 +187,21 @@ textarea.large {
 .full-input textarea { height: 200px; }
 html .mce-path { padding: 0 8px; }
 
-button.button-fixed-bottom-right,
-nput[type=submit].button-fixed-bottom-right,
-input[type=button].button-fixed-bottom-right,
-.button.button-fixed-bottom-right,
-button.button-fixed-bottom-left,
-nput[type=submit].button-fixed-bottom-left,
-input[type=button].button-fixed-bottom-left,
-.button.button-fixed-bottom-left {
-    position: fixed;
+.button-fixed-if-not-visible {
+    margin: 10px 0;
+    text-align: right;
+}
+.button-fixed-bottom-right button,
+.button-fixed-bottom-right input[type=submit],
+.button-fixed-bottom-right input[type=button],
+.button-fixed-bottom-right .button,
+.button-fixed-bottom-left button,
+.button-fixed-bottom-left input[type=submit],
+.button-fixed-bottom-left input[type=button],
+.button-fixed-bottom-left .button {
     padding: 10px;
     bottom: 0;
+    position: fixed;
     border-bottom: none;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -205,15 +209,15 @@ input[type=button].button-fixed-bottom-left,
     border-top-left-radius: 10px;
     z-index: 1;
 }
-button.button-fixed-bottom-right,
-nput[type=submit].button-fixed-bottom-right,
-input[type=button].button-fixed-bottom-right,
-.button.button-fixed-bottom-right {
+.button-fixed-bottom-right button,
+.button-fixed-bottom-right input[type=submit],
+.button-fixed-bottom-right input[type=button],
+.button-fixed-bottom-right .button {
     right: 20px;
 }
-button.button-fixed-bottom-left,
-nput[type=submit].button-fixed-bottom-left,
-input[type=button].button-fixed-bottom-left,
-.button.button-fixed-bottom-left {
+.button-fixed-bottom-left button,
+.button-fixed-bottom-left input[type=submit],
+.button-fixed-bottom-left input[type=button],
+.button-fixed-bottom-left .button {
     left: 20px;
 }

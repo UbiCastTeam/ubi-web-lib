@@ -194,6 +194,7 @@ aside.aside.aside-right {
 .commands-place {
     text-align: right;
 }
+
 /* paragraph blocks */
 .paragraph-block {
     margin-top: 10px;
@@ -212,6 +213,7 @@ aside.aside.aside-right {
 .padding-4 {
     padding: 4px;
 }
+
 /* breadcrumb */
 .breadcrumb {
     margin: 40px 0 0 0;
@@ -220,12 +222,14 @@ aside.aside.aside-right {
 .breadcrumb .tree:before {
     content: " > ";
 }
+
 /* common classes for blocks */
 .centered {
     text-align: center;
     margin: 0 auto;
     vertical-align: middle;
 }
+
 /* tabs */
 .tab-window .tab-button {
     margin: 0;

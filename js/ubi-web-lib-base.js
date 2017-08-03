@@ -52,19 +52,33 @@ UbiWebLibBase.prototype.init_messages = function () {
 UbiWebLibBase.prototype.init_buttons = function () {
     var button_place = $(".button-fixed-if-not-visible");
     if (button_place.length) {
+        // copy first button in a botton bar and show this bar
+        // only when the original button is not visible after scrolling
+        button_place = $(button_place[0]);
+        var button_place_fixed = $("<div class=\"button-fixed-bottom-right\" style=\"display: none;\"></div>");
+        var button_save = $("button", button_place);
+        var button_copy = button_save.clone();
+        button_place_fixed.append(button_copy);
+        button_copy.click(function () {
+            button_save.click();
+        });
+        $("body").append(button_place_fixed);
+
+        var show_fixed = false;
         var check_button_place = function () {
-            button_place.each(function () {
-                var button_save = $("button", $(this));
-                var button_top = $(this).offset().top;
-                var button_bottom = button_top + $(this).height();
-                var top = $(window).scrollTop();
-                var bottom = top + $(window).height();
-                if (!((button_bottom <= bottom) && (button_top >= top))) {
-                    button_save.addClass("button-fixed-bottom-right");
-                } else {
-                    button_save.removeClass("button-fixed-bottom-right");
+            var button_top = button_place.offset().top;
+            var top = $(window).scrollTop();
+            if (button_top <= top) {
+                if (!show_fixed) {
+                    show_fixed = true;
+                    button_place_fixed.css("display", "");
                 }
-            });
+            } else {
+                if (show_fixed) {
+                    show_fixed = false;
+                    button_place_fixed.css("display", "none");
+                }
+            }
         };
         $(window).scroll(check_button_place);
         check_button_place();
