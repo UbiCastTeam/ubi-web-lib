@@ -18,12 +18,22 @@ input[type=submit],
 input[type=button] {
     line-height: 1.5;
     border: 1px solid;
-    padding: 3px 8px;
     cursor: pointer;
     border-radius: 4px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+input,
+textarea {
+    padding: 3px 4px;
+}
+select,
+button,
+.button,
+input[type=submit],
+input[type=button] {
+    padding: 3px 8px;
 }
 input:focus,
 select:focus,
