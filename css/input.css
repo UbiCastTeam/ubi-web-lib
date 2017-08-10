@@ -127,7 +127,8 @@ input[type=button].button-block i:first-child {
 td.input { width: 100%; }
 input.small,
 textarea.small {
-    width: 40px;
+    width: 50px;
+    text-align: center;
 }
 input.medium,
 textarea.medium {
