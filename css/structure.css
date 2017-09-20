@@ -113,8 +113,8 @@ aside.aside {
     display: inline-block;
     width: 100%;
     max-width: 320px;
-    bottom: 0;
     position: absolute;
+    min-height: 100%;
     z-index: 10;
 }
 aside.aside .list {
@@ -264,6 +264,7 @@ aside.aside.aside-right {
     text-align: center;
     line-height: 30px;
     border-top: 1px solid;
+    z-index: -1;
 }
 
 #message_box {
