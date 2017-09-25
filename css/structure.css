@@ -20,11 +20,8 @@ header.header .header-block {
     position: relative;
     vertical-align: middle;
     display: inline-block;
-    padding: 10px;
-    line-height: 45px;
-}
-header.header .header-block:first-child {
-    margin-left: 15px;
+    padding: 0 10px;
+    line-height: 65px;
 }
 header.header .account-block {
     margin-right: 15px;
@@ -32,10 +29,9 @@ header.header .account-block {
 header.header .header-logo {
     max-width: 200px;
 }
-header.header .header-account,
 header.header .header-logo-small,
 header.header .header-logo {
-    max-height: 45px;
+    max-height: 55px;
 }
 header.header .header-logo-small {
     display: none;
