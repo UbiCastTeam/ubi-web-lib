@@ -35,6 +35,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        vertical-align: middle;
     }
 }
 @media (max-width: 440px) {
