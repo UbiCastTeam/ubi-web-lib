@@ -4,10 +4,51 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
+.animated-slow,
 .animated.hinge {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+}
+@keyframes flash-color {
+  from, 50%, to {
+    color: inherit;
+  }
+
+  25%, 75% {
+    color: #1C73BF;
+  }
+}
+
+.flash-color {
+  animation-name: flash-color;
+}
+
+@keyframes flash-bg-color {
+  from, 50%, to {
+    background-color: inherit;
+  }
+
+  25%, 75% {
+    background-color: #1C73BF;
+  }
+}
+
+.flash-bg-color {
+  animation-name: flash-bg-color;
+}
+
+@keyframes flash-border-color {
+  from, 50%, to {
+    border-color: inherit;
+  }
+
+  25%, 75% {
+    border-color: #1C73BF;
+  }
+}
+
+.flash-border-color {
+  animation-name: flash-border-color;
 }
 
 .animated.flipOutX,
