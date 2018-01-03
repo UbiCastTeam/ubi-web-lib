@@ -42,7 +42,8 @@ button:focus,
 .button:focus,
 input[type=submit]:focus,
 input[type=button]:focus
-input:disabled:focus {
+input:disabled:focus,
+textarea:disabled:focus {
     outline: none;
 }
 
@@ -79,7 +80,8 @@ button:disabled,
 .button.disabled,
 input[type=submit]:disabled,
 input[type=button]:disabled,
-input:disabled {
+input:disabled,
+textarea:disabled {
     opacity: 0.6;
     cursor: default;
 }

@@ -256,7 +256,8 @@ button:disabled,
 .button.disabled,
 input[type=submit]:disabled,
 input[type=button]:disabled,
-input:disabled {
+input:disabled,
+textarea:disabled {
     background: #DDD !important;
 }
 a.disabled {
@@ -468,7 +469,8 @@ button:disabled,
 .button.disabled,
 input[type=submit]:disabled,
 input[type=button]:disabled,
-input:disabled {
+input:disabled,
+textarea:disabled {
     color: #404040 !important;
 }
 a.disabled {
