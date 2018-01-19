@@ -119,24 +119,26 @@ aside.aside .list {
     border-left-width: 10px;
     border-left-style: solid;
 }
-aside.aside .aside-list-btn {
-    display: block;
-    padding: 5px 10px;
+aside.aside .list a,
+aside.aside .list span {
+    padding: 0 10px;
+    color: inherit;
+    display: inline-block;
 }
-aside.aside .aside-list-btn,
+aside.aside .list .aside-list-btn {
+    display: block;
+}
+aside.aside .list .aside-list-btn,
 aside.aside .list li {
     cursor: pointer;
-    line-height: 1.9;
+    line-height: 36px;
     font-weight: bold;
     margin: 0;
     vertical-align: middle;
 }
-aside.aside .list a {
-    color: inherit;
-}
-aside.aside .aside-list-btn .fa {
+aside.aside .list .aside-list-btn .fa {
     font-size: 1.5em;
-    line-height: 1.2;
+    line-height: 36px;
     vertical-align: middle;
 }
 aside.aside .list > li {
