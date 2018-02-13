@@ -1,7 +1,7 @@
 /* Table common style */
 table {
     border-spacing: 0;
-    border-collapse: separate;
+    border-collapse: collapse;
 }
 table caption {
     font-size: 1.2em;
@@ -9,27 +9,9 @@ table caption {
     margin-bottom: 3px;
 }
 table td,
-table th,
-table tr {
+table th {
     padding: 4px 6px;
-    border-left: 1px solid;
-}
-table tr th {
-    border-top: 1px solid;
-}
-table tr:first-child th {
-    border-top: none;
-}
-table tr td:first-child,
-table tr:first-child th:first-child {
-    border-left: 0 none;
-}
-table td:last-child,
-table th:last-child {
-    border-right: 0 none;
-}
-table td {
-    border-color: transparent;
+    border: 1px solid #fff;
 }
 .title-block,
 table th,
@@ -74,24 +56,6 @@ table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
 table th.transparent,
 table td.transparent {
     background: transparent !important;
-}
-table td.inner-table {
-    padding: 0;
-}
-table td.inner-table th {
-    border-left: none;
-}
-.form-section,
-table th.form-section {
-    padding: 4px 6px;
-    font-weight: bold;
-    font-size: 120%;
-    background: transparent !important;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-}
-table tr:first-child th.form-section {
-    border-top: 0 none;
 }
 table td.input {
     vertical-align: middle;

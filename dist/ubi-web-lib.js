@@ -185,12 +185,20 @@ utils._get_user_agent = function () {
         utils.user_agent = "unknown";
 };
 utils._get_user_agent();
+
+utils._get_ios_version = function () {
+    var version = 0;
+    version = parseFloat(("" + (/CPU.*OS ([0-9_]{1,5})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0,""])[1]).replace("undefined", "3_2").replace("_", ".").replace("_", "")) || false;
+};
+
 utils._get_os_name = function () {
     var name = "";
     if (window.navigator && window.navigator.platform) {
         var platform = window.navigator.platform.toLowerCase();
-        if (platform.indexOf("ipad") != -1 || platform.indexOf("iphone") != -1 || platform.indexOf("ipod") != -1)
+        if (platform.indexOf("ipad") != -1 || platform.indexOf("iphone") != -1 || platform.indexOf("ipod") != -1) {
             name = "ios";
+            utils.os_version = utils._get_ios_version();
+        }
     }
     if (!name && window.navigator && window.navigator.appVersion) {
         var app_version = window.navigator.appVersion.toLowerCase();
@@ -282,6 +290,26 @@ utils._get_browser_info = function () {
     utils.is_tactile = document.documentElement && "ontouchstart" in document.documentElement;
 };
 utils._get_browser_info();
+
+utils.webgl_available = function (canvas) {
+    var webglAvailable = !! window.WebGLRenderingContext;
+    if (webglAvailable) {
+        try {
+            var webglContext = webglAvailable && (canvas.getContext("webgl2") || canvas.getContext("webgl") || canvas.getContext("experimental-webgl"));
+            if (!webglContext) {
+                console.log("Impossible to initialize WebGL context. Your browser does not support Webgl context");
+                return null;
+            }
+            return webglContext;
+        } 
+        catch(e) {
+            console.log("WebGL context is supported but may be disable, please check your browser configuration");
+            return null;
+        }
+    }
+    console.log("Your browser does not support Webgl context");
+    return null;
+};
 
 // Translations utils
 utils._translations = { en: {} };
