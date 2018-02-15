@@ -131,6 +131,9 @@ legend h3 { margin: 0; }
     text-align: center;
     overflow: auto;
 }
+.message a {
+    text-decoration: underline;
+}
 li.message {
     list-style: none;
 }
