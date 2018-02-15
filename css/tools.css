@@ -18,3 +18,11 @@
     z-index: 60;
     padding: 5px;
 }
+.tooltip-button {
+    display: inline-block;
+    cursor: help;
+    vertical-align: middle;
+}
+.tooltip-button span {
+    display: none;
+}

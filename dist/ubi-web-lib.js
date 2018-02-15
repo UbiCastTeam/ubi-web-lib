@@ -1321,18 +1321,17 @@ UbiWebLibBase.prototype.init_nav = function () {
     });
 };
 UbiWebLibBase.prototype.init_tooltips = function () {
-    $(".tooltip").each(function () {
-        if (!$(this).attr("data-tooltip-content")) {
+    $(".tooltip-button").each(function () {
+        if ($("span", this).length < 1) {
             return;
         }
         $(this).click(function (event) {
             event.stopPropagation();
-            var text = $(this).attr("data-tooltip-content");
-            text = utils.escape_html(text);
+            var html = $("span", this).html();
             var box = $("#tooltip_content");
             if (!box.length)
                 box = $("<span class=\"tooltip-content\" id=\"tooltip_content\"></span>");
-            box.html(text);
+            box.html(html);
             var left = event.pageX;
             var min_size = left + 200;
             if (min_size > $(window).width()) {
