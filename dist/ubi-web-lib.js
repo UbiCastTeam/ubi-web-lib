@@ -1322,12 +1322,16 @@ UbiWebLibBase.prototype.init_nav = function () {
 };
 UbiWebLibBase.prototype.init_tooltips = function () {
     $(".tooltip-button").each(function () {
-        if ($("span", this).length < 1) {
+        if ($("span", this).length < 1 && !$(this).attr("title")) {
             return;
         }
         $(this).click(function (event) {
             event.stopPropagation();
-            var html = $("span", this).html();
+            var html;
+            if ($("span", this).length > 0)
+                html = $("span", this).html();
+            else
+                html = utils.escape_html($(this).attr("title"));
             var box = $("#tooltip_content");
             if (!box.length)
                 box = $("<span class=\"tooltip-content\" id=\"tooltip_content\"></span>");
