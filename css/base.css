@@ -39,8 +39,6 @@ p { margin-top: 8px; margin-bottom: 8px; }
 object,
 embed { vertical-align: top; }
 
-sup { font-size: 0.85em; }
-
 fieldset {
     margin: 8px 0;
     border-radius: 6px;
