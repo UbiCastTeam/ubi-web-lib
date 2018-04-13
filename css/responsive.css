@@ -20,6 +20,9 @@
     .column-2 {
         width: 100%;
     }
+    .column-3 {
+        width: 100%;
+    }
     .hidden-below-800 {
         display: none!important;
     }
