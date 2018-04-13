@@ -69,6 +69,11 @@ legend h3 { margin: 0; }
     display: inline-block;
     vertical-align: top;
 }
+.column-3 {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
 .first { margin-top: 0; padding-top: 0; }
 .no-margin { margin: 0; }
 .no-padding { padding: 0; }
