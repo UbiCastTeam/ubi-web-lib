@@ -62,15 +62,6 @@ input[type=button] {
     -moz-transition: background-color 0.2s, color 0.2s;
     -o-transition: background-color 0.2s, color 0.2s;
 }
-button i:first-child,
-.button i:first-child,
-input[type=submit] i:first-child,
-input[type=button] i:first-child,
-.button-icon {
-    padding-left: 3px;
-    padding-right: 5px;
-    vertical-align: middle;
-}
 button i.fa-spin,
 .button i.fa-spin {
     display: inline-block;
@@ -198,7 +189,9 @@ textarea.large {
 .full-input input[type=password],
 .full-input textarea { width: 100%; }
 .full-input textarea { height: 200px; }
-html .mce-path { padding: 0 8px; }
+
+body .mce-path { padding: 1px 8px; }
+body .mce-branding { display: none; }
 
 .button-fixed-if-not-visible {
     margin: 10px 0;
