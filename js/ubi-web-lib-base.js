@@ -4,6 +4,8 @@
 * Author: Stéphane Schoorens               *
 *******************************************/
 /* globals utils */
+"use strict";
+
 function UbiWebLibBase (options) {
 
     utils.setup_class(this, options);
@@ -14,11 +16,24 @@ function UbiWebLibBase (options) {
     });
 }
 UbiWebLibBase.prototype.init = function () {
+    this.init_footer();
     this.init_aside();
     this.init_nav();
     this.init_tooltips();
     this.init_buttons();
     this.init_messages();
+};
+UbiWebLibBase.prototype.init_footer = function () {
+    if ($("#footer").length < 1)
+        return;
+    // change body padding depending on footer height
+    var set_body_padding = function () {
+        var height = $("#footer").outerHeight();
+        if (height && height > 30)
+            $("body").css("padding-bottom", parseInt(height + 40, 10) + "px");
+    };
+    set_body_padding();
+    $(window).resize(set_body_padding);
 };
 UbiWebLibBase.prototype.init_messages = function () {
     var obj = this;
