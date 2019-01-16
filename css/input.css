@@ -193,10 +193,6 @@ textarea.large {
 body .mce-path { padding: 1px 8px; }
 body .mce-branding { display: none; }
 
-.button-fixed-if-not-visible {
-    margin: 10px 0;
-    text-align: right;
-}
 .button-fixed-bottom-right button,
 .button-fixed-bottom-right input[type=submit],
 .button-fixed-bottom-right input[type=button],
@@ -219,11 +215,11 @@ body .mce-branding { display: none; }
 .button-fixed-bottom-right input[type=submit],
 .button-fixed-bottom-right input[type=button],
 .button-fixed-bottom-right .button {
-    right: 20px;
+    right: 10%;
 }
 .button-fixed-bottom-left button,
 .button-fixed-bottom-left input[type=submit],
 .button-fixed-bottom-left input[type=button],
 .button-fixed-bottom-left .button {
-    left: 20px;
+    left: 10%;
 }
