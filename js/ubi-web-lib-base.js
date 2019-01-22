@@ -21,6 +21,21 @@ UbiWebLibBase.prototype.init = function () {
     this.init_nav();
     this.init_tooltips();
     this.init_messages();
+    this.init_aria();
+};
+UbiWebLibBase.prototype.init_aria = function () {
+    $(".aria-describedby-input input, .aria-describedby-input textarea, .aria-describedby-input select").each(function () {
+        $(this).attr("aria-describedby", $(this).attr("id") + "_help");
+    });
+    $(".aria-invalid-input input, .aria-invalid-input textarea, .aria-invalid-input select").each(function () {
+        $(this).attr("aria-invalid", "true");
+        $(this).attr("aria-describedby", $(this).attr("id") + "_errors");
+    });
+    $("input, textarea, select").each(function () {
+        if ($(this).attr("required")) {
+            $(this).attr("aria-required", "true");
+        }
+    });
 };
 UbiWebLibBase.prototype.init_footer = function () {
     if ($("#footer").length < 1)
