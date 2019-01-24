@@ -106,7 +106,7 @@ UbiWebLibBase.prototype.init_aside = function () {
     });
     $(".js-active").each(function () {
         var $parent = $(this);
-        $(".js-active-item .js-active-toogle", $parent).click(function (event) {
+        $(".js-active-toogle", $parent).click(function (event) {
             event.stopPropagation();
             obj.click_js_active($(this), $parent);
         });
@@ -184,8 +184,8 @@ UbiWebLibBase.prototype.toggle_dropdown = function (button, id) {
     }
 };
 UbiWebLibBase.prototype.click_js_active = function ($this, $parent) {
-    var $thisItem = $this.parent();
-    var $icon = $(".fa", $this);
+    var $thisItem = $(".js-active-item", $this).first();
+    var $icon = $(".fa", $this).first();
     if ($thisItem.hasClass("active")) {
         $thisItem.removeClass("active");
         if ($icon.length) {
@@ -193,7 +193,7 @@ UbiWebLibBase.prototype.click_js_active = function ($this, $parent) {
         }
     } else {
         $(".js-active-item", $parent).removeClass("active");
-        $(".js-active-item .js-active-toogle .fa", $parent).removeClass("fa-rotate-90");
+        $(".js-active-toogle .fa", $parent).removeClass("fa-rotate-90");
         $thisItem.addClass("active");
         if ($icon.length) {
             $icon.addClass("fa-rotate-90");
