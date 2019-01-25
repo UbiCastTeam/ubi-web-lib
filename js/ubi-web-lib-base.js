@@ -227,7 +227,6 @@ UbiWebLibBase.prototype.init_nav = function () {
                 hide_array.push($(this).detach());
             }
         });
-        console.log(hide_array);
         if (hide_array.length > 0) {
             for (var index = 0; index < hide_array.length; index++) {
                 var item = hide_array[index];
@@ -242,7 +241,6 @@ UbiWebLibBase.prototype.init_nav = function () {
             $next_button.addClass("not-visible");
         }
         if (prev_menus_hidden.length > 0) {
-            console.log('here', $prev_button);
             $prev_button.removeClass("not-visible");
         } else {
             $prev_button.addClass("not-visible");
