@@ -211,7 +211,7 @@ UbiWebLibBase.prototype.init_nav = function () {
         var total_width = 0;
         var hide_array = [];
         $next_button.addClass("not-visible");
-        $("li", $next_menu).each(function () {
+        $("li:not(.button-nav)", $next_menu).each(function () {
             var $item = $(this).detach();
             $nav_links.append($item.addClass("animated fadeInRight").one(obj.animation_end_event, function () {
                 $(this).removeClass("animated fadeInRight");
@@ -221,12 +221,13 @@ UbiWebLibBase.prototype.init_nav = function () {
         $next_button.removeClass("not-visible");
         $prev_button.removeClass("not-visible");
         var menu_width = $nav_links.width() - $next_button.outerWidth() - $prev_button.outerWidth();
-        $("li", $nav_links).each(function () {
+        $("li:not(.button-nav)", $nav_links).each(function () {
             total_width += $(this).outerWidth();
             if (total_width >= menu_width) {
                 hide_array.push($(this).detach());
             }
         });
+        console.log(hide_array);
         if (hide_array.length > 0) {
             for (var index = 0; index < hide_array.length; index++) {
                 var item = hide_array[index];
@@ -241,6 +242,7 @@ UbiWebLibBase.prototype.init_nav = function () {
             $next_button.addClass("not-visible");
         }
         if (prev_menus_hidden.length > 0) {
+            console.log('here', $prev_button);
             $prev_button.removeClass("not-visible");
         } else {
             $prev_button.addClass("not-visible");
@@ -250,8 +252,8 @@ UbiWebLibBase.prototype.init_nav = function () {
         var prev_menu = [];
         var total_width = 0;
         var menu_width = $nav_links.width() - $next_button.outerWidth() - $prev_button.outerWidth();
-        $("li", $nav_links).each(function () { total_width += $(this).outerWidth(); });
-        $("li", $nav_links).each(function () {
+        $("li:not(.button-nav)", $nav_links).each(function () { total_width += $(this).outerWidth(); });
+        $("li:not(.button-nav)", $nav_links).each(function () {
             var link = $("a", $(this)).attr("href");
             if (window.location.pathname == link) {
                 return false;
@@ -271,7 +273,7 @@ UbiWebLibBase.prototype.init_nav = function () {
 
     $next_button.click(function () {
         var prev_menu = [];
-        $("li", $nav_links).each(function () {
+        $("li:not(.button-nav)", $nav_links).each(function () {
             prev_menu.push($(this).detach());
         });
         prev_menus_hidden.push(prev_menu);
@@ -283,7 +285,7 @@ UbiWebLibBase.prototype.init_nav = function () {
         var prev_menu = prev_menus_hidden.pop();
         for (var index = (prev_menu.length - 1); index >= 0; index--) {
             var item = prev_menu[index];
-            $nav_links.prepend(item.addClass("animated fadeInLeft").one(obj.animation_end_event, function () {
+            $prev_button.after(item.addClass("animated fadeInLeft").one(obj.animation_end_event, function () {
                 $(this).removeClass("animated fadeInLeft");
             }));
         }
