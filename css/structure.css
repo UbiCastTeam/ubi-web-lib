@@ -76,7 +76,9 @@ nav.navbar .links .prev {
 }
 nav.navbar .links .next .button-text,
 nav.navbar .links .prev .button-text {
-    font-size: 2em;
+    font-size: 1.75em;
+    padding-top: 0;
+    padding-bottom: 0; 
 }
 nav.navbar .links .item.button-nav:hover {
     background: transparent;
