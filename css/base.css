@@ -23,7 +23,9 @@ h3 {
     padding: 5px 10px;
     font-size: 1.4em;
 }
-
+.keyboard-navigation :focus {
+    outline: 2px solid #145284;
+}
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 a.disabled { text-decoration: line-through; }

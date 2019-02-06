@@ -292,11 +292,11 @@ utils._get_browser_info = function () {
 };
 utils._get_browser_info();
 
-utils.webgl_available = function (canvas) {
+utils.webgl_available = function (canvas, options) {
     var webglAvailable = !! window.WebGLRenderingContext;
     if (webglAvailable) {
         try {
-            var webglContext = webglAvailable && (canvas.getContext("webgl2") || canvas.getContext("webgl") || canvas.getContext("experimental-webgl"));
+            var webglContext = webglAvailable && (canvas.getContext("webgl2", options) || canvas.getContext("webgl", options) || canvas.getContext("experimental-webgl", options));
             if (!webglContext) {
                 console.log("Impossible to initialize WebGL context. Your browser does not support Webgl context");
                 return null;
@@ -1084,6 +1084,15 @@ UbiWebLibBase.prototype.init_aria = function () {
     $("input, textarea, select").each(function () {
         if ($(this).attr("required")) {
             $(this).attr("aria-required", "true");
+        }
+    });
+    $(document).click(function () {
+        $("html").removeClass("keyboard-navigation");
+    });
+    $(document).keydown(function (event) {
+        var keyCode = event.keyCode || event.which; 
+        if (keyCode == 9) {
+            $("html").addClass("keyboard-navigation");
         }
     });
 };

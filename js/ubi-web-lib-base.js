@@ -36,6 +36,15 @@ UbiWebLibBase.prototype.init_aria = function () {
             $(this).attr("aria-required", "true");
         }
     });
+    $(document).click(function () {
+        $("html").removeClass("keyboard-navigation");
+    });
+    $(document).keydown(function (event) {
+        var keyCode = event.keyCode || event.which; 
+        if (keyCode == 9) {
+            $("html").addClass("keyboard-navigation");
+        }
+    });
 };
 UbiWebLibBase.prototype.init_footer = function () {
     if ($("#footer").length < 1)
