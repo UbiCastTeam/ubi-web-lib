@@ -507,6 +507,8 @@ utils.compute_md5 = function (file, callback, progress_callback) {
 * https://creativecommons.org/licenses/by-sa/3.0/ *
 * Requires: jQuery                                *
 **************************************************/
+"use strict";
+
 
 function OverlayDisplayManager(options) {
     // params
@@ -539,7 +541,7 @@ function OverlayDisplayManager(options) {
     this.element_first_focused = null;
     
     if (window.utils && window.utils._current_lang)
-        this.language = utils._current_lang;
+        this.language = window.utils._current_lang;
     if (options) {
         for (var attr in options)
             this[attr] = options[attr];
@@ -583,7 +585,7 @@ OverlayDisplayManager.prototype._init = function () {
     html +=     "<div class=\"odm-layer\">";
     html +=         "<table class=\"odm-table\"><tr class=\"odm-table\"><td class=\"odm-table\">";
     html +=             "<div role=\"dialog\" aria-labelledby=\"odm_title_" + nb_odm_opened + "\" aria-modal=\"true\" class=\"odm-block\">";
-    html +=                 "<button type=\"button\" class=\"odm-close\"><i class=\"fa fa-close\"></i><span class=\"sr-only\">Close</span></button>";
+    html +=                 "<button type=\"button\" class=\"odm-close\" title=\""+this.messages.close+"\"><i aria-hidden=\"true\">X</i><span class=\"sr-only\" style=\"display: none;\">"+this.messages.close+"</span></button>";
     html +=                 "<div class=\"odm-top-bar\">";
     html +=                     "<div class=\"odm-resources\"></div>";
     html +=                     "<div id=\"odm_title_" + nb_odm_opened + "\" class=\"odm-title\"></div>";
@@ -655,6 +657,7 @@ OverlayDisplayManager.prototype.set_language = function (lang) {
     if (lang == "fr") {
         this.language = "fr";
         this.messages = {
+            close: "Fermer",
             loading: "Chargement...",
             not_found: "Image introuvable",
             unknown_resource: "Type de ressource inconnu",
@@ -665,6 +668,7 @@ OverlayDisplayManager.prototype.set_language = function (lang) {
     else {
         this.language = "en";
         this.messages = {
+            close: "Close",
             loading: "Loading...",
             not_found: "Image not found",
             unknown_resource: "Unknown resource type",
@@ -674,6 +678,8 @@ OverlayDisplayManager.prototype.set_language = function (lang) {
     }
     if (this.$widget) {
         // replace messages
+        $(".odm-close", this.$widget).attr("title", this.messages.close);
+        $(".odm-close span", this.$widget).html(this.messages.close);
         $(".odm-loading", this.$widget).html(this.messages.loading);
         $(".odm-hover-loading", this.$widget).html(this.messages.loading);
         $(".odm-previous .odm-btn-icon", this.$widget).html(this.messages.previous);
@@ -806,8 +812,8 @@ OverlayDisplayManager.prototype._check_buttons_display = function (resource) {
             this.bottom_bar_displayed = true;
             this.on_resize();
         }
-        if (!obj.focus_first_descendant($(".odm-element-content", obj.$widget)[0])) {
-            $(".odm-close", obj.$widget).focus();
+        if (!this.focus_first_descendant($(".odm-element-content", this.$widget)[0])) {
+            $(".odm-close", this.$widget).focus();
         }
     }
     else if (this.bottom_bar_displayed) {
@@ -847,7 +853,7 @@ OverlayDisplayManager.prototype._load_resource = function (resource) {
     this._set_locked(resource.locked ? true : false);
     
     var obj = this;
-    var callback = function (success) {
+    var callback = function () {
         obj._hide_loading();
     };
     this.current_resource = resource;
