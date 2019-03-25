@@ -3,17 +3,50 @@
 }
 @media (max-width: 1920px) {
     .hidden-below-1920 {
-        display: none!important;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
 }
 @media (max-width: 1600px) {
     .hidden-below-1600 {
-        display: none!important;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
 }
 @media (max-width: 1280px) {
     .hidden-below-1280 {
-        display: none!important;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+}
+@media (max-width: 960px) {
+    .hidden-below-960 {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
 }
 @media (max-width: 800px) {
@@ -24,12 +57,26 @@
         width: 100%;
     }
     .hidden-below-800 {
-        display: none!important;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
 }
 @media (max-width: 600px) {
     .hidden-below-600 {
-        display: none!important;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
     nav.navbar .links .item a span {
         display: inline-block;
@@ -43,7 +90,14 @@
 }
 @media (max-width: 440px) {
     .hidden-below-440 {
-        display: none!important;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
     .shown-below-440 {
         display: block!important;
@@ -51,7 +105,14 @@
 }
 @media (max-width: 340px) {
     .hidden-below-340 {
-        display: none!important;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
     .button,
     button,
