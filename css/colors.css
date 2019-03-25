@@ -2,8 +2,8 @@
 /*
     white: #FFFFFF;
     black: #404040;
-    blue: #1C73BF;
-    hover: #145284;
+    blue: #003BC3;
+    hover: #000F32;
     green: #008750;
     hover: #00AF66;
     red: #DB263D;
@@ -84,7 +84,7 @@ input[type=button].default,
 nav.navbar .links .item:hover,
 nav.navbar .links .item.active,
 .bg-blue {
-    background: #1C73BF;
+    background: #003BC3;
 }
 button.default:hover,
 .button.default:hover,
@@ -92,14 +92,14 @@ input[type=submit].default:hover,
 input[type=button].default:hover,
 .bg-hover-blue:hover,
 .bg-focus-blue:focus {
-    background: #145284;
+    background: #000F32;
 }
 button.default:active,
 .button.default:active,
 input[type=submit].default:active,
 input[type=button].default:active,
 .bg-active-blue:active {
-    background: #145284;
+    background: #000F32;
 }
 .message.success,
 aside.aside .list.active.green > .aside-list-btn,
@@ -285,7 +285,7 @@ table tr {
     border-color: #DB263D;
 }
 .border-color-blue {
-    border-color: #1C73BF;
+    border-color: #003BC3;
 }
 .border-color-green {
     border-color: #008750;
@@ -365,12 +365,12 @@ h1 small {
     color: #D4D4D4;
 }
 a:hover {
-    color: #145284;
+    color: #000F32;
 }
 a,
 .blue,
 .color-blue {
-    color: #1C73BF;
+    color: #003BC3;
 }
 .green,
 .color-green {

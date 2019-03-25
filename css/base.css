@@ -3,7 +3,7 @@ html, body, div, table, h1, h2, h3, h4, tr, th, td, img, ul, ol, li, form, pre {
 
 html {
     background: white;
-    font-size: 14px;
+    font-size: 0.9em;
     font-family: Arial, sans-serif;
 }
 body {
@@ -24,7 +24,7 @@ h3 {
     font-size: 1.4em;
 }
 .keyboard-navigation :focus {
-    outline: 2px solid #145284;
+    outline: 2px solid #000F32;
 }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
