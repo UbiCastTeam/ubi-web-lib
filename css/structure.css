@@ -5,7 +5,6 @@ html {
 }
 /* header */
 .container,
-header.header,
 nav.navbar {
     position: relative;
     display: block;
@@ -15,9 +14,10 @@ header.header {
     border-bottom: 1px solid;
     text-align: center;
     height: 65px;
+    display: block;
+    margin: 0 auto;
 }
 header.header .header-block {
-    position: relative;
     vertical-align: middle;
     display: inline-block;
     padding: 0 10px;
@@ -106,53 +106,54 @@ nav.navbar .links .item.active {
     cursor: pointer;
 }
 /* Aside */
-aside.aside {
-    top: 0px;
+.aside {
+    top: 66px;
+    left: 0;
     display: inline-block;
-    width: 100%;
-    max-width: 320px;
+    width: 320px;
     position: absolute;
     min-height: 100%;
     z-index: 10;
+    text-align: left;
 }
-aside.aside .list {
+.aside .list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     border-left-width: 10px;
     border-left-style: solid;
 }
-aside.aside .list a {
-    padding: 0 10px;
+.aside .list a {
     color: inherit;
     display: inline-block;
 }
-aside.aside .list .aside-list-btn {
+.aside .list .aside-list-btn {
     display: block;
+    padding-left: 3px; 
 }
-aside.aside .list .aside-list-btn,
-aside.aside .list li {
+.aside .list .aside-list-btn,
+.aside .list li {
     cursor: pointer;
     line-height: 36px;
     font-weight: bold;
     margin: 0;
     vertical-align: middle;
 }
-aside.aside .list .aside-list-btn .fa {
+.aside .list .aside-list-btn .fa {
     font-size: 1.5em;
     line-height: 36px;
     vertical-align: middle;
 }
-aside.aside .list > li, aside.aside .list > ul > li {
+.aside .list > li, .aside .list > ul > li {
     display: none;
 }
-aside.aside .list.active > li, aside.aside .list.active > ul > li {
+.aside .list.active > li, .aside .list.active > ul > li {
     display: block;
 }
-aside.aside.aside-left {
+.aside.aside-left {
     border-right: 1px solid;
 }
-aside.aside.aside-right {
+.aside.aside-right {
     border-left: 1px solid;
 }
 

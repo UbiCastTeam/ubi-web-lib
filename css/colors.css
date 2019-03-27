@@ -19,7 +19,7 @@
 nav.navbar,
 header.header,
 .footer,
-aside.aside,
+.aside,
 .paragraph-block.white,
 .paragraph-block .paragraph-block,
 input,
@@ -39,7 +39,7 @@ button:hover,
 .button:hover,
 input[type=submit]:hover,
 input[type=button]:hover,
-aside.aside .aside-list-btn:hover {
+.aside .aside-list-btn:hover {
     background: #DDD;
 }
 button:active,
@@ -68,7 +68,7 @@ select:focus,
 .input-group.focused input[type="submit"],
 .tab-window .tab-button.active,
 .tab-window .tab-button:hover,
-aside.aside .list.active.black > .aside-list-btn,
+.aside .list.active.black > .aside-list-btn,
 button.black,
 .button.black,
 input[type=submit].black,
@@ -76,7 +76,7 @@ input[type=button].black {
     background: #404040;
 }
 .message.info,
-aside.aside .list.active.blue > .aside-list-btn,
+.aside .list.active.blue > .aside-list-btn,
 button.default,
 .button.default,
 input[type=submit].default,
@@ -102,7 +102,7 @@ input[type=button].default:active,
     background: #000F32;
 }
 .message.success,
-aside.aside .list.active.green > .aside-list-btn,
+.aside .list.active.green > .aside-list-btn,
 button.main,
 .button.main,
 input[type=submit].main,
@@ -122,7 +122,7 @@ input[type=button].main:active {
     background: #00AF66;
 }
 .message.error,
-aside.aside .list.active.red > .aside-list-btn,
+.aside .list.active.red > .aside-list-btn,
 button.danger,
 .button.danger,
 input[type=submit].danger,
@@ -142,7 +142,7 @@ input[type=button].danger:active {
     background: #9B1B2B;
 }
 .message.warning,
-aside.aside .list.active.orange > .aside-list-btn,
+.aside .list.active.orange > .aside-list-btn,
 button.warning,
 .button.warning,
 input[type=submit].warning,
@@ -176,7 +176,7 @@ input[type=button].black:active {
     background: #666;
 }
 
-aside.aside .list.active.purple > .aside-list-btn,
+.aside .list.active.purple > .aside-list-btn,
 button.purple,
 .button.purple,
 input[type=submit].purple,
@@ -271,8 +271,8 @@ table th.form-section {
 nav.navbar,
 header.header,
 .container .title,
-aside.aside.aside-left,
-aside.aside.aside-right,
+.aside.aside-left,
+.aside.aside-right,
 .footer {
     border-color: #DDD;
 }
@@ -439,16 +439,16 @@ input[type=submit].purple:hover,
 input[type=button].purple:hover,
 nav.navbar .links .item:hover a,
 nav.navbar .links .item.active a,
-aside.aside .list.active.red > .aside-list-btn,
-aside.aside .list.active.blue > .aside-list-btn,
-aside.aside .list.active.purple > .aside-list-btn,
-aside.aside .list.active.green > .aside-list-btn,
-aside.aside .list.active.black > .aside-list-btn,
-aside.aside .list.active.red > .aside-list-btn > a,
-aside.aside .list.active.blue > .aside-list-btn > a,
-aside.aside .list.active.purple > .aside-list-btn > a,
-aside.aside .list.active.green > .aside-list-btn > a,
-aside.aside .list.active.black > .aside-list-btn > a,
+.aside .list.active.red > .aside-list-btn,
+.aside .list.active.blue > .aside-list-btn,
+.aside .list.active.purple > .aside-list-btn,
+.aside .list.active.green > .aside-list-btn,
+.aside .list.active.black > .aside-list-btn,
+.aside .list.active.red > .aside-list-btn > a,
+.aside .list.active.blue > .aside-list-btn > a,
+.aside .list.active.purple > .aside-list-btn > a,
+.aside .list.active.green > .aside-list-btn > a,
+.aside .list.active.black > .aside-list-btn > a,
 .title-block,
 table th,
 table tfoot tr,
