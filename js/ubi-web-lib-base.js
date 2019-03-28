@@ -186,6 +186,11 @@ UbiWebLibBase.prototype.toggle_dropdown = function (button, id) {
             $icon.addClass(effect);
         }
     }
+    if ($(button).attr("aria-expanded") == 'false') {
+        $(button).attr("aria-expanded", true);
+    } else {
+        $(button).attr("aria-expanded", false);
+    }
     if ($("#" + id).hasClass("active")) {
         $("#" + id).removeClass("active");
     } else {
@@ -195,6 +200,14 @@ UbiWebLibBase.prototype.toggle_dropdown = function (button, id) {
 UbiWebLibBase.prototype.click_js_active = function ($this, $parent) {
     var $thisItem = $(".js-active-item", $this).first();
     var $icon = $(".fa", $this).first();
+    var $btn = $("[aria-expanded]", $this).first();
+    if ($btn) {
+        if ($btn.attr("aria-expanded") == 'false') {
+            $btn.attr("aria-expanded", true);
+        } else {
+            $btn.attr("aria-expanded", false);
+        }
+    }
     if ($thisItem.hasClass("active")) {
         $thisItem.removeClass("active");
         if ($icon.length) {
