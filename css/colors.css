@@ -39,7 +39,8 @@ button:hover,
 .button:hover,
 input[type=submit]:hover,
 input[type=button]:hover,
-.aside .aside-list-btn:hover {
+.aside .aside-list-btn:hover,
+.aside .aside-list-btn:hover > button {
     background: #DDD;
 }
 button:active,
