@@ -1454,49 +1454,42 @@ UbiWebLibBase.prototype.init_nav = function () {
     });
 };
 UbiWebLibBase.prototype.init_tooltips = function () {
+    var obj = this;
     $(".tooltip-button").each(function () {
-        if ($("span", this).length < 1 && !$(this).attr("title")) {
+        if ($(".tooltip-hidden-content", this).length < 1 && !$(this).attr("title")) {
             return;
         }
-        $(this).click(function (event) {
-            event.stopPropagation();
-            var html;
-            if ($("span", this).length > 0)
-                html = $("span", this).html();
-            else
-                html = utils.escape_html($(this).attr("title"));
-            var box = $("#tooltip_content");
-            if (!box.length)
-                box = $("<span class=\"tooltip-content\" id=\"tooltip_content\"></span>");
-            box.html(html);
-            var left = event.pageX;
-            var min_size = left + 200;
-            if (min_size > $(window).width()) {
-                left = left - 200;
-                if (left < 0) {
-                    left = 0;
-                }
-            }
-            var top = event.pageY;
-            var min_size = top + 20;
-            if (min_size > $(window).height()) {
-                top = top - 20;
-                if (top < 0) {
-                    top = 0;
-                }
-            }
-            box.css({
-                "position": "absolute",
-                "left": left + "px",
-                "top": top + "px",
-                "margin-right": "10px"
-            });
-            $("body").append(box);
-        });
+        $(this).click(obj.tooltip_click);
     });
     $(document).click(function (event) {
-        var box = $("#tooltip_content");
+        var box = $(".tooltip-content");
         if (box.length && event.target != box[0])
-            box.remove();
+            box.removeClass("tooltip-content").addClass("tooltip-hidden-content");
     });
+};
+UbiWebLibBase.prototype.tooltip_click = function (event) {
+    event.stopPropagation();
+    if ($(".tooltip-content", this).length > 0) {
+        $(".tooltip-content", this).removeClass("tooltip-content").addClass("tooltip-hidden-content");
+        return;
+    }
+    $(".tooltip-content").removeClass("tooltip-content").addClass("tooltip-hidden-content");
+    if ($(".tooltip-hidden-content", this).length > 0) {
+        $(".tooltip-hidden-content", this).removeClass("tooltip-hidden-content").addClass("tooltip-content");
+    } else {
+        var html = utils.escape_html($(this).attr("title"));
+        var box = $("<span class=\"tooltip-content\" id=\"tooltip_content\"></span>");
+        box.html(html);
+        $(this).append(box);
+    }
+};
+UbiWebLibBase.prototype.generate_tooltip_button = function (id, text, button_text) {
+    var html = "<button type=\"button\" class=\"tooltip-button no-padding no-border no-background\" aria-describedby=\"" + id + "\" aria-label=\"" + utils.translate('help') + "\">";
+    if (button_text) {
+        html += button_text;
+    }
+    html +=     "<i class=\"fa fa-question-circle fa-fw\" aria-hidden=\"true\"></i>";
+    html +=     "<span role=\"tooltip\" class=\"tooltip-hidden-content\" id=\"" + id + "\">" + text + "</span>";
+    html += "</button>";
+    return html;
 };

@@ -18,11 +18,18 @@
     z-index: 60;
     padding: 5px;
 }
+.tooltip-content {
+    position: absolute;
+    left: 24px;
+    top: 0px;
+    min-width: 200px;
+}
 .tooltip-button {
     display: inline-block;
     cursor: help;
     vertical-align: middle;
+    position: relative;
 }
-.tooltip-button span {
+.tooltip-button .tooltip-hidden-content {
     display: none;
 }
