@@ -325,6 +325,13 @@ UbiWebLibBase.prototype.init_tooltips = function () {
         if (box.length && event.target != box[0])
             box.removeClass("tooltip-content").addClass("tooltip-hidden-content");
     });
+    $(document).keydown(function (event) {
+        var keyCode = event.keyCode || event.which; 
+        if (keyCode == 27 && $(".tooltip-content").length) {
+            $(".tooltip-content").removeClass("tooltip-content").addClass("tooltip-hidden-content");
+            event.stopPropagation();
+        }
+    });
 };
 UbiWebLibBase.prototype.tooltip_click = function (event) {
     event.stopPropagation();
