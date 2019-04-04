@@ -503,9 +503,8 @@ utils.compute_md5 = function (file, callback, progress_callback) {
 utils.focus_first_descendant = function (element) {
     for (var i = 0; i < element.childNodes.length; i++) {
         var child = element.childNodes[i];
-        if (utils.attempt_focus(child)) {
-            return true;
-        } else if (utils.focus_first_descendant(child)) {
+        if (utils.attempt_focus(child) ||
+            utils.focus_first_descendant(child)) {
             return true;
         }
     }
@@ -524,8 +523,8 @@ utils.focus_last_descendant = function (element) {
 };
 utils.ignore_until_focus_changes = false;
 utils.attempt_focus = function (element) {
-    if (utils.ignore_until_focus_changes) {
-      return;
+    if (!this.is_focusable(element)) {
+        return false;
     }
     utils.ignore_until_focus_changes = true;
     try {
@@ -535,6 +534,28 @@ utils.attempt_focus = function (element) {
     }
     utils.ignore_until_focus_changes = false;
     return (document.activeElement === element);
+};
+utils.is_focusable = function (element) {
+  if (element.tabIndex > 0 || (element.tabIndex === 0 && element.getAttribute('tabIndex') !== null)) {
+    return true;
+  }
+
+  if (element.disabled) {
+    return false;
+  }
+
+  switch (element.nodeName) {
+    case 'A':
+      return !!element.href && element.rel != 'ignore';
+    case 'INPUT':
+      return element.type != 'hidden' && element.type != 'file';
+    case 'BUTTON':
+    case 'SELECT':
+    case 'TEXTAREA':
+      return true;
+    default:
+      return false;
+  }
 };
 utils.slugify = function (text) {
   return text.toString().toLowerCase()
@@ -684,7 +705,6 @@ OverlayDisplayManager.prototype._init = function () {
         this.show(this.pending_show_params);
 };
 OverlayDisplayManager.prototype.trap_focus = function (event) {
-    console.log(event);
     if (this.ignore_until_focus_changes) {
       return;
     }
