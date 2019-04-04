@@ -24,7 +24,12 @@
     top: 0px;
     min-width: 200px;
     max-height: 300px;
+    max-width: 700px;
     overflow: auto;
+    cursor: initial;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 0.8em;
 }
 .tooltip-button {
     display: inline-block;

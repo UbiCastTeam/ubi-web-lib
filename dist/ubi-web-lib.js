@@ -1477,7 +1477,9 @@ UbiWebLibBase.prototype.init_tooltips = function () {
 UbiWebLibBase.prototype.tooltip_click = function (event) {
     event.stopPropagation();
     if ($(".tooltip-content", this).length > 0) {
-        $(".tooltip-content", this).removeClass("tooltip-content").addClass("tooltip-hidden-content");
+        if (event.target != $(".tooltip-content", this)[0]) {
+            $(".tooltip-content", this).removeClass("tooltip-content").addClass("tooltip-hidden-content");
+        }
         return;
     }
     $(".tooltip-content").removeClass("tooltip-content").addClass("tooltip-hidden-content");
