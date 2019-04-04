@@ -23,6 +23,8 @@
     left: 24px;
     top: 0px;
     min-width: 200px;
+    max-height: 300px;
+    overflow: auto;
 }
 .tooltip-button {
     display: inline-block;
