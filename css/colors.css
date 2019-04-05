@@ -56,7 +56,7 @@ table th.header:hover {
 .title-block,
 table th,
 table tfoot tr {
-    background: #999;
+    background: #333;
 }
 .bg-gray {
     background: #D4D4D4;
