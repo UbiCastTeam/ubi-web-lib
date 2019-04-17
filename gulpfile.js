@@ -3,7 +3,6 @@ var gulp = require("gulp");
 var concat = require("gulp-concat");
 var minify = require("gulp-minify");
 var cleanCSS = require("gulp-clean-css");
-var rename = require("gulp-rename");
 
 gulp.task("build", function() {
   gulp.src([
