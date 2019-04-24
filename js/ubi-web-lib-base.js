@@ -48,6 +48,15 @@ UbiWebLibBase.prototype.init_aria = function () {
             $(this).attr("aria-required", "true");
         }
     });
+    $("a").each(function () {
+        if ($(this).attr("target") == "_blank") {
+            var title = utils.translate("open in a new window");
+            if ($(this).text().trim()) {
+                title = $(this).text() + " (" + utils.translate("new window") + ")"; 
+            }
+            $(this).attr("title", title);
+        }
+    });
     $(document).click(function () {
         $("html").removeClass("keyboard-navigation");
     });
