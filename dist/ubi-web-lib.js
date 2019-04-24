@@ -1213,11 +1213,23 @@ UbiWebLibBase.prototype.init = function () {
 };
 UbiWebLibBase.prototype.init_aria = function () {
     $(".aria-describedby-input input, .aria-describedby-input textarea, .aria-describedby-input select").each(function () {
-        $(this).attr("aria-describedby", $(this).attr("id") + "_help");
-    });
-    $(".aria-invalid-input input, .aria-invalid-input textarea, .aria-invalid-input select").each(function () {
-        $(this).attr("aria-invalid", "true");
-        $(this).attr("aria-describedby", $(this).attr("id") + "_errors");
+        var describedby = $(this).attr("aria-describedby");
+        if (describedby) {
+            describedby = describedby.split(" ");
+        } else {
+            describedby = [];
+        }
+        if ($("#" + $(this).attr("id") + "_help").length) {
+            describedby.push($(this).attr("id") + "_help");
+        }
+        if ($("#" + $(this).attr("id") + "_format").length) {
+            describedby.push($(this).attr("id") + "_format");
+        }
+        if ($("#" + $(this).attr("id") + "_errors").length) {
+            $(this).attr("aria-invalid", "true");
+            describedby.push($(this).attr("id") + "_errors");
+        }
+        $(this).attr("aria-describedby", describedby.join(" "));
     });
     $("input, textarea, select").each(function () {
         if ($(this).attr("required")) {
