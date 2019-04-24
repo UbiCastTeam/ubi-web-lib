@@ -1238,7 +1238,7 @@ UbiWebLibBase.prototype.init_aria = function () {
     });
     $("a").each(function () {
         if ($(this).attr("target") == "_blank") {
-            var title = utils.translate("open in a new window");
+            var title = utils.translate("Open in a new window");
             if ($(this).text().trim()) {
                 title = $(this).text() + " (" + utils.translate("new window") + ")"; 
             }
