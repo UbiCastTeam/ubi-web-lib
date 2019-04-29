@@ -41,7 +41,9 @@ UbiWebLibBase.prototype.init_aria = function () {
             $(this).attr("aria-invalid", "true");
             describedby.push($(this).attr("id") + "_errors");
         }
-        $(this).attr("aria-describedby", describedby.join(" "));
+        if (describedby.length > 0) {
+            $(this).attr("aria-describedby", describedby.join(" "));
+        }
     });
     $("input, textarea, select").each(function () {
         if ($(this).attr("required")) {
