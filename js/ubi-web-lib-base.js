@@ -54,7 +54,11 @@ UbiWebLibBase.prototype.init_aria = function () {
         if ($(this).attr("target") == "_blank") {
             var title = utils.translate("Open in a new window");
             if ($(this).text().trim()) {
-                title = $(this).text() + " (" + utils.translate("new window") + ")"; 
+                var text = $(this).text();
+                if ($(this).attr("title")) {
+                    text = $(this).attr("title")
+                }
+                title = $(this).attr("title") + " (" + utils.translate("new window") + ")"; 
             }
             $(this).attr("title", title);
         }
