@@ -51,7 +51,7 @@ table th.header:active {
     background: #CCC;
 }
 table th.header:hover {
-    background: #AAA;
+    background: #666;
 }
 .title-block,
 table th,
