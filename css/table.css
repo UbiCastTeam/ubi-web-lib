@@ -27,22 +27,22 @@ table th.header {
 table th.header a {
     color: #FFF;
 }
-table th.header > span,
-table th.headerSortDown > span,
-table th.headerSortUp > span {
+table th.header > a,
+table th.headerSortDown > a,
+table th.headerSortUp > a {
     display: block;
 }
-table th.header > span:before,
-table th.headerSortDown > span:before,
-table th.headerSortUp > span:before {
+table th.header > a:before,
+table th.headerSortDown > a:before,
+table th.headerSortUp > a:before {
     padding-right: 5px;
     content: "\f0dc"; /* fa-sort */
     font: normal normal normal 14px/1 FontAwesome;
 }
-table th.headerSortDown > span:before {
+table th.headerSortDown > a:before {
     content: "\f0dd"; /* fa-sort-down */
 }
-table th.headerSortUp > span:before {
+table th.headerSortUp > a:before {
     content: "\f0de"; /* fa-sort-up */
 }
 table.even-odd.clickable > tbody > tr:hover > td,
