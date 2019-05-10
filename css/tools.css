@@ -29,7 +29,7 @@
     cursor: initial;
     text-align: left;
     white-space: nowrap;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 .tooltip-button {
     display: inline-block;
