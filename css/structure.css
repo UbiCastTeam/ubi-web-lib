@@ -23,6 +23,9 @@ header.header .header-block {
     padding: 0 10px;
     line-height: 65px;
 }
+header.header .header-block .aside {
+    line-height: normal;
+}
 header.header .account-block {
     margin-right: 15px;
 }
