@@ -191,6 +191,10 @@ nav.navbar .links .item.active {
     max-width: 1600px;
     width: auto;
 }
+.container.max-width-2000 {
+    max-width: 2000px;
+    width: auto;
+}
 .container .title {
     padding-bottom: 9px;
     margin: 40px 0 20px;
