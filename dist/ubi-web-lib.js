@@ -9,6 +9,7 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
 * Author: Stephane Diemer                  *
 *******************************************/
 /* globals SparkMD5 */
+"use strict";
 
 // add console functions for old browsers
 if (!window.console)
@@ -67,7 +68,7 @@ utils.strip = function (str, character) {
 // add indexOf method to Array (for IE8)
 if (!Array.prototype.indexOf) {
     Array.prototype.indexOf = function(searchElement, fromIndex) {
-        if (this == null)
+        if (this === null)
             throw new TypeError("\"this\" is undefined or null.");
         var O = Object(this);
         var len = O.length >>> 0;
@@ -92,7 +93,6 @@ if (!Array.prototype.indexOf) {
 // from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
     Object.keys = (function() {
-        "use strict";
         var hasOwnProperty = Object.prototype.hasOwnProperty,
             hasDontEnumBug = !({ toString: null }).propertyIsEnumerable("toString"),
             dontEnums = [
@@ -224,8 +224,18 @@ utils._get_os_name = function () {
 utils._get_os_name();
 utils._extract_browser_version = function (ua, re) {
     var matches = ua.match(re);
-    if (matches && !isNaN(parseFloat(matches[1])))
-        return parseFloat(matches[1]);
+    if (matches && !isNaN(parseInt(matches[1], 10))) {
+        var vNumb = "";
+        if (!isNaN(parseInt(matches[2], 10))) {
+            vNumb = matches[2];
+            while (vNumb.length < 10) {
+                // zero padding to be able to compare versions
+                vNumb = "0" + vNumb;
+            }
+        }
+        vNumb = matches[1] + "." + vNumb;
+        return parseFloat(vNumb);
+    }
     return 0.0;
 };
 utils._get_browser_info = function () {
@@ -235,29 +245,29 @@ utils._get_browser_info = function () {
     var ua = utils.user_agent;
     if (ua.indexOf("firefox") != -1) {
         name = "firefox";
-        version = utils._extract_browser_version(ua, /firefox\/(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /firefox\/(\d+)\.(\d+)/);
         if (!version)
-            version = utils._extract_browser_version(ua, /rv:(\d+\.\d+)/);
+            version = utils._extract_browser_version(ua, /rv:(\d+)\.(\d+)/);
     }
     else if (ua.indexOf("edge") != -1) {
         name = "edge";
-        version = utils._extract_browser_version(ua, /edge\/(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /edge\/(\d+)\.(\d+)/);
     }
     else if (ua.indexOf("chromium") != -1) {
         name = "chromium";
-        version = utils._extract_browser_version(ua, /chromium\/(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /chromium\/(\d+)\.(\d+)/);
     }
     else if (ua.indexOf("chrome") != -1) {
         name = "chrome";
-        version = utils._extract_browser_version(ua, /chrome\/(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /chrome\/(\d+)\.(\d+)/);
     }
     else if (ua.indexOf("iemobile") != -1) {
         name = "iemobile";
-        version = utils._extract_browser_version(ua, /iemobile\/(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /iemobile\/(\d+)\.(\d+)/);
     }
     else if (ua.indexOf("msie") != -1) {
         name = "ie";
-        version = utils._extract_browser_version(ua, /msie (\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /msie (\d+)\.(\d+)/);
         if (version < 7)
             utils.browser_is_ie6 = true;
         else if (version < 8)
@@ -269,24 +279,24 @@ utils._get_browser_info = function () {
     }
     else if (ua.indexOf("trident") != -1) {
         name = "ie";
-        version = utils._extract_browser_version(ua, /rv.{1}(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /rv.{1}(\d+)\.(\d+)/);
         utils.browser_is_ie9 = true;
     }
     else if (ua.indexOf("opera") != -1) {
         name = "opera";
-        version = utils._extract_browser_version(ua, /opera\/(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /opera\/(\d+)\.(\d+)/);
     }
     else if (ua.indexOf("konqueror") != -1) {
         name = "konqueror";
-        version = utils._extract_browser_version(ua, /konqueror\/(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /konqueror\/(\d+)\.(\d+)/);
     }
     else if (ua.indexOf("mobile safari") != -1) {
         name = "mobile_safari";
-        version = utils._extract_browser_version(ua, /mobile safari\/(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /mobile safari\/(\d+)\.(\d+)/);
     }
     else if (ua.indexOf("safari") != -1) {
         name = "safari";
-        version = utils._extract_browser_version(ua, /safari\/(\d+\.\d+)/);
+        version = utils._extract_browser_version(ua, /version\/(\d+)\.(\d+)/);
     }
     utils.browser_name = name;
     utils["browser_is_"+name] = true;
@@ -310,8 +320,7 @@ utils.webgl_available = function (canvas, options) {
                 return null;
             }
             return webglContext;
-        } 
-        catch(e) {
+        } catch(e) {
             console.log("WebGL context is supported but may be disable, please check your browser configuration");
             return null;
         }
@@ -344,9 +353,9 @@ utils.add_translations = function (translations, lang) {
         if (!utils._translations[lang])
             utils._translations[lang] = {};
         catalog = utils._translations[lang];
-    }
-    else
+    } else {
         catalog = utils._current_catalog;
+    }
     for (var text in translations) {
         if (translations.hasOwnProperty(text))
             catalog[text] = translations[text];
@@ -402,17 +411,16 @@ utils.get_date_display = function (d) {
         if (hour < 10)
             hour = "0"+hour;
         time = hour+"h"+minute;
-    }
-    else {
+    } else {
         // 12 hours time format
         var moment = "PM";
         if (hour < 13) {
             moment = "AM";
-            if (hour == 0)
+            if (!hour)
                 hour = 12;
-        }
-        else
+        } else {
             hour -= 12;
+        }
         time = hour+":"+minute+" "+moment;
     }
     return day+" "+month+" "+year+" "+utils.translate("at")+" "+time;
@@ -420,7 +428,6 @@ utils.get_date_display = function (d) {
 
 // Versions comparison
 utils.compare_versions = function (v1, comparator, v2) {
-    "use strict";
     comparator = comparator == "=" ? "==" : comparator;
     var v1parts = v1.split("."), v2parts = v2.split(".");
     var maxLen = Math.max(v1parts.length, v2parts.length);
@@ -454,7 +461,7 @@ utils.setup_class = function (obj, options, allowed_options) {
     if (!obj.constructor.prototype.set_options)
         obj.constructor.prototype.set_options = function (options) {
             if (options.translations) {
-                this.add_translations(options.translations);
+                utils.add_translations(options.translations);
                 delete options.translations;
             }
             if (this.allowed_options) {
@@ -521,11 +528,10 @@ utils.focus_first_descendant = function (element) {
 
 utils.focus_last_descendant = function (element) {
     for (var i = element.childNodes.length - 1; i >= 0; i--) {
-      var child = element.childNodes[i];
-      if (utils.attempt_focus(child) ||
-          utils.focus_last_descendant(child)) {
-        return true;
-      }
+        var child = element.childNodes[i];
+        if (utils.attempt_focus(child) || utils.focus_last_descendant(child)) {
+            return true;
+        }
     }
     return false;
 };
@@ -544,35 +550,36 @@ utils.attempt_focus = function (element) {
     return (document.activeElement === element);
 };
 utils.is_focusable = function (element) {
-  if (element.tabIndex > 0 || (element.tabIndex === 0 && element.getAttribute('tabIndex') !== null)) {
-    return true;
-  }
+    if (element.tabIndex > 0 || (element.tabIndex === 0 && element.getAttribute('tabIndex') !== null)) {
+        return true;
+    }
 
-  if (element.disabled) {
-    return false;
-  }
+    if (element.disabled) {
+        return false;
+    }
 
-  switch (element.nodeName) {
-    case 'A':
-      return !!element.href && element.rel != 'ignore';
-    case 'INPUT':
-      return element.type != 'hidden' && element.type != 'file';
-    case 'BUTTON':
-    case 'SELECT':
-    case 'TEXTAREA':
-      return true;
-    default:
-      return false;
-  }
+    switch (element.nodeName) {
+        case 'A':
+            return !!element.href && element.rel != 'ignore';
+        case 'INPUT':
+            return element.type != 'hidden' && element.type != 'file';
+        case 'BUTTON':
+        case 'SELECT':
+        case 'TEXTAREA':
+            return true;
+        default:
+            return false;
+    }
 };
 utils.slugify = function (text) {
-  return text.toString().toLowerCase()
-    .replace(/\s+/g, '-')           // Replace spaces with -
-    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-    .replace(/^-+/, '')             // Trim - from start of text
-    .replace(/-+$/, '');            // Trim - from end of text
+    return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+        .replace(/^-+/, '')             // Trim - from start of text
+        .replace(/-+$/, '');            // Trim - from end of text
 };
+
 /**************************************************
 * Overlay display manager                         *
 * Author: Stephane Diemer                         *
