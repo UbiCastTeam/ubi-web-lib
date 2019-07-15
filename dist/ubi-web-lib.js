@@ -1397,6 +1397,7 @@ UbiWebLibBase.prototype.hide_all_dropdowns = function () {
         $(this).removeClass($(this).attr("data-effect"));
     });
     $(".js-display").each(function () {
+        $(this).attr('aria-expanded', false);
         var $icon = $(".fa", $(this));
         if ($icon.length > 0) {
             $icon.removeClass($(this).attr("data-icon-effect"));
