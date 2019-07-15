@@ -1432,22 +1432,18 @@ UbiWebLibBase.prototype.click_js_active = function ($this, $parent) {
     var $thisItem = $(".js-active-item", $this).first();
     var $icon = $(".fa", $this).first();
     var $btn = $("[aria-expanded]", $this).first();
-    if ($btn) {
-        if ($btn.attr("aria-expanded") == 'false') {
-            $btn.attr("aria-expanded", true);
-        } else {
-            $btn.attr("aria-expanded", false);
-        }
-    }
     if ($thisItem.hasClass("active")) {
         $thisItem.removeClass("active");
+        $btn.attr("aria-expanded", false);
         if ($icon.length) {
             $icon.removeClass("fa-rotate-90");
         }
     } else {
         $(".js-active-item", $parent).removeClass("active");
         $(".js-active-toogle .fa", $parent).removeClass("fa-rotate-90");
+        $(".js-active-toogle [aria-expanded]", $parent).attr("aria-expanded", false);
         $thisItem.addClass("active");
+        $btn.attr("aria-expanded", true);
         if ($icon.length) {
             $icon.addClass("fa-rotate-90");
         }
