@@ -36,6 +36,7 @@
     cursor: help;
     vertical-align: middle;
     position: relative;
+    color: inherit;
 }
 .tooltip-button .tooltip-hidden-content {
     display: none;
