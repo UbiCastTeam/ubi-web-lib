@@ -9,7 +9,6 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
 * Author: Stephane Diemer                  *
 *******************************************/
 /* globals SparkMD5 */
-"use strict";
 
 // add console functions for old browsers
 if (!window.console)
@@ -424,6 +423,28 @@ utils.get_date_display = function (d) {
         time = hour+":"+minute+" "+moment;
     }
     return day+" "+month+" "+year+" "+utils.translate("at")+" "+time;
+};
+utils.get_size_display = function (value) {
+    if (!value || isNaN(value))
+        return "0 " + utils.translate("B");
+    var unit = "";
+    if (value > 1024) {
+        value /= 1024;
+        unit = "K";
+        if (value > 1024) {
+            value /= 1024;
+            unit = "M";
+            if (value > 1024) {
+                value /= 1024;
+                unit = "G";
+                if (value > 1024) {
+                    value /= 1024;
+                    unit = "T";
+                }
+            }
+        }
+    }
+    return value.toFixed(2) + " " + unit + utils.translate("B");
 };
 
 // Versions comparison
