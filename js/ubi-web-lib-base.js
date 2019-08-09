@@ -4,7 +4,6 @@
 * Author: Stéphane Schoorens               *
 *******************************************/
 /* globals utils */
-"use strict";
 
 function UbiWebLibBase (options) {
 
@@ -56,7 +55,7 @@ UbiWebLibBase.prototype.init_aria = function () {
             if ($(this).text().trim()) {
                 var text = $(this).text();
                 if ($(this).attr("title")) {
-                    text = $(this).attr("title")
+                    text = $(this).attr("title");
                 }
                 title = $(this).attr("title") + " (" + utils.translate("new window") + ")"; 
             }
@@ -155,18 +154,26 @@ UbiWebLibBase.prototype.init_aside = function () {
         obj.toggle_dropdown(this, id);
     });
     $(document).click(function (event) {
-        obj.hide_all_dropdowns();
+        var node = event.target;
+        while (node && node.className !== undefined) {
+            if (node.className.indexOf("js-active") != -1)
+                return;
+            node = node.parentNode;
+        }
         $(".js-toogle-menu").each(function () {
             var menu = $("#" + $(this).attr("data-menu-id"));
             if (menu.length && event.target != menu[0])
                 obj.hide_menu(this);
         });
     });
-    $(".dropdown").click(function (event) {
-        event.stopPropagation();
-        var box = $("#tooltip_content");
-        if (box.length && event.target != box[0])
-            box.remove();
+    $(document).click(function (event) {
+        var node = event.target;
+        while (node && node.className !== undefined) {
+            if (node.className.indexOf("dropdown") != -1)
+                return;
+            node = node.parentNode;
+        }
+        obj.hide_all_dropdowns();
     });
 };
 UbiWebLibBase.prototype.hide_menu = function (menu_btn) {
@@ -189,7 +196,7 @@ UbiWebLibBase.prototype.hide_menu = function (menu_btn) {
     $this.attr("title", this.translate("Open menu"));
 };
 UbiWebLibBase.prototype.hide_all_dropdowns = function () {
-    $(".dropdown").each(function () {
+    $(".dropdown.active").each(function () {
         $(this).removeClass("active");
         $(this).removeClass($(this).attr("data-effect"));
     });
@@ -273,15 +280,16 @@ UbiWebLibBase.prototype.init_nav = function () {
                 hide_array.push($(this).detach());
             }
         });
+        var index, item;
         if (hide_array.length > 0) {
-            for (var index = 0; index < hide_array.length; index++) {
-                var item = hide_array[index];
+            for (index = 0; index < hide_array.length; index++) {
+                item = hide_array[index];
                 $next_menu.append(item);
             }
             $next_button.removeClass("not-visible");
         } else {
-            for (var index = 0; index < hide_array.length; index++) {
-                var item = hide_array[index];
+            for (index = 0; index < hide_array.length; index++) {
+                item = hide_array[index];
                 $nav_links.append(item);
             }
             $next_button.addClass("not-visible");
