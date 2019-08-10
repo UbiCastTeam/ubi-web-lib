@@ -11,30 +11,17 @@
     display: block;
 }
 .dropdown,
-.tooltip-content {
+.tooltip-overlay {
     border-radius: 4px;
     box-shadow: 1px 1px 1px 1px #EEE;
     border: 1px solid;
     z-index: 60;
     padding: 5px;
 }
-.tooltip-content {
+.tooltip-overlay {
     position: absolute;
-    left: 24px;
-    top: 0px;
-    min-width: 200px;
-    max-height: 300px;
-    max-width: 700px;
-    overflow: auto;
-    cursor: default;
     text-align: left;
-    white-space: nowrap;
     font-size: initial;
-    /* Allow tooltip content text selection */
-    -webkit-user-select: text; /* Chrome 49+ */
-    -moz-user-select: text;    /* Firefox 43+ */
-    -ms-user-select: text;     /* No support yet */
-    user-select: text;         /* Likely future */
 }
 .tooltip-button {
     display: inline-block;

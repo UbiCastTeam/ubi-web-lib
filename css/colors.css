@@ -15,7 +15,7 @@
 */
 /**** Backgrounds ******/
 .dropdown,
-.tooltip-content,
+.tooltip-overlay,
 nav.navbar,
 header.header,
 .footer,
@@ -304,7 +304,7 @@ table tr {
     border-color: #D4D4D4;
 }
 .dropdown,
-.tooltip-content,
+.tooltip-overlay,
 input,
 select,
 textarea,
@@ -353,7 +353,7 @@ button,
 .button:hover,
 input[type=submit],
 input[type=button],
-.tooltip-content,
+.tooltip-overlay,
 .black,
 .color-black,
 .dropdown,

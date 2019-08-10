@@ -347,21 +347,43 @@ UbiWebLibBase.prototype.init_nav = function () {
 UbiWebLibBase.prototype.init_tooltips = function () {
     var on_tooltip_click = function (event, button) {
         event.stopPropagation();
-        if ($('.tooltip-content', button).length > 0) {
-            if (event.target != $('.tooltip-content', button)[0]) {
-                $('.tooltip-content', button).removeClass('tooltip-content').addClass('tooltip-hidden-content');
-            }
+
+        var tooltip_id = button.getAttribute('aria-describedby');
+        if (tooltip_id) {
+            tooltip_id += '_tooltip';
+        }
+        if (tooltip_id && $('#' + tooltip_id).length > 0) {
+            $('#' + tooltip_id).remove();
             return;
         }
-        $('.tooltip-content').removeClass('tooltip-content').addClass('tooltip-hidden-content');
-        if ($('.tooltip-hidden-content', button).length > 0) {
-            $('.tooltip-hidden-content', button).removeClass('tooltip-hidden-content').addClass('tooltip-content');
-        } else if ($(button).attr('title')) {
-            var html = utils.escape_html($(button).attr('title'));
-            var box = $('<span class="tooltip-content" id="tooltip_content"></span>');
-            box.html(html);
-            $(button).append(box);
+        if ($('.tooltip-overlay').length) {
+            $('.tooltip-overlay').remove();
         }
+
+        var content;
+        if ($('.tooltip-hidden-content', button).length > 0) {
+            content = $('.tooltip-hidden-content', button).html();
+        } else if ($(button).attr('title')) {
+            content = utils.escape_html($(button).attr('title'));
+        }
+        if (!content)
+            return;
+
+        var rect = button.getBoundingClientRect();
+        var style = 'top: ' + parseInt(window.pageYOffset + rect.bottom + 2, 10) + 'px; ';
+        if (window.pageXOffset + rect.left < $(window).width() / 2.0) {
+            style += 'left: ' + parseInt(window.pageXOffset + rect.left - 10, 10) + 'px;';
+        } else {
+            style += 'right: ' + parseInt($(window).width() - window.pageXOffset - rect.right - 10, 10) + 'px;';
+        }
+
+        var tooltip = '<div class="tooltip-overlay"';
+        if (tooltip_id)
+            tooltip += ' id="' + tooltip_id + '" ';
+        tooltip += ' style="' + style + '">';
+        tooltip += content;
+        tooltip += '</div>';
+        $('body').append(tooltip);
     };
     // click events are not bound to 'tooltip-button' DOM elements because they can be added after the page loading
     $(document).click(function (event) {
@@ -372,14 +394,21 @@ UbiWebLibBase.prototype.init_tooltips = function () {
             // a node inside a tooltip button was clicked
             return on_tooltip_click(event, event.target.parentNode);
         }
-        var box = $('.tooltip-content');
-        if (box.length && event.target != box[0])
-            box.removeClass('tooltip-content').addClass('tooltip-hidden-content');
+        // close tooltips overlays if not clicked in
+        if ($('.tooltip-overlay').length) {
+            var node = event.target;
+            while (node && node.className !== undefined) {
+                if (node.className.indexOf('tooltip-overlay') != -1)
+                    return;
+                node = node.parentNode;
+            }
+            $('.tooltip-overlay').remove();
+        }
     });
     $(document).keydown(function (event) {
         var keyCode = event.keyCode || event.which; 
-        if (keyCode == 27 && $('.tooltip-content').length) {
-            $('.tooltip-content').removeClass('tooltip-content').addClass('tooltip-hidden-content');
+        if (keyCode == 27 && $('.tooltip-overlay').length) {
+            $('.tooltip-overlay').remove();
             event.stopPropagation();
         }
     });
