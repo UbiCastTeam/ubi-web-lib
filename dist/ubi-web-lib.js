@@ -1340,15 +1340,13 @@ UbiWebLibBase.prototype.init_messages = function () {
     });
     $(document).click(function (event) {
         if ($('#messages_place .message').length) {
-            var hide = true;
-            $('#messages_place .message').each(function () {
-                if (event.target === this) {
-                    hide = false;
-                }
-            });
-            if (hide) {
-                hide_msg();
+            var node = event.target;
+            while (node && node.className !== undefined) {
+                if (node.id == 'messages_place' || node.id == 'message_box_button')
+                    return;
+                node = node.parentNode;
             }
+            hide_msg();
         }
     });
 };
