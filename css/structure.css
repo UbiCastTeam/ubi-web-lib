@@ -13,7 +13,7 @@ nav.navbar {
 header.header {
     border-bottom: 1px solid;
     text-align: center;
-    height: 65px;
+    min-height: 65px;
     display: block;
     margin: 0 auto;
 }
