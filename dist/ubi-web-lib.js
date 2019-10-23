@@ -1296,7 +1296,7 @@ UbiWebLibBase.prototype.init_aria = function () {
                 if ($(this).attr('title')) {
                     text = $(this).attr('title');
                 }
-                title = $(this).attr('title') + ' (' + utils.translate('new window') + ')';
+                title = text + ' (' + utils.translate('new window') + ')';
             }
             $(this).attr('title', title);
         }
