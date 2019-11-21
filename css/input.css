@@ -178,8 +178,7 @@ textarea.large {
 .full-input textarea { width: 100%; }
 .full-input textarea { height: 200px; }
 
-body .mce-path { padding: 1px 8px; }
-body .mce-branding { display: none; }
+.tox .tox-statusbar .tox-statusbar__branding { display: none; }
 
 .button-fixed-bottom-right button,
 .button-fixed-bottom-right input[type=submit],
