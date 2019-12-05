@@ -443,17 +443,17 @@ utils.get_size_display = function (value) {
     if (!value || isNaN(value))
         return "0 " + utils.translate("B");
     var unit = "";
-    if (value > 1024) {
-        value /= 1024;
+    if (value > 1000) {
+        value /= 1000;
         unit = "K";
-        if (value > 1024) {
-            value /= 1024;
+        if (value > 1000) {
+            value /= 1000;
             unit = "M";
-            if (value > 1024) {
-                value /= 1024;
+            if (value > 1000) {
+                value /= 1000;
                 unit = "G";
-                if (value > 1024) {
-                    value /= 1024;
+                if (value > 1000) {
+                    value /= 1000;
                     unit = "T";
                 }
             }
@@ -1292,11 +1292,13 @@ UbiWebLibBase.prototype.init_aria = function () {
         if ($(this).attr('target') == '_blank') {
             var title = utils.translate('Open in a new window');
             if ($(this).text().trim()) {
-                var text = $(this).text();
+                var text;
                 if ($(this).attr('title')) {
                     text = $(this).attr('title');
+                } else {
+                    text = $(this).text();
                 }
-                title = text + ' (' + utils.translate('new window') + ')';
+                title = utils.strip(text) + ' (' + utils.translate('new window') + ')';
             }
             $(this).attr('title', title);
         }
