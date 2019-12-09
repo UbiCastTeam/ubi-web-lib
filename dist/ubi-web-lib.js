@@ -1286,7 +1286,7 @@ UbiWebLibBase.prototype.init_aria = function () {
     if (errorField.length) {
         utils.focus_first_descendant($(".input-place", errorField)[0]);
     } else {
-        $(".messages .message").first().focus();
+        $("#messages_place .message").first().focus();
     }
     $('input, textarea, select').each(function () {
         if ($(this).attr('required')) {
