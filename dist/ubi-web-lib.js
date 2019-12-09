@@ -1283,6 +1283,10 @@ UbiWebLibBase.prototype.init_aria = function () {
             $(this).attr('aria-describedby', describedby.join(' '));
         }
     });
+    var errorField = $('.aria-focus-error').first();
+    if (errorField.length) {
+        utils.focus_first_descendant($(".input-place", errorField)[0]);
+    }
     $('input, textarea, select').each(function () {
         if ($(this).attr('required')) {
             $(this).attr('aria-required', 'true');
