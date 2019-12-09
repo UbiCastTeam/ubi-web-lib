@@ -1258,7 +1258,6 @@ UbiWebLibBase.prototype.init = function () {
     this.init_aside();
     this.init_nav();
     this.init_tooltips();
-    this.init_messages();
     this.init_aria();
 };
 UbiWebLibBase.prototype.init_aria = function () {
@@ -1286,6 +1285,8 @@ UbiWebLibBase.prototype.init_aria = function () {
     var errorField = $('.aria-focus-error').first();
     if (errorField.length) {
         utils.focus_first_descendant($(".input-place", errorField)[0]);
+    } else {
+        $(".messages .message").first().focus();
     }
     $('input, textarea, select').each(function () {
         if ($(this).attr('required')) {
@@ -1328,33 +1329,6 @@ UbiWebLibBase.prototype.init_footer = function () {
     };
     set_body_padding();
     $(window).resize(set_body_padding);
-};
-UbiWebLibBase.prototype.init_messages = function () {
-    var obj = this;
-    var hide_msg = function () {
-        $('#messages_place').hide(250, function () {
-            $('#message_box_button').removeClass('hidden');
-            $('.message-box-count').html('(' + $('.message', this).length + ')');
-        });
-    };
-    if ($('#messages_place .message').length) {
-        setTimeout(hide_msg, 7000);
-    }
-    $('#message_box_button').click(function () {
-        $('#messages_place').show();
-        obj.hide_all_dropdowns();
-    });
-    $(document).click(function (event) {
-        if ($('#messages_place .message').length) {
-            var node = event.target;
-            while (node && node.className !== undefined) {
-                if (node.id == 'messages_place' || node.id == 'message_box_button')
-                    return;
-                node = node.parentNode;
-            }
-            hide_msg();
-        }
-    });
 };
 UbiWebLibBase.prototype.init_aside = function () {
     var obj = this;
