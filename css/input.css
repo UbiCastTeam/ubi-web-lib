@@ -108,19 +108,19 @@ input[type=button].button-block i:first-child {
 td.input { width: 100%; }
 input.small,
 textarea.small {
-    width: 50px;
+    width: 4em;
     text-align: center;
 }
 input.medium,
 textarea.medium {
-    width: 250px;
+    width: 20em;
 }
 input.large,
 textarea.large {
     width: 100%;
 }
 textarea.large {
-    height: 150px;
+    height: 12em;
 }
 .select::after {
     position: absolute;
@@ -176,7 +176,7 @@ textarea.large {
 .full-input input[type=text],
 .full-input input[type=password],
 .full-input textarea { width: 100%; }
-.full-input textarea { height: 200px; }
+.full-input textarea { height: 16em; }
 
 .tox .tox-statusbar .tox-statusbar__branding { display: none; }
 
