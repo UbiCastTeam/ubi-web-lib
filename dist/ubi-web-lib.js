@@ -623,18 +623,18 @@ utils.slugify = function (text) {
 * https://creativecommons.org/licenses/by-sa/3.0/ *
 * Requires: jQuery                                *
 **************************************************/
-"use strict";
 
 
 function OverlayDisplayManager(options) {
     // params
     this.language = "en";
-    this.margin = 30;
-    this.element_padding = 20;
-    this.top_bar_height = 30;
-    this.bottom_bar_height = 40;
     this.default_buttons_class = "";
     this.hide_on_escape = true;
+    // size are in em unit
+    this.margin = 2;
+    this.element_padding = 1;
+    this.top_bar_height = 1.75;
+    this.bottom_bar_height = 2;
 
     // vars
     this.pending_show_params = null;
@@ -757,25 +757,25 @@ OverlayDisplayManager.prototype._init = function () {
 };
 OverlayDisplayManager.prototype.trap_focus = function (event) {
     if (this.ignore_until_focus_changes) {
-      return;
+        return;
     }
     if ($(".odm-block", this.$widget)[0].contains(event.target)) {
-      this.last_focus = event.target;
+        this.last_focus = event.target;
     } else {
-      this.focus_first_descendant($(".odm-block", this.$widget)[0]);
-      if (this.last_focus == document.activeElement) {
-        this.focus_last_descendant($(".odm-block", this.$widget)[0]);
-      }
-      this.last_focus = document.activeElement;
+        this.focus_first_descendant($(".odm-block", this.$widget)[0]);
+        if (this.last_focus == document.activeElement) {
+            this.focus_last_descendant($(".odm-block", this.$widget)[0]);
+        }
+        this.last_focus = document.activeElement;
     }
 };
 OverlayDisplayManager.prototype.focus_last_descendant = function (element) {
     for (var i = element.childNodes.length - 1; i >= 0; i--) {
-      var child = element.childNodes[i];
-      if (this.attempt_focus(child) ||
-          this.focus_last_descendant(child)) {
+        var child = element.childNodes[i];
+        if (this.attempt_focus(child) ||
+            this.focus_last_descendant(child)) {
         return true;
-      }
+        }
     }
     return false;
 };
@@ -797,8 +797,7 @@ OverlayDisplayManager.prototype.attempt_focus = function (element) {
     this.ignore_until_focus_changes = true;
     try {
         element.focus();
-    }
-    catch (e) {
+    } catch (e) {
     }
     this.ignore_until_focus_changes = false;
     return (document.activeElement === element);
@@ -806,26 +805,26 @@ OverlayDisplayManager.prototype.attempt_focus = function (element) {
 
 
 OverlayDisplayManager.prototype.is_focusable = function (element) {
-  if (element.tabIndex > 0 || (element.tabIndex === 0 && element.getAttribute('tabIndex') !== null)) {
-    return true;
-  }
+    if (element.tabIndex > 0 || (element.tabIndex === 0 && element.getAttribute('tabIndex') !== null)) {
+        return true;
+    }
 
-  if (element.disabled) {
-    return false;
-  }
+    if (element.disabled) {
+        return false;
+    }
 
-  switch (element.nodeName) {
-    case 'A':
-      return !!element.href && element.rel != 'ignore';
-    case 'INPUT':
-      return element.type != 'hidden' && element.type != 'file';
-    case 'BUTTON':
-    case 'SELECT':
-    case 'TEXTAREA':
-      return true;
-    default:
-      return false;
-  }
+    switch (element.nodeName) {
+        case 'A':
+            return !!element.href && element.rel != 'ignore';
+        case 'INPUT':
+            return element.type != 'hidden' && element.type != 'file';
+        case 'BUTTON':
+        case 'SELECT':
+        case 'TEXTAREA':
+            return true;
+        default:
+            return false;
+    }
 };
 
 OverlayDisplayManager.prototype.set_language = function (lang) {
@@ -863,13 +862,22 @@ OverlayDisplayManager.prototype.set_language = function (lang) {
 };
 
 OverlayDisplayManager.prototype.on_resize = function () {
-    this.max_width = $(window).width() - this.margin;
-    this.max_height = $(window).height() - this.margin;
+    var em_factor;
+    try {
+        // get number of px of one em
+        em_factor = parseFloat(getComputedStyle(document.body).fontSize);
+    } catch (e) {
+        em_factor = 15;
+    }
+    var width_used = this.margin;
+    var height_used = this.margin;
     if (this.top_bar_displayed)
-        this.max_height -= this.top_bar_height;
+        height_used += this.top_bar_height;
     if (this.bottom_bar_displayed)
-        this.max_height -= this.bottom_bar_height;
-    var padding = this.element_padding_displayed ? this.element_padding : 0;
+        height_used += this.bottom_bar_height;
+    this.max_width = $(window).width() - (width_used * em_factor);
+    this.max_height = $(window).height() - (height_used * em_factor);
+    var padding = this.element_padding_displayed ? this.element_padding * em_factor : 0;
     if (this.max_width > 0)
         $(".odm-element", this.$widget).css("max-width", (this.max_width-padding)+"px");
     if (this.max_height > 0)
@@ -1235,7 +1243,6 @@ OverlayDisplayManager.prototype._load_html = function (resource, callback) {
     this._display_element($html, true);
     callback(true);
 };
-
 
 /*******************************************
 * UbiWebLibBase - Base js lib              *
