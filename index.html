@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/colors.css" />
 
-    <script src="vendors/js/jquery-latest.min.js"></script>
+    <script src="vendors/js/jquery.min.js"></script>
     <script src="vendors/js/utils.js"></script>
     <script src="js/ubi-web-lib-base.js"></script>
     <script>
@@ -153,41 +153,61 @@
         </section>
     </main>
     <aside id="main_menu" class="aside aside-left hidden animated js-active">
-        <ul class="list js-active-item border-color-red"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
-            <li><a class="aside-list-btn" href="#structures">Structures</a></li>
-            <li><a class="aside-list-btn" href="#forms">Forms</a></li>
-            <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
-            <li><a class="aside-list-btn" href="#tables">Tables</a></li>
-        </ul>
-        <ul class="list js-active-item border-color-blue"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
-            <li><a class="aside-list-btn" href="#structures">Structures</a></li>
-            <li><a class="aside-list-btn" href="#forms">Forms</a></li>
-            <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
-            <li><a class="aside-list-btn" href="#tables">Tables</a></li>
-        </ul>
-        <ul class="list js-active-item border-color-green"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
-            <li><a class="aside-list-btn" href="#structures">Structures</a></li>
-            <li><a class="aside-list-btn" href="#forms">Forms</a></li>
-            <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
-            <li><a class="aside-list-btn" href="#tables">Tables</a></li>
-        </ul>
-        <ul class="list js-active-item border-color-black"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
-            <li><a class="aside-list-btn" href="#structures">Structures</a></li>
-            <li><a class="aside-list-btn" href="#forms">Forms</a></li>
-            <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
-            <li><a class="aside-list-btn" href="#tables">Tables</a></li>
-        </ul>
-        <ul class="list js-active-item border-color-purple"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
-            <li><a class="aside-list-btn" href="#structures">Structures</a></li>
-            <li><a class="aside-list-btn" href="#forms">Forms</a></li>
-            <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
-            <li><a class="aside-list-btn" href="#tables">Tables</a></li>
-        </ul>
-        <ul class="list js-active-item border-color-orange"><div class="aside-list-btn js-active-toogle">Menu <i class="fa fa-fw fa-angle-right fa-pull-right" aria-hidden="true"></i></div>
-            <li><a class="aside-list-btn" href="#structures">Structures</a></li>
-            <li><a class="aside-list-btn" href="#forms">Forms</a></li>
-            <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
-            <li><a class="aside-list-btn" href="#tables">Tables</a></li>
+        <ul class="no-padding">
+            <li class="list js-active-toogle border-color-red">
+                <span class="aside-list-btn">Menu <button aria-expanded="false" aria-label="Administration" class="fa-pull-right no-padding no-border"><i class="fa fa-fw fa-angle-right" aria-hidden="true"></i></button></span>
+                <ul class="list js-active-item border-color-red">
+                    <li><a class="aside-list-btn" href="#structures">Structures</a></li>
+                    <li><a class="aside-list-btn" href="#forms">Forms</a></li>
+                    <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
+                    <li><a class="aside-list-btn" href="#tables">Tables</a></li>
+                </ul>
+            </li>
+            <li class="list js-active-toogle border-color-blue">
+                <span class="aside-list-btn">Menu <button aria-expanded="false" aria-label="Administration" class="fa-pull-right no-padding no-border"><i class="fa fa-fw fa-angle-right" aria-hidden="true"></i></button></span>
+                <ul class="list js-active-item border-color-blue">
+                    <li><a class="aside-list-btn" href="#structures">Structures</a></li>
+                    <li><a class="aside-list-btn" href="#forms">Forms</a></li>
+                    <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
+                    <li><a class="aside-list-btn" href="#tables">Tables</a></li>
+                </ul>
+            </li>
+            <li class="list js-active-toogle border-color-green">
+                <span class="aside-list-btn">Menu <button aria-expanded="false" aria-label="Administration" class="fa-pull-right no-padding no-border"><i class="fa fa-fw fa-angle-right" aria-hidden="true"></i></button></span>
+                <ul class="list js-active-item border-color-green">
+                    <li><a class="aside-list-btn" href="#structures">Structures</a></li>
+                    <li><a class="aside-list-btn" href="#forms">Forms</a></li>
+                    <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
+                    <li><a class="aside-list-btn" href="#tables">Tables</a></li>
+                </ul>
+            </li>
+            <li class="list js-active-toogle border-color-black">
+                <span class="aside-list-btn">Menu <button aria-expanded="false" aria-label="Administration" class="fa-pull-right no-padding no-border"><i class="fa fa-fw fa-angle-right" aria-hidden="true"></i></button></span>
+                <ul class="list js-active-item border-color-black">
+                    <li><a class="aside-list-btn" href="#structures">Structures</a></li>
+                    <li><a class="aside-list-btn" href="#forms">Forms</a></li>
+                    <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
+                    <li><a class="aside-list-btn" href="#tables">Tables</a></li>
+                </ul>
+            </li>
+            <li class="list js-active-toogle border-color-purple">
+                <span class="aside-list-btn">Menu <button aria-expanded="false" aria-label="Administration" class="fa-pull-right no-padding no-border"><i class="fa fa-fw fa-angle-right" aria-hidden="true"></i></button></span>
+                <ul class="list js-active-item border-color-purple">
+                    <li><a class="aside-list-btn" href="#structures">Structures</a></li>
+                    <li><a class="aside-list-btn" href="#forms">Forms</a></li>
+                    <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
+                    <li><a class="aside-list-btn" href="#tables">Tables</a></li>
+                </ul>
+            </li>
+            <li class="list js-active-toogle border-color-orange">
+                <span class="aside-list-btn">Menu <button aria-expanded="false" aria-label="Administration" class="fa-pull-right no-padding no-border"><i class="fa fa-fw fa-angle-right" aria-hidden="true"></i></button></span>
+                <ul class="list js-active-item border-color-orange">
+                    <li><a class="aside-list-btn" href="#structures">Structures</a></li>
+                    <li><a class="aside-list-btn" href="#forms">Forms</a></li>
+                    <li><a class="aside-list-btn" href="#buttons">Buttons</a></li>
+                    <li><a class="aside-list-btn" href="#tables">Tables</a></li>
+                </ul>
+            </li>
         </ul>
     </aside>
     <footer class="footer">
