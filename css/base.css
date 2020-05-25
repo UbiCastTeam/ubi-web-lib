@@ -23,6 +23,9 @@ h3 {
     padding: 5px 10px;
     font-size: 1.4em;
 }
+:focus {
+    outline: none;
+}
 .keyboard-navigation :focus {
     outline: 2px solid #000F32;
 }
