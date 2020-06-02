@@ -50,6 +50,19 @@ input[type=button]:active
 table th.header:active {
     background: #CCC;
 }
+table.even-odd button:hover,
+table.even-odd .button:hover,
+table.even-odd input[type=submit]:hover,
+table.even-odd input[type=button]:hover {
+    background: #FFF;
+}
+table.even-odd button:active,
+table.even-odd .button:active,
+table.even-odd input[type=submit]:active,
+table.even-odd input[type=button]:active
+table th.header:active {
+    background: #FFF;
+}
 table th.header:hover {
     background: #666;
 }
