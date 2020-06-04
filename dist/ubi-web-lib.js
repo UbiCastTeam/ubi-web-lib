@@ -637,6 +637,7 @@ function OverlayDisplayManager(options) {
     this.bottom_bar_height = 2;
 
     // vars
+    this.overlay_selector_place = "body";
     this.pending_show_params = null;
     this.messages = {};
     this.$widget = null;
@@ -681,7 +682,7 @@ OverlayDisplayManager.prototype._init = function () {
     }
     window.odm_id_count += 1;
     var extra_class = "";
-    if (navigator.platform == "iPad" || navigator.platform == "iPhone" || navigator.platform == "iPod") {
+    if (this.overlay_selector_place || navigator.platform == "iPad" || navigator.platform == "iPhone" || navigator.platform == "iPod") {
         this.no_fixed = true;
         extra_class = "no-fixed";
     }
@@ -715,7 +716,7 @@ OverlayDisplayManager.prototype._init = function () {
     html +=     "<div class=\"odm-closer\" tabindex=\"0\"></div>";
     html += "</div>";
     this.$widget = $(html);
-    $("body").append(this.$widget);
+    $(this.overlay_selector_place).append(this.$widget);
 
     // bind events
     $(".odm-previous", this.$widget).click({ obj: this }, function (event) {
