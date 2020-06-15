@@ -105,14 +105,20 @@ button.default:hover,
 input[type=submit].default:hover,
 input[type=button].default:hover,
 .bg-hover-blue:hover,
-.bg-focus-blue:focus {
-    background: #000F32;
-}
+.bg-focus-blue:focus,
 button.default:active,
 .button.default:active,
 input[type=submit].default:active,
 input[type=button].default:active,
-.bg-active-blue:active {
+.bg-active-blue:active,
+table.even-odd button.default:hover,
+table.even-odd .button.default:hover,
+table.even-odd input[type=submit].default:hover,
+table.even-odd input[type=button].default:hover
+table.even-odd button.default:active,
+table.even-odd .button.default:active,
+table.even-odd input[type=submit].default:active,
+table.even-odd input[type=button].default:active {
     background: #000F32;
 }
 .message.success,
@@ -126,13 +132,19 @@ input[type=button].main {
 button.main:hover,
 .button.main:hover,
 input[type=submit].main:hover,
-input[type=button].main:hover {
-    background: #00AF66;
-}
+input[type=button].main:hover,
 button.main:active,
 .button.main:active,
 input[type=submit].main:active,
-input[type=button].main:active {
+input[type=button].main:active,
+table.even-odd button.main:hover,
+table.even-odd .button.main:hover,
+table.even-odd input[type=submit].main:hover,
+table.even-odd input[type=button].main:hover
+table.even-odd button.main:active,
+table.even-odd .button.main:active,
+table.even-odd input[type=submit].main:active,
+table.even-odd input[type=button].main:active {
     background: #00AF66;
 }
 .message.error,
@@ -146,13 +158,19 @@ input[type=button].danger {
 button.danger:hover,
 .button.danger:hover,
 input[type=submit].danger:hover,
-input[type=button].danger:hover {
-    background: #9B1B2B;
-}
+input[type=button].danger:hover,
 button.danger:active,
 .button.danger:active,
 input[type=submit].danger:active,
-input[type=button].danger:active {
+input[type=button].danger:active,
+table.even-odd button.danger:hover,
+table.even-odd .button.danger:hover,
+table.even-odd input[type=submit].danger:hover,
+table.even-odd input[type=button].danger:hover
+table.even-odd button.danger:active,
+table.even-odd .button.danger:active,
+table.even-odd input[type=submit].danger:active,
+table.even-odd input[type=button].danger:active {
     background: #9B1B2B;
 }
 .message.warning,
@@ -167,26 +185,38 @@ input[type=button].warning {
 button.warning:hover,
 .button.warning:hover,
 input[type=submit].warning:hover,
-input[type=button].warning:hover {
-    background: #FCD280;
-}
+input[type=button].warning:hover,
 button.warning:active,
 .button.warning:active,
 input[type=submit].warning:active,
-input[type=button].warning:active {
+input[type=button].warning:active,
+table.even-odd button.warning:hover,
+table.even-odd .button.warning:hover,
+table.even-odd input[type=submit].warning:hover,
+table.even-odd input[type=button].warning:hover
+table.even-odd button.warning:active,
+table.even-odd .button.warning:active,
+table.even-odd input[type=submit].warning:active,
+table.even-odd input[type=button].warning:active {
     background: #FCD280;
 }
 
 button.black:hover,
 .button.black:hover,
 input[type=submit].black:hover,
-input[type=button].black:hover {
-    background: #666;
-}
+input[type=button].black:hover,
 button.black:active,
 .button.black:active,
 input[type=submit].black:active,
-input[type=button].black:active {
+input[type=button].black:active,
+table.even-odd button.black:hover,
+table.even-odd .button.black:hover,
+table.even-odd input[type=submit].black:hover,
+table.even-odd input[type=button].black:hover
+table.even-odd button.black:active,
+table.even-odd .button.black:active,
+table.even-odd input[type=submit].black:active,
+table.even-odd input[type=button].black:active {
     background: #666;
 }
 
@@ -200,13 +230,19 @@ input[type=button].purple {
 button.purple:hover,
 .button.purple:hover,
 input[type=submit].purple:hover,
-input[type=button].purple:hover {
-    background: #945498;
-}
+input[type=button].purple:hover,
 button.purple:active,
 .button.purple:active,
 input[type=submit].purple:active,
-input[type=button].purple:active {
+input[type=button].purple:active,
+table.even-odd button.purple:hover,
+table.even-odd .button.purple:hover,
+table.even-odd input[type=submit].purple:hover,
+table.even-odd input[type=button].purple:hover
+table.even-odd button.purple:active,
+table.even-odd .button.purple:active,
+table.even-odd input[type=submit].purple:active,
+table.even-odd input[type=button].purple:active {
     background: #945498;
 }
 
