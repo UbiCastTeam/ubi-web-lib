@@ -1276,6 +1276,7 @@ UbiWebLibBase.prototype.init = function () {
     this.init_footer();
     this.init_aside();
     this.init_nav();
+    this.init_dropdowns();
     this.init_tooltips();
     this.init_aria();
 };
@@ -1382,13 +1383,6 @@ UbiWebLibBase.prototype.init_aside = function () {
             obj.click_js_active($(this), $parent);
         });
     });
-    $('.js-display').click(function (event) {
-        event.stopPropagation();
-        var id = $(this).attr('data-display-id');
-        if (!id || !$('#' + id).length)
-            return;
-        obj.toggle_dropdown(this, id);
-    });
     $(document).click(function (event) {
         var node = event.target;
         while (node && node.className !== undefined) {
@@ -1402,11 +1396,21 @@ UbiWebLibBase.prototype.init_aside = function () {
                 obj.hide_menu(this);
         });
     });
+};
+UbiWebLibBase.prototype.init_dropdowns = function () {
+    var obj = this;
     $(document).click(function (event) {
         var node = event.target;
         while (node && node.className !== undefined) {
-            if (node.className.indexOf('dropdown') != -1)
+            if (node.className.indexOf('dropdown-button') != -1) {
+                var id = node.getAttribute('data-dropdown-id');
+                if (id)
+                    obj.toggle_dropdown(this, id);
                 return;
+            }
+            if (node.className.indexOf('dropdown') != -1) {
+                return;
+            }
             node = node.parentNode;
         }
         obj.hide_all_dropdowns();
@@ -1436,7 +1440,7 @@ UbiWebLibBase.prototype.hide_all_dropdowns = function () {
         $(this).removeClass('active');
         $(this).removeClass($(this).attr('data-effect'));
     });
-    $('.js-display').each(function () {
+    $('.dropdown-button').each(function () {
         $(this).attr('aria-expanded', false);
         var $icon = $('.fa', $(this));
         if ($icon.length > 0) {
