@@ -1405,7 +1405,7 @@ UbiWebLibBase.prototype.init_dropdowns = function () {
             if (node.className.indexOf('dropdown-button') != -1) {
                 var id = node.getAttribute('data-dropdown-id');
                 if (id)
-                    obj.toggle_dropdown(this, id);
+                    obj.toggle_dropdown(node, id);
                 return;
             }
             if (node.className.indexOf('dropdown') != -1) {
