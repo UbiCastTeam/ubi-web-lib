@@ -99,6 +99,17 @@ if (!String.prototype.repeat) {
         return n;
     };
 }
+// add Event management for ie9+
+if (typeof window.Event !== 'function') {
+    var newEvent = function Event (event, params) {
+        params = params || { bubbles: false, cancelable: false, detail: null };
+        var evt = document.createEvent('CustomEvent');
+        evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+        return evt;
+    };
+    newEvent.prototype = window.Event.prototype;
+    window.Event = newEvent;
+}
 
 
 var utils = {};
@@ -325,11 +336,15 @@ utils._get_browser_info = function () {
 };
 utils._get_browser_info();
 
-utils.webgl_available = function (canvas, options) {
+utils.webgl_available = function (canvas, options, browserName) {
     var webglAvailable = !! window.WebGLRenderingContext;
     if (webglAvailable) {
         try {
-            var webglContext = webglAvailable && (canvas.getContext("webgl2", options) || canvas.getContext("webgl", options) || canvas.getContext("experimental-webgl", options));
+            var webglContext;
+            if (browserName === "safari")
+                webglContext = canvas.getContext("webgl", options) || canvas.getContext("experimental-webgl", options);
+            else
+                webglContext = canvas.getContext("webgl2", options) || canvas.getContext("webgl", options) || canvas.getContext("experimental-webgl", options);
             if (!webglContext) {
                 console.log("Impossible to initialize WebGL context. Your browser does not support Webgl context");
                 return null;
