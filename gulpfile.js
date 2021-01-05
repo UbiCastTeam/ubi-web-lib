@@ -6,9 +6,10 @@ var cleanCSS = require("gulp-clean-css");
 
 gulp.task("build", function() {
   gulp.src([
-    "vendors/js/jquery.min.js",
+    "vendors/js/jsu.js",
     "vendors/js/utils.js",
     "vendors/js/odm/odm.js",
+    "vendors/js/jquery.min.js",
     "js/ubi-web-lib-base.js"
   ])
   .pipe(concat("ubi-web-lib.js"))
