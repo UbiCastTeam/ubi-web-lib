@@ -1363,8 +1363,10 @@ utils.slugify = function (text) {
 
 function OverlayDisplayManager (options) {
     // params
+    this.id = 1;
     this.language = 'en';
     this.defaultButtonsClass = '';
+    this.overlaySelectorPlace = 'body';
     this.hideOnEscape = true;
     // size are in em unit
     this.margin = 2;
@@ -1373,7 +1375,6 @@ function OverlayDisplayManager (options) {
     this.bottomBarHeight = 2;
 
     // vars
-    this.overlaySelectorPlace = 'body';
     this.pendingShowParams = null;
     this.messages = {};
     this.widget = null;
@@ -1396,7 +1397,6 @@ function OverlayDisplayManager (options) {
     this.elementFirstFocused = null;
     this.lastFocus = null;
     this.ignoreUntilFocusChanges = false;
-    this.id = 1;
 
     if (window.jsu) {
         this.language = window.jsu.getCurrentLang();
@@ -1419,12 +1419,14 @@ function OverlayDisplayManager (options) {
 }
 
 OverlayDisplayManager.prototype._init = function () {
-    if (window.odmIdCount) {
-        window.odmIdCount++;
-        this.id = window.odmIdCount;
-    } else {
-        window.odmIdCount = 1;
-        this.id = 1;
+    if (!isNaN(this.id)) {
+        if (window.odmIdCount) {
+            window.odmIdCount++;
+            this.id = window.odmIdCount;
+        } else {
+            window.odmIdCount = 1;
+            this.id = 1;
+        }
     }
     let extraClass = '';
     if (this.overlaySelectorPlace != 'body' || navigator.platform == 'iPad' || navigator.platform == 'iPhone' || navigator.platform == 'iPod') {
