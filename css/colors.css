@@ -2,7 +2,7 @@
 /*
     white: #FFFFFF;
     black: #404040;
-    blue: #003BC3;
+    blue: #274BB1;
     hover: #000F32;
     green: #008750;
     hover: #00AF66;
@@ -98,7 +98,7 @@ input[type=button].default,
 nav.navbar .links .item:hover,
 nav.navbar .links .item.active,
 .bg-blue {
-    background: #003BC3;
+    background: #274BB1;
 }
 button.default:hover,
 .button.default:hover,
@@ -335,7 +335,7 @@ table tr {
     border-color: #DB263D;
 }
 .border-color-blue {
-    border-color: #003BC3;
+    border-color: #274BB1;
 }
 .border-color-green {
     border-color: #008750;
@@ -479,7 +479,7 @@ a:hover {
 a,
 .blue,
 .color-blue {
-    color: #003BC3;
+    color: #274BB1;
 }
 .green,
 .color-green {
