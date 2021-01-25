@@ -4,6 +4,3 @@
 [submodule "submodules/odm"]
 	path = submodules/odm
 	url = https://github.com/UbiCastTeam/overlay-display-manager.git
-[submodule "submodules/utils"]
-	path = submodules/utils
-	url = https://github.com/UbiCastTeam/utils-js.git
