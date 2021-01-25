@@ -3,11 +3,10 @@
 * Copyright: UbiCast, all rights reserved  *
 * Author: Stéphane Schoorens               *
 *******************************************/
-/* globals utils */
+/* globals jsu */
 
 function UbiWebLibBase (options) {
-
-    utils.setup_class(this, options);
+    jsu.setObjectAttributes(this, options);
     this.animation_end_event = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     var obj = this;
     $(document).ready(function () {
@@ -46,7 +45,7 @@ UbiWebLibBase.prototype.init_aria = function () {
     });
     var errorField = $('.aria-focus-error').first();
     if (errorField.length) {
-        utils.focus_first_descendant($(".input-place", errorField)[0]);
+        jsu.focusFirstDescendant($(".input-place", errorField)[0]);
     } else {
         $("#messages_place .message").first().focus();
     }
@@ -57,7 +56,7 @@ UbiWebLibBase.prototype.init_aria = function () {
     });
     $('a').each(function () {
         if ($(this).attr('target') == '_blank') {
-            var title = utils.translate('Open in a new window');
+            var title = jsu.translate('Open in a new window');
             if ($(this).text().trim()) {
                 var text;
                 if ($(this).attr('title')) {
@@ -65,7 +64,7 @@ UbiWebLibBase.prototype.init_aria = function () {
                 } else {
                     text = $(this).text();
                 }
-                title = utils.strip(text) + ' (' + utils.translate('new window') + ')';
+                title = jsu.strip(text) + ' (' + jsu.translate('new window') + ')';
             }
             $(this).attr('title', title);
         }
@@ -98,11 +97,13 @@ UbiWebLibBase.prototype.init_aside = function () {
         event.stopPropagation();
         var $this = $(this);
         var menu_id = $this.attr('data-menu-id');
-        if (!menu_id)
+        if (!menu_id) {
             return;
+        }
         var $menu = $('#' + menu_id);
-        if (!$menu.length)
+        if (!$menu.length) {
             return;
+        }
         var $icon = $('.fa', $this);
         var $text = $('.text', $this);
         if ($menu.hasClass('hidden')) {
@@ -111,9 +112,9 @@ UbiWebLibBase.prototype.init_aside = function () {
                 $icon.removeClass('fa-bars').addClass('fa-close');
             }
             if ($text.length) {
-                $text.text(obj.translate('Close'));
+                $text.text(jsu.translate('Close'));
             }
-            $this.attr('title', obj.translate('Close menu'));
+            $this.attr('title', jsu.translate('Close menu'));
         } else {
             obj.hide_menu(this);
         }
@@ -173,9 +174,9 @@ UbiWebLibBase.prototype.hide_menu = function (menu_btn) {
         $icon.removeClass('fa-close').addClass('fa-bars');
     }
     if ($text.length) {
-        $text.text(this.translate('Menu'));
+        $text.text(jsu.translate('Menu'));
     }
-    $this.attr('title', this.translate('Open menu'));
+    $this.attr('title', jsu.translate('Open menu'));
 };
 UbiWebLibBase.prototype.hide_all_dropdowns = function () {
     $('.dropdown.active').each(function () {
@@ -346,7 +347,7 @@ UbiWebLibBase.prototype.init_tooltips = function () {
         if ($('.tooltip-hidden-content', button).length > 0) {
             content = $('.tooltip-hidden-content', button).html();
         } else if ($(button).attr('title')) {
-            content = utils.escape_html($(button).attr('title'));
+            content = jsu.escapeHTML($(button).attr('title'));
         }
         if (!content)
             return;
@@ -396,7 +397,7 @@ UbiWebLibBase.prototype.init_tooltips = function () {
     });
 };
 UbiWebLibBase.prototype.generate_tooltip_button = function (id, text, button_text) {
-    var html = '<button type="button" class="tooltip-button no-padding no-border no-background" aria-describedby="' + id + '" aria-label="' + utils.translate('help') + '">';
+    var html = '<button type="button" class="tooltip-button no-padding no-border no-background" aria-describedby="' + id + '" aria-label="' + jsu.translate('help') + '">';
     if (button_text) {
         html += button_text;
     }
