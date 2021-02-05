@@ -94,8 +94,8 @@ if (shouldBeDefined('getCookie')) {
     jsu.setCookie = function (name, value, expireDays) {
         const exDate = new Date();
         exDate.setDate(exDate.getDate() + (expireDays ? expireDays : 360));
-        const secure = window.location.href.indexOf('https://') === 0 ? '; secure' : '';
-        document.cookie = name + '=' + window.escape(value) + '; expires=' + exDate.toUTCString() + '; path=/; samesite=none' + secure;
+        const secure = window.location.href.indexOf('https://') === 0 ? '; secure; samesite=none' : '';
+        document.cookie = name + '=' + window.escape(value) + '; expires=' + exDate.toUTCString() + '; path=/' + secure;
     };
 }
 
@@ -233,7 +233,7 @@ if (shouldBeDefined('httpRequest')) {
             urlParams.push(encodeURIComponent(field) + '=' + encodeURIComponent(params[field]));
         }
         if (urlParams.length > 0) {
-            url += '?' + urlParams.join('&');
+            url += (url.indexOf('?') === -1 ? '?' : '&') + urlParams.join('&');
         }
         let formData;
         if (args.jsonData) {
