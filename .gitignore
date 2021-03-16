@@ -25,3 +25,5 @@ nosetests.xml
 .pydevproject
 
 node_modules
+
+package-lock.json

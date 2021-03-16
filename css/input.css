@@ -60,7 +60,8 @@ button:disabled,
 input[type=submit]:disabled,
 input[type=button]:disabled,
 input:disabled,
-textarea:disabled {
+textarea:disabled,
+select:disabled {
     opacity: 0.6;
     cursor: default;
 }
