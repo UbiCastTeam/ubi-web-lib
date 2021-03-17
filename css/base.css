@@ -127,7 +127,7 @@ legend h3 { margin: 0; }
 }
 .btn-bar,
 .top-bar,
-.bottom-bar { line-height: 24px; overflow: hidden; }
+.bottom-bar { line-height: 24px; }
 .top-bar { margin-bottom: 8px; }
 .bottom-bar { margin-top: 8px; }
 .messages {
