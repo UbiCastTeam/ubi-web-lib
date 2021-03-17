@@ -65,7 +65,6 @@ legend h3 { margin: 0; }
 /* common display styles */
 .left { display: block; float: left; }
 .right { display: block; float: right; }
-.float-container { overflow: hidden; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
 .block { display: block; }
