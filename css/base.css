@@ -69,11 +69,15 @@ legend h3 { margin: 0; }
 .inline-block { display: inline-block; }
 .block { display: block; }
 .column-2 {
+    margin: 0;
+    padding: 0;
     width: 50%;
     display: inline-block;
     vertical-align: top;
 }
 .column-3 {
+    margin: 0;
+    padding: 0;
     width: 33%;
     display: inline-block;
     vertical-align: top;

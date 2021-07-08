@@ -20,8 +20,6 @@ nav.navbar,
 header.header,
 .footer,
 .aside,
-.paragraph-block.white,
-.paragraph-block .paragraph-block,
 input,
 select,
 textarea,
@@ -30,10 +28,6 @@ button,
 input[type=submit],
 input[type=button] {
     background: #FFF;
-}
-.paragraph-block,
-.paragraph-block.white .paragraph-block {
-    background: #EEE;
 }
 button:hover,
 .button:hover,
