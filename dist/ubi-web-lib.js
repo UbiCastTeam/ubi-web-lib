@@ -61,7 +61,7 @@ if (typeof window.Event !== 'function') {
 
 
 /* ---- jsu object definition ---- */
-const VERSION = 4;
+const VERSION = 5;
 const jsu = window.jsu ? window.jsu : {version: VERSION};
 window.jsu = jsu;
 const shouldBeDefined = function (attribute) {
@@ -521,6 +521,8 @@ if (shouldBeDefined('userAgent')) {
                     version = parseFloat(bd.version);
                     if (name == 'google chrome') {
                         name = 'chrome';
+                    } else if (name == 'microsoft edge') {
+                        name = 'edge';
                     }
                     jsu.userAgentData = window.navigator.userAgentData;
                     break;
@@ -613,6 +615,9 @@ if (shouldBeDefined('translate')) {
     };
     jsu.getCurrentLang = function () {
         return jsu._currentLang;
+    };
+    jsu.getCurrentCatalog = function () {
+        return jsu._currentCatalog;
     };
     jsu.addTranslations = function (translations, lang) {
         // translations keys must be text or context + '\u0004' + text
