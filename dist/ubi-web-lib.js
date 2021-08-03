@@ -1551,11 +1551,12 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
 * Author: Stéphane Schoorens               *
 *******************************************/
 /* globals jsu */
+/* eslint-disable camelcase */
 
 function UbiWebLibBase (options) {
     jsu.setObjectAttributes(this, options);
     this.animation_end_event = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    var obj = this;
+    const obj = this;
     $(document).ready(function () {
         obj.init();
     });
@@ -1570,7 +1571,7 @@ UbiWebLibBase.prototype.init = function () {
 };
 UbiWebLibBase.prototype.init_aria = function () {
     $('.aria-describedby-input input, .aria-describedby-input textarea, .aria-describedby-input select').each(function () {
-        var describedby = $(this).attr('aria-describedby');
+        let describedby = $(this).attr('aria-describedby');
         if (describedby) {
             describedby = describedby.split(' ');
         } else {
@@ -1590,11 +1591,11 @@ UbiWebLibBase.prototype.init_aria = function () {
             $(this).attr('aria-describedby', describedby.join(' '));
         }
     });
-    var errorField = $('.aria-focus-error').first();
+    const errorField = $('.aria-focus-error').first();
     if (errorField.length) {
-        jsu.focusFirstDescendant($(".input-place", errorField)[0]);
+        jsu.focusFirstDescendant($('.input-place', errorField)[0]);
     } else {
-        $("#messages_place .message").first().focus();
+        $('#messages_place .message').first().focus();
     }
     $('input, textarea, select').each(function () {
         if ($(this).attr('required')) {
@@ -1603,9 +1604,9 @@ UbiWebLibBase.prototype.init_aria = function () {
     });
     $('a').each(function () {
         if ($(this).attr('target') == '_blank') {
-            var title = jsu.translate('Open in a new window');
+            let title = jsu.translate('Open in a new window');
             if ($(this).text().trim()) {
-                var text;
+                let text;
                 if ($(this).attr('title')) {
                     text = $(this).attr('title');
                 } else {
@@ -1620,39 +1621,41 @@ UbiWebLibBase.prototype.init_aria = function () {
         $('html').removeClass('keyboard-navigation');
     });
     $(document).keydown(function (event) {
-        var keyCode = event.keyCode || event.which; 
+        const keyCode = event.keyCode || event.which;
         if (keyCode == 9) {
             $('html').addClass('keyboard-navigation');
         }
     });
 };
 UbiWebLibBase.prototype.init_footer = function () {
-    if ($('#footer').length < 1)
+    if ($('#footer').length < 1) {
         return;
+    }
     // change body padding depending on footer height
-    var set_body_padding = function () {
-        var height = $('#footer').outerHeight();
-        if (height && height > 30)
+    const set_body_padding = function () {
+        const height = $('#footer').outerHeight();
+        if (height && height > 30) {
             $('body').css('padding-bottom', parseInt(height + 40, 10) + 'px');
+        }
     };
     set_body_padding();
     $(window).resize(set_body_padding);
 };
 UbiWebLibBase.prototype.init_aside = function () {
-    var obj = this;
+    const obj = this;
     $('.js-toogle-menu').click(function (event) {
         event.stopPropagation();
-        var $this = $(this);
-        var menu_id = $this.attr('data-menu-id');
+        const $this = $(this);
+        const menu_id = $this.attr('data-menu-id');
         if (!menu_id) {
             return;
         }
-        var $menu = $('#' + menu_id);
+        const $menu = $('#' + menu_id);
         if (!$menu.length) {
             return;
         }
-        var $icon = $('.fa', $this);
-        var $text = $('.text', $this);
+        const $icon = $('.fa', $this);
+        const $text = $('.text', $this);
         if ($menu.hasClass('hidden')) {
             $menu.removeClass('hidden').addClass('fadeInLeft');
             if ($icon.length) {
@@ -1667,35 +1670,38 @@ UbiWebLibBase.prototype.init_aside = function () {
         }
     });
     $('.js-active').each(function () {
-        var $parent = $(this);
+        const $parent = $(this);
         $('.js-active-toogle', $parent).click(function (event) {
             event.stopPropagation();
             obj.click_js_active($(this), $parent);
         });
     });
     $(document).click(function (event) {
-        var node = event.target;
+        let node = event.target;
         while (node && node.className !== undefined) {
-            if (node.className.indexOf('js-active') != -1)
+            if (node.className.indexOf('js-active') != -1) {
                 return;
+            }
             node = node.parentNode;
         }
         $('.js-toogle-menu').each(function () {
-            var menu = $('#' + $(this).attr('data-menu-id'));
-            if (menu.length && event.target != menu[0])
+            const menu = $('#' + $(this).attr('data-menu-id'));
+            if (menu.length && event.target != menu[0]) {
                 obj.hide_menu(this);
+            }
         });
     });
 };
 UbiWebLibBase.prototype.init_dropdowns = function () {
-    var obj = this;
+    const obj = this;
     $(document).click(function (event) {
-        var node = event.target;
+        let node = event.target;
         while (node && node.className !== undefined) {
             if (node.className.indexOf('dropdown-button') != -1) {
-                var id = node.getAttribute('data-dropdown-id');
-                if (id)
+                const id = node.getAttribute('data-dropdown-id');
+                if (id) {
                     obj.toggle_dropdown(node, id);
+                }
                 return;
             }
             if (node.className.indexOf('dropdown') != -1) {
@@ -1707,15 +1713,17 @@ UbiWebLibBase.prototype.init_dropdowns = function () {
     });
 };
 UbiWebLibBase.prototype.hide_menu = function (menu_btn) {
-    var $this = $(menu_btn);
-    var menu_id = $this.attr('data-menu-id');
-    if (!menu_id)
+    const $this = $(menu_btn);
+    const menu_id = $this.attr('data-menu-id');
+    if (!menu_id) {
         return;
-    var $menu = $('#' + menu_id);
-    if (!$menu.length)
+    }
+    const $menu = $('#' + menu_id);
+    if (!$menu.length) {
         return;
-    var $icon = $('.fa', $this);
-    var $text = $('.text', $this);
+    }
+    const $icon = $('.fa', $this);
+    const $text = $('.text', $this);
     $menu.addClass('hidden').removeClass('fadeInLeft');
     if ($icon.length) {
         $icon.removeClass('fa-close').addClass('fa-bars');
@@ -1732,7 +1740,7 @@ UbiWebLibBase.prototype.hide_all_dropdowns = function () {
     });
     $('.dropdown-button').each(function () {
         $(this).attr('aria-expanded', false);
-        var $icon = $('.fa', $(this));
+        const $icon = $('.fa', $(this));
         if ($icon.length > 0) {
             $icon.removeClass($(this).attr('data-icon-effect'));
         }
@@ -1742,9 +1750,9 @@ UbiWebLibBase.prototype.toggle_dropdown = function (button, id) {
     if (!$('#' + id).hasClass('active')) {
         this.hide_all_dropdowns();
     }
-    var $icon = $('.fa', $(button));
+    const $icon = $('.fa', $(button));
     if ($icon.length > 0) {
-        var effect = $(button).attr('data-icon-effect');
+        const effect = $(button).attr('data-icon-effect');
         if ($icon.hasClass(effect)) {
             $icon.removeClass(effect);
         } else {
@@ -1763,9 +1771,9 @@ UbiWebLibBase.prototype.toggle_dropdown = function (button, id) {
     }
 };
 UbiWebLibBase.prototype.click_js_active = function ($this, $parent) {
-    var $thisItem = $('.js-active-item', $this).first();
-    var $icon = $('.fa', $this).first();
-    var $btn = $('[aria-expanded]', $this).first();
+    const $thisItem = $('.js-active-item', $this).first();
+    const $icon = $('.fa', $this).first();
+    const $btn = $('[aria-expanded]', $this).first();
     if ($thisItem.hasClass('active')) {
         $thisItem.removeClass('active');
         $btn.attr('aria-expanded', false);
@@ -1784,18 +1792,18 @@ UbiWebLibBase.prototype.click_js_active = function ($this, $parent) {
     }
 };
 UbiWebLibBase.prototype.init_nav = function () {
-    var obj = this;
-    var $nav_links = $('.navbar .links');
-    var $next_menu = $('.navbar .next-menu');
-    var $next_button = $('.next', $nav_links);
-    var $prev_button = $('.prev', $nav_links);
-    var prev_menus_hidden = [];
-    var resize_check = function () {
-        var total_width = 0;
-        var hide_array = [];
+    const obj = this;
+    const $nav_links = $('.navbar .links');
+    const $next_menu = $('.navbar .next-menu');
+    const $next_button = $('.next', $nav_links);
+    const $prev_button = $('.prev', $nav_links);
+    const prev_menus_hidden = [];
+    const resize_check = function () {
+        let total_width = 0;
+        const hide_array = [];
         $next_button.addClass('not-visible');
         $('li:not(.button-nav)', $next_menu).each(function () {
-            var $item = $(this).detach();
+            const $item = $(this).detach();
             $nav_links.append($item.addClass('animated fadeInRight').one(obj.animation_end_event, function () {
                 $(this).removeClass('animated fadeInRight');
             }));
@@ -1803,14 +1811,14 @@ UbiWebLibBase.prototype.init_nav = function () {
         $nav_links.append($next_button.detach());
         $next_button.removeClass('not-visible');
         $prev_button.removeClass('not-visible');
-        var menu_width = $nav_links.width() - $next_button.outerWidth() - $prev_button.outerWidth();
+        const menu_width = $nav_links.width() - $next_button.outerWidth() - $prev_button.outerWidth();
         $('li:not(.button-nav)', $nav_links).each(function () {
             total_width += $(this).outerWidth();
             if (total_width >= menu_width) {
                 hide_array.push($(this).detach());
             }
         });
-        var index, item;
+        let index, item;
         if (hide_array.length > 0) {
             for (index = 0; index < hide_array.length; index++) {
                 item = hide_array[index];
@@ -1830,13 +1838,15 @@ UbiWebLibBase.prototype.init_nav = function () {
             $prev_button.addClass('not-visible');
         }
     };
-    var go_to_current_menu = function () {
-        var prev_menu = [];
-        var total_width = 0;
-        var menu_width = $nav_links.width() - $next_button.outerWidth() - $prev_button.outerWidth();
-        $('li:not(.button-nav)', $nav_links).each(function () { total_width += $(this).outerWidth(); });
+    const go_to_current_menu = function () {
+        const prev_menu = [];
+        let total_width = 0;
+        const menu_width = $nav_links.width() - $next_button.outerWidth() - $prev_button.outerWidth();
         $('li:not(.button-nav)', $nav_links).each(function () {
-            var link = $('a', $(this)).attr('href');
+            total_width += $(this).outerWidth();
+        });
+        $('li:not(.button-nav)', $nav_links).each(function () {
+            const link = $('a', $(this)).attr('href');
             if (window.location.pathname == link) {
                 return false;
             }
@@ -1854,7 +1864,7 @@ UbiWebLibBase.prototype.init_nav = function () {
     $(window).resize(resize_check);
 
     $next_button.click(function () {
-        var prev_menu = [];
+        const prev_menu = [];
         $('li:not(.button-nav)', $nav_links).each(function () {
             prev_menu.push($(this).detach());
         });
@@ -1862,11 +1872,12 @@ UbiWebLibBase.prototype.init_nav = function () {
         resize_check();
     });
     $prev_button.click(function () {
-        if (!prev_menus_hidden.length)
+        if (!prev_menus_hidden.length) {
             return;
-        var prev_menu = prev_menus_hidden.pop();
-        for (var index = (prev_menu.length - 1); index >= 0; index--) {
-            var item = prev_menu[index];
+        }
+        const prev_menu = prev_menus_hidden.pop();
+        for (let index = (prev_menu.length - 1); index >= 0; index--) {
+            const item = prev_menu[index];
             $prev_button.after(item.addClass('animated fadeInLeft').one(obj.animation_end_event, function () {
                 $(this).removeClass('animated fadeInLeft');
             }));
@@ -1875,10 +1886,10 @@ UbiWebLibBase.prototype.init_nav = function () {
     });
 };
 UbiWebLibBase.prototype.init_tooltips = function () {
-    var on_tooltip_click = function (event, button) {
+    const on_tooltip_click = function (event, button) {
         event.stopPropagation();
 
-        var tooltip_id = button.getAttribute('aria-describedby');
+        let tooltip_id = button.getAttribute('aria-describedby');
         if (tooltip_id) {
             tooltip_id += '_tooltip';
         }
@@ -1890,26 +1901,28 @@ UbiWebLibBase.prototype.init_tooltips = function () {
             $('.tooltip-overlay').remove();
         }
 
-        var content;
+        let content;
         if ($('.tooltip-hidden-content', button).length > 0) {
             content = $('.tooltip-hidden-content', button).html();
         } else if ($(button).attr('title')) {
             content = jsu.escapeHTML($(button).attr('title'));
         }
-        if (!content)
+        if (!content) {
             return;
+        }
 
-        var rect = button.getBoundingClientRect();
-        var style = 'top: ' + parseInt(window.pageYOffset + rect.bottom + 2, 10) + 'px; ';
+        const rect = button.getBoundingClientRect();
+        let style = 'top: ' + parseInt(window.pageYOffset + rect.bottom + 2, 10) + 'px; ';
         if (window.pageXOffset + rect.left < $(window).width() / 2.0) {
             style += 'left: ' + parseInt(window.pageXOffset + rect.left - 10, 10) + 'px;';
         } else {
             style += 'right: ' + parseInt($(window).width() - window.pageXOffset - rect.right - 10, 10) + 'px;';
         }
 
-        var tooltip = '<div class="tooltip-overlay"';
-        if (tooltip_id)
+        let tooltip = '<div class="tooltip-overlay"';
+        if (tooltip_id) {
             tooltip += ' id="' + tooltip_id + '" ';
+        }
         tooltip += ' style="' + style + '">';
         tooltip += content;
         tooltip += '</div>';
@@ -1926,17 +1939,18 @@ UbiWebLibBase.prototype.init_tooltips = function () {
         }
         // close tooltips overlays if not clicked in
         if ($('.tooltip-overlay').length) {
-            var node = event.target;
+            let node = event.target;
             while (node && node.className !== undefined) {
-                if (node.className.indexOf('tooltip-overlay') != -1)
+                if (node.className.indexOf('tooltip-overlay') != -1) {
                     return;
+                }
                 node = node.parentNode;
             }
             $('.tooltip-overlay').remove();
         }
     });
     $(document).keydown(function (event) {
-        var keyCode = event.keyCode || event.which; 
+        const keyCode = event.keyCode || event.which;
         if (keyCode == 27 && $('.tooltip-overlay').length) {
             $('.tooltip-overlay').remove();
             event.stopPropagation();
@@ -1944,12 +1958,12 @@ UbiWebLibBase.prototype.init_tooltips = function () {
     });
 };
 UbiWebLibBase.prototype.generate_tooltip_button = function (id, text, button_text) {
-    var html = '<button type="button" class="tooltip-button no-padding no-border no-background" aria-describedby="' + id + '" aria-label="' + jsu.translate('help') + '">';
+    let html = '<button type="button" class="tooltip-button no-padding no-border no-background" aria-describedby="' + id + '" aria-label="' + jsu.translate('help') + '">';
     if (button_text) {
         html += button_text;
     }
-    html +=     '<i class="fa fa-question-circle fa-fw" aria-hidden="true"></i>';
-    html +=     '<span role="tooltip" class="tooltip-hidden-content" id="' + id + '">' + text + '</span>';
+    html += '<i class="fa fa-question-circle fa-fw" aria-hidden="true"></i>';
+    html += '<span role="tooltip" class="tooltip-hidden-content" id="' + id + '">' + text + '</span>';
     html += '</button>';
     return html;
 };
