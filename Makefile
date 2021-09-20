@@ -1,7 +1,7 @@
 install:
 	npm install
 
-build: install translate
+build: install
 	npm run build
 
 lint: install

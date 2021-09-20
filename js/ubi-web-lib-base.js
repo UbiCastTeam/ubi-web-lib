@@ -383,10 +383,10 @@ UbiWebLibBase.prototype.init_tooltips = function () {
     };
     // click events are not bound to 'tooltip-button' DOM elements because they can be added after the page loading
     $(document).click(function (event) {
-        if (event.target.className.indexOf('tooltip-button') != -1) {
+        if (event && event.target && event.target.className.indexOf('tooltip-button') != -1) {
             // a tooltip button was clicked
             return on_tooltip_click(event, event.target);
-        } else if (event.target.parentNode && event.target.parentNode.className.indexOf('tooltip-button') != -1) {
+        } else if (event && event.target && event.target.parentNode && event.target.parentNode.className && event.target.parentNode.className.indexOf('tooltip-button') != -1) {
             // a node inside a tooltip button was clicked
             return on_tooltip_click(event, event.target.parentNode);
         }

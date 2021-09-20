@@ -23,45 +23,9 @@ if (!window.console.info) {
 if (!window.console.warn) {
     window.console.warn = window.console.log;
 }
-// Add repeat method to String (for all IE)
-if (!String.prototype.repeat) {
-    String.prototype.repeat = function (count) {
-        if (isNaN(count) || count < 0) {
-            throw new TypeError('Invalid value for "count".');
-        }
-        let i = 0;
-        let n = '';
-        while (i < count) {
-            n += this;
-            i++;
-        }
-        return n;
-    };
-}
-// Add endsWith method to String (for IE11)
-if (!String.prototype.endsWith) {
-    String.prototype.endsWith = function (search, thisLen) {
-        if (thisLen === undefined || thisLen > this.length) {
-            thisLen = this.length;
-        }
-        return this.substring(thisLen - search.length, thisLen) === search;
-    };
-}
-// Add Event management (for all IE)
-if (typeof window.Event !== 'function') {
-    const newEvent = function Event (event, params) {
-        params = params || { bubbles: false, cancelable: false, detail: null };
-        const evt = document.createEvent('CustomEvent');
-        evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
-        return evt;
-    };
-    newEvent.prototype = window.Event.prototype;
-    window.Event = newEvent;
-}
-
 
 /* ---- jsu object definition ---- */
-const VERSION = 5;
+const VERSION = 6;
 const jsu = window.jsu ? window.jsu : {version: VERSION};
 window.jsu = jsu;
 const shouldBeDefined = function (attribute) {
@@ -228,9 +192,14 @@ if (shouldBeDefined('httpRequest')) {
             }
         }
         const urlParams = [];
-        let field;
-        for (field in params) {
-            urlParams.push(encodeURIComponent(field) + '=' + encodeURIComponent(params[field]));
+        for (const field in params) {
+            if (params[field] instanceof Array) {
+                for (const value of params[field]) {
+                    urlParams.push(encodeURIComponent(field) + '=' + encodeURIComponent(value));
+                }
+            } else {
+                urlParams.push(encodeURIComponent(field) + '=' + encodeURIComponent(params[field]));
+            }
         }
         if (urlParams.length > 0) {
             url += (url.indexOf('?') === -1 ? '?' : '&') + urlParams.join('&');
@@ -243,8 +212,14 @@ if (shouldBeDefined('httpRequest')) {
             formData = args.data;
         } else if (args.data) {
             formData = new FormData();
-            for (field in args.data) {
-                formData.append(field, args.data[field]);
+            for (const field in args.data) {
+                if (args.data[field] instanceof Array) {
+                    for (const value of args.data[field]) {
+                        formData.append(field + '[]', value);
+                    }
+                } else {
+                    formData.append(field, args.data[field]);
+                }
             }
         } else {
             formData = null;
@@ -283,9 +258,14 @@ if (shouldBeDefined('httpRequest')) {
             };
         }
         xhr.open(method, url, true);
-        let header;
-        for (header in headers) {
-            xhr.setRequestHeader(header, headers[header]);
+        for (const field in headers) {
+            if (headers[field] instanceof Array) {
+                for (const value of headers[field]) {
+                    xhr.setRequestHeader(field, value);
+                }
+            } else {
+                xhr.setRequestHeader(field, headers[field]);
+            }
         }
         xhr.send(formData);
         return xhr;
@@ -322,8 +302,7 @@ if (shouldBeDefined('setObjectAttributes')) {
             delete data.translations;
         }
         // Override fields
-        let attr;
-        for (attr in data) {
+        for (const attr in data) {
             if (!allowedAttributes || allowedAttributes.indexOf(attr) != -1) {
                 obj[attr] = data[attr];
             }
@@ -632,8 +611,7 @@ if (shouldBeDefined('translate')) {
         } else {
             catalog = jsu._currentCatalog;
         }
-        let text;
-        for (text in translations) {
+        for (const text in translations) {
             if (translations[text]) {
                 // empty texts are ignored to use default texts
                 catalog[text] = translations[text];
@@ -1930,10 +1908,10 @@ UbiWebLibBase.prototype.init_tooltips = function () {
     };
     // click events are not bound to 'tooltip-button' DOM elements because they can be added after the page loading
     $(document).click(function (event) {
-        if (event.target.className.indexOf('tooltip-button') != -1) {
+        if (event && event.target && event.target.className.indexOf('tooltip-button') != -1) {
             // a tooltip button was clicked
             return on_tooltip_click(event, event.target);
-        } else if (event.target.parentNode && event.target.parentNode.className.indexOf('tooltip-button') != -1) {
+        } else if (event && event.target && event.target.parentNode && event.target.parentNode.className && event.target.parentNode.className.indexOf('tooltip-button') != -1) {
             // a node inside a tooltip button was clicked
             return on_tooltip_click(event, event.target.parentNode);
         }
