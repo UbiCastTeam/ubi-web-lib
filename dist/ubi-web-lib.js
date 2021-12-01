@@ -1634,6 +1634,7 @@ UbiWebLibBase.prototype.init_aside = function () {
         }
         const $icon = $('.fa', $this);
         const $text = $('.text', $this);
+        obj.hide_all_dropdowns();
         if ($menu.hasClass('hidden')) {
             $menu.removeClass('hidden').addClass('fadeInLeft');
             if ($icon.length) {
