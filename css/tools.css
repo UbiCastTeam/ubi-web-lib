@@ -26,7 +26,7 @@
 .tooltip-button {
     display: inline-block;
     cursor: help;
-    vertical-align: middle;
+    vertical-align: baseline;
     position: relative;
     color: inherit;
 }
