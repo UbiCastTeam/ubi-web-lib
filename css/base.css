@@ -3,7 +3,7 @@ html, body, div, table, h1, h2, h3, h4, tr, th, td, img, ul, ol, li, form, pre {
 
 html {
     background: white;
-    font-size: 0.9em;
+    font-size: 16px;
     font-family: Arial, sans-serif;
 }
 body {
