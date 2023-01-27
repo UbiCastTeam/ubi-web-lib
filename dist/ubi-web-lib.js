@@ -96,7 +96,7 @@ UbiWebLibBase.prototype.init_footer = function () {
     const set_body_padding = function () {
         const height = $('#footer').outerHeight();
         if (height && height > 30) {
-            $('body').css('padding-bottom', parseInt(height + 40, 10) + 'px');
+            $('body').css('padding-bottom', parseInt(height, 10) + 'px');
         }
     };
     set_body_padding();
