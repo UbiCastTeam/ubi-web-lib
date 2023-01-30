@@ -23,7 +23,6 @@ function UbiWebLibBase (options) {
     });
 }
 UbiWebLibBase.prototype.init = function () {
-    this.init_footer();
     this.init_aside();
     this.init_nav();
     this.init_dropdowns();
@@ -87,20 +86,6 @@ UbiWebLibBase.prototype.init_aria = function () {
             $('html').addClass('keyboard-navigation');
         }
     });
-};
-UbiWebLibBase.prototype.init_footer = function () {
-    if ($('#footer').length < 1) {
-        return;
-    }
-    // change body padding depending on footer height
-    const set_body_padding = function () {
-        const height = $('#footer').outerHeight();
-        if (height && height > 30) {
-            $('body').css('padding-bottom', parseInt(height, 10) + 'px');
-        }
-    };
-    set_body_padding();
-    $(window).resize(set_body_padding);
 };
 UbiWebLibBase.prototype.init_aside = function () {
     const obj = this;

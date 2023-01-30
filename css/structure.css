@@ -264,11 +264,7 @@ nav.navbar .links .item.active {
 }
 /* Footer block */
 .footer {
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: 10px 20px;
-    position: absolute;
     display: block;
     text-align: center;
     line-height: 30px;
