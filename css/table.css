@@ -24,9 +24,6 @@ table tfoot tr {
 table th.header {
     cursor: pointer;
 }
-table th.header a {
-    color: #FFF;
-}
 table th.header > a:before,
 table th.header > span:before,
 table th.headerSortDown > a:before,
