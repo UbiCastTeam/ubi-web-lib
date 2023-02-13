@@ -118,7 +118,7 @@ UbiWebLibBase.prototype.init_aside = function () {
     $(document).click(function (event) {
         let node = event.target;
         while (node && node.className !== undefined) {
-            if (node.className.indexOf('js-active') != -1) {
+            if (node.classList.contains('js-active') != -1) {
                 return;
             }
             node = node.parentNode;
@@ -136,14 +136,14 @@ UbiWebLibBase.prototype.init_dropdowns = function () {
     $(document).click(function (event) {
         let node = event.target;
         while (node && node.className !== undefined) {
-            if (node.className.indexOf('dropdown-button') != -1) {
+            if (node.classList.contains('dropdown-button') != -1) {
                 const id = node.getAttribute('data-dropdown-id');
                 if (id) {
                     obj.toggle_dropdown(node, id);
                 }
                 return;
             }
-            if (node.className.indexOf('dropdown') != -1) {
+            if (node.classList.contains('dropdown') != -1) {
                 return;
             }
             node = node.parentNode;
@@ -369,10 +369,10 @@ UbiWebLibBase.prototype.init_tooltips = function () {
     };
     // click events are not bound to 'tooltip-button' DOM elements because they can be added after the page loading
     $(document).click(function (event) {
-        if (event && event.target && event.target.className.indexOf('tooltip-button') != -1) {
+        if (event && event.target && event.target.classList.contains('tooltip-button') != -1) {
             // a tooltip button was clicked
             return on_tooltip_click(event, event.target);
-        } else if (event && event.target && event.target.parentNode && event.target.parentNode.className && event.target.parentNode.className.indexOf('tooltip-button') != -1) {
+        } else if (event && event.target && event.target.parentNode && event.target.parentNode.className && event.target.parentNode.classList.contains('tooltip-button') != -1) {
             // a node inside a tooltip button was clicked
             return on_tooltip_click(event, event.target.parentNode);
         }
@@ -380,7 +380,7 @@ UbiWebLibBase.prototype.init_tooltips = function () {
         if ($('.tooltip-overlay').length) {
             let node = event.target;
             while (node && node.className !== undefined) {
-                if (node.className.indexOf('tooltip-overlay') != -1) {
+                if (node.classList.contains('tooltip-overlay') != -1) {
                     return;
                 }
                 node = node.parentNode;
