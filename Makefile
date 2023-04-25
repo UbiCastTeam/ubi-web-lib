@@ -1,23 +1,25 @@
 DOCKER_IMAGE_NAME ?= ubi-web-lib
+DOCKER_RUN ?= docker run \
+	--name ubi-web-lib-container \
+	--workdir /apps \
+	--mount type=bind,src=${PWD},dst=/apps \
+	--user "$(shell id -u):$(shell id -g)" \
+	--rm -it
 
-build_docker_img:
+docker_build:
 	docker build --tag ${DOCKER_IMAGE_NAME} .
 
-install:
-	npm install
+docker_rebuild:
+	docker build --no-cache -t ${DOCKER_IMAGE_NAME} .
 
 lint:
-ifndef IN_DOCKER
-	docker run -it --rm -v ${CURDIR}:/apps ${DOCKER_IMAGE_NAME} make lint
-else
-	make install
+	${DOCKER_RUN} ${DOCKER_IMAGE_NAME} make lint_local
+
+lint_local:
 	npm run lint
-endif
 
 build:
-ifndef IN_DOCKER
-	docker run -it --rm -v ${CURDIR}:/apps ${DOCKER_IMAGE_NAME} make build
-else
-	make install
+	${DOCKER_RUN} ${DOCKER_IMAGE_NAME} make build_local
+
+build_local:
 	npm run build
-endif
