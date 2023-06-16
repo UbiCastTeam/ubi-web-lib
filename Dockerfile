@@ -1,6 +1,4 @@
-FROM node:18-alpine
-
-ENV IN_DOCKER 1
+FROM node:20-alpine
 
 RUN apk upgrade --no-cache --available
 
