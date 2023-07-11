@@ -263,8 +263,8 @@ nav.navbar .links .item.active {
     font-weight: bold;
 }
 /* Footer block */
-.footer {
-    padding: 10px 20px;
+footer.footer {
+    padding: 20px 10px 40px 10px;
     display: block;
     text-align: center;
     line-height: 30px;
