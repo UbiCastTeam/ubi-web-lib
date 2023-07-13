@@ -1,44 +1,37 @@
 /* css for buttons and inputs */
-input,
-select,
-.button,
-button {
+.ubi-input,
+.select,
+.button {
     vertical-align: middle;
 }
-textarea {
+.textarea {
     vertical-align: top;
     max-width: 100%;
 }
-input,
-select,
-textarea,
-button,
-.button,
-input[type=submit],
-input[type=button] {
+.ubi-input,
+.select,
+.textarea,
+.button {
     line-height: 1.5;
     border: 1px solid;
-    cursor: pointer;
     border-radius: 4px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-input,
-textarea {
+.select,
+.button {
+    cursor: pointer;
+}
+.ubi-input,
+.textarea {
     padding: 3px 4px;
 }
-select,
-button,
-.button,
-input[type=submit],
-input[type=button] {
+.select,
+.button {
     padding: 3px 8px;
 }
-button,
-.button,
-input[type=submit],
-input[type=button] {
+.button {
     text-align: center;
     text-decoration: none !important;
     cursor: pointer;
@@ -50,32 +43,22 @@ input[type=button] {
     -moz-transition: background-color 0.2s, color 0.2s;
     -o-transition: background-color 0.2s, color 0.2s;
 }
-button i.fa-spin,
 .button i.fa-spin {
     display: inline-block;
 }
-button:disabled,
 .button:disabled,
 .button.disabled,
-input[type=submit]:disabled,
-input[type=button]:disabled,
-input:disabled,
-textarea:disabled,
-select:disabled {
+.ubi-input:disabled,
+.textarea:disabled,
+.select:disabled {
     opacity: 0.6;
     cursor: default;
 }
-button.button-block,
-input[type=submit].button-block,
-input[type=button].button-block,
 .button.button-block {
     display: block;
     width: 100%;
 }
-button.button-block i:first-child,
-.button.button-block i:first-child,
-input[type=submit].button-block i:first-child,
-input[type=button].button-block i:first-child {
+.button.button-block i:first-child {
     padding: 0;
 }
 /******** button with only text effects *******/
@@ -106,43 +89,26 @@ input[type=button].button-block i:first-child {
     font-weight: bold;
     text-align: right;
 }
-td.input { width: 100%; }
-input.small,
-textarea.small {
+td.ubi-input { width: 100%; }
+.ubi-input.small,
+.textarea.small {
     width: 4em;
     text-align: center;
 }
-input.medium,
-textarea.medium {
+.ubi-input.medium,
+.textarea.medium {
     width: 20em;
 }
-input.large,
-textarea.large {
+.ubi-input.large,
+.textarea.large {
     width: 100%;
 }
-textarea.large {
+.textarea.large {
     height: 12em;
 }
-.select::after {
-    position: absolute;
-    right: 0.7em;
-    top: 0.1em;
-    font-family: "FontAwesome";
-    content: "\f107";
-    pointer-events: none;
-}
-.select {
-    position: relative;
-}
-.select select {
-    padding-right: 1.5em;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-}
-.input-group input,
-.input-group button,
-.input-group a {
+.ubi-input-group .ubi-input,
+.ubi-input-group .button,
+.ubi-input-group a {
     vertical-align: middle;
     margin-left: 0;
     margin-right: 0;
@@ -150,9 +116,9 @@ textarea.large {
     border-bottom-right-radius: 0;
     border-right: 0px;
 }
-.input-group input:last-child,
-.input-group button:last-child,
-.input-group a:last-child {
+.ubi-input-group .ubi-input:last-child,
+.ubi-input-group .button:last-child,
+.ubi-input-group a:last-child {
     border-right: 1px solid;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -174,20 +140,14 @@ textarea.large {
     margin-left: 0;
     margin-right: 8px;
 }
-.full-input input[type=text],
-.full-input input[type=password],
-.full-input textarea { width: 100%; }
-.full-input textarea { height: 16em; }
+.full-input .ubi-input[type=text],
+.full-input .ubi-input[type=password],
+.full-input .textarea { width: 100%; }
+.full-input .textarea { height: 16em; }
 
 .tox .tox-statusbar .tox-statusbar__branding { display: none; }
 
-.button-fixed-bottom-right button,
-.button-fixed-bottom-right input[type=submit],
-.button-fixed-bottom-right input[type=button],
 .button-fixed-bottom-right .button,
-.button-fixed-bottom-left button,
-.button-fixed-bottom-left input[type=submit],
-.button-fixed-bottom-left input[type=button],
 .button-fixed-bottom-left .button {
     padding: 10px;
     bottom: 0;
@@ -199,15 +159,9 @@ textarea.large {
     border-top-left-radius: 10px;
     z-index: 1;
 }
-.button-fixed-bottom-right button,
-.button-fixed-bottom-right input[type=submit],
-.button-fixed-bottom-right input[type=button],
 .button-fixed-bottom-right .button {
     right: 10%;
 }
-.button-fixed-bottom-left button,
-.button-fixed-bottom-left input[type=submit],
-.button-fixed-bottom-left input[type=button],
 .button-fixed-bottom-left .button {
     left: 10%;
 }

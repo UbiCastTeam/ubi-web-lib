@@ -20,261 +20,146 @@ nav.navbar,
 header.header,
 .footer,
 .aside,
-input:enabled,
-select:enabled,
-textarea:enabled,
-button:enabled,
-.button:enabled,
-input[type=submit]:enabled,
-input[type=button]:enabled {
-    background: #FFF;
+.button:not(:disabled),
+.ubi-input:not(:disabled) {
+    background-color: #FFF;
 }
-button:hover:enabled,
-.button:hover:enabled,
-input[type=submit]:hover:enabled,
-input[type=button]:hover:enabled,
+.button:hover:not(:disabled),
 .aside .aside-list-btn:hover,
-.aside .aside-list-btn:hover > button {
-    background: #DDD;
+.aside .aside-list-btn:hover > .button {
+    background-color: #DDD;
 }
-button:active:enabled,
-.button:active:enabled,
-input[type=submit]:active:enabled,
-input[type=button]:active:enabled
+.button:active:not(:disabled),
 table th.header:active {
-    background: #CCC;
+    background-color: #CCC;
 }
-table.even-odd button:hover,
-table.even-odd .button:hover,
-table.even-odd input[type=submit]:hover,
-table.even-odd input[type=button]:hover {
-    background: #FFF;
+table.even-odd .button:hover {
+    background-color: #FFF;
 }
-table.even-odd button:active,
 table.even-odd .button:active,
-table.even-odd input[type=submit]:active,
-table.even-odd input[type=button]:active
 table th.header:active {
-    background: #FFF;
+    background-color: #FFF;
 }
 table th.header:hover {
-    background: #666;
+    background-color: #666;
 }
 .title-block,
 table th,
 table tfoot tr {
-    background: #333;
+    background-color: #333;
 }
 .bg-gray {
-    background: #D4D4D4;
+    background-color: #D4D4D4;
 }
-input:focus:enabled,
-textarea:focus:enabled,
-select:focus:enabled,
-.input-group.focused button:enabled,
-.input-group.focused input[type="button"]:enabled,
-.input-group.focused input[type="submit"]:enabled,
+.ubi-input-group.focused .button:not(:disabled),
 .tab-window .tab-button.active,
 .tab-window .tab-button:hover,
 .aside .list.active.black > .aside-list-btn,
-button.black:enabled,
-.button.black:enabled,
-input[type=submit].black:enabled,
-input[type=button].black:enabled {
-    background: #404040;
+.button.black:not(:disabled) {
+    background-color: #404040;
 }
 .message.info,
 .aside .list.active.blue > .aside-list-btn,
-button.default:enabled,
-.button.default:enabled,
-input[type=submit].default:enabled,
-input[type=button].default:enabled,
+.button.default:not(:disabled),
 nav.navbar .links .item:hover,
 nav.navbar .links .item.active,
 .bg-blue {
-    background: #274BB1;
+    background-color: #274BB1;
 }
-button.default:hover:enabled,
-.button.default:hover:enabled,
-input[type=submit].default:hover:enabled,
-input[type=button].default:hover:enabled,
+.button.default:hover:not(:disabled),
 .bg-hover-blue:hover,
 .bg-focus-blue:focus,
-button.default:active:enabled,
-.button.default:active:enabled,
-input[type=submit].default:active:enabled,
-input[type=button].default:active:enabled,
+.button.default:active:not(:disabled),
 .bg-active-blue:active,
-table.even-odd button.default:hover:enabled,
-table.even-odd .button.default:hover:enabled,
-table.even-odd input[type=submit].default:hover:enabled,
-table.even-odd input[type=button].default:hover:enabled
-table.even-odd button.default:active:enabled,
-table.even-odd .button.default:active:enabled,
-table.even-odd input[type=submit].default:active:enabled,
-table.even-odd input[type=button].default:active:enabled {
-    background: #000F32;
+table.even-odd .button.default:hover:not(:disabled),
+table.even-odd .button.default:active:not(:disabled) {
+    background-color: #000F32;
 }
 .message.success,
 .aside .list.active.green > .aside-list-btn,
-button.main:enabled,
-.button.main:enabled,
-input[type=submit].main:enabled,
-input[type=button].main:enabled {
-    background: #008750;
+.button.main:not(:disabled) {
+    background-color: #008750;
 }
-button.main:hover:enabled,
-.button.main:hover:enabled,
-input[type=submit].main:hover:enabled,
-input[type=button].main:hover:enabled,
-button.main:active:enabled,
-.button.main:active:enabled,
-input[type=submit].main:active:enabled,
-input[type=button].main:active:enabled,
-table.even-odd button.main:hover:enabled,
-table.even-odd .button.main:hover:enabled,
-table.even-odd input[type=submit].main:hover:enabled,
-table.even-odd input[type=button].main:hover:enabled,
-table.even-odd button.main:active:enabled,
-table.even-odd .button.main:active:enabled,
-table.even-odd input[type=submit].main:active:enabled,
-table.even-odd input[type=button].main:active:enabled {
-    background: #00AF66;
+.button.main:hover:not(:disabled),
+.button.main:active:not(:disabled),
+table.even-odd .button.main:hover:not(:disabled),
+table.even-odd .button.main:active:not(:disabled) {
+    background-color: #00AF66;
 }
 .message.error,
 .aside .list.active.red > .aside-list-btn,
-button.danger:enabled,
-.button.danger:enabled,
-input[type=submit].danger:enabled,
-input[type=button].danger:enabled {
-    background: #DB263D;
+.button.danger:not(:disabled) {
+    background-color: #DB263D;
 }
-button.danger:hover:enabled,
-.button.danger:hover:enabled,
-input[type=submit].danger:hover:enabled,
-input[type=button].danger:hover:enabled,
-button.danger:active:enabled,
-.button.danger:active:enabled,
-input[type=submit].danger:active:enabled,
-input[type=button].danger:active:enabled,
-table.even-odd button.danger:hover:enabled,
-table.even-odd .button.danger:hover:enabled,
-table.even-odd input[type=submit].danger:hover:enabled,
-table.even-odd input[type=button].danger:hover:enabled,
-table.even-odd button.danger:active:enabled,
-table.even-odd .button.danger:active:enabled,
-table.even-odd input[type=submit].danger:active:enabled,
-table.even-odd input[type=button].danger:active:enabled {
-    background: #9B1B2B;
+.button.danger:hover:not(:disabled),
+.button.danger:active:not(:disabled),
+table.even-odd .button.danger:hover:not(:disabled),
+table.even-odd .button.danger:active:not(:disabled) {
+    background-color: #9B1B2B;
 }
 .message.warning,
 .aside .list.active.orange > .aside-list-btn,
-button.warning:enabled,
-.button.warning:enabled,
-input[type=submit].warning:enabled,
-input[type=button].warning:enabled {
-    background: #F7B407;
+.button.warning:not(:disabled) {
+    background-color: #F7B407;
 }
-
-button.warning:hover:enabled,
-.button.warning:hover:enabled,
-input[type=submit].warning:hover:enabled,
-input[type=button].warning:hover:enabled,
-button.warning:active:enabled,
-.button.warning:active:enabled,
-input[type=submit].warning:active:enabled,
-input[type=button].warning:active:enabled,
-table.even-odd button.warning:hover:enabled,
-table.even-odd .button.warning:hover:enabled,
-table.even-odd input[type=submit].warning:hover:enabled,
-table.even-odd input[type=button].warning:hover:enabled,
-table.even-odd button.warning:active:enabled,
-table.even-odd .button.warning:active:enabled,
-table.even-odd input[type=submit].warning:active:enabled,
-table.even-odd input[type=button].warning:active:enabled {
-    background: #FCD280;
+.button.warning:hover:not(:disabled),
+.button.warning:active:not(:disabled),
+table.even-odd .button.warning:hover:not(:disabled),
+table.even-odd .button.warning:active:not(:disabled) {
+    background-color: #FCD280;
 }
-
-button.black:hover:enabled,
-.button.black:hover:enabled,
-input[type=submit].black:hover:enabled,
-input[type=button].black:hover:enabled,
-button.black:active:enabled,
-.button.black:active:enabled,
-input[type=submit].black:active:enabled,
-input[type=button].black:active:enabled,
-table.even-odd button.black:hover:enabled,
-table.even-odd .button.black:hover:enabled,
-table.even-odd input[type=submit].black:hover:enabled,
-table.even-odd input[type=button].black:hover:enabled,
-table.even-odd button.black:active:enabled,
-table.even-odd .button.black:active:enabled,
-table.even-odd input[type=submit].black:active:enabled,
-table.even-odd input[type=button].black:active:enabled {
-    background: #666;
+.button.black:hover:not(:disabled),
+.button.black:active:not(:disabled),
+table.even-odd .button.black:hover:not(:disabled),
+table.even-odd .button.black:active:not(:disabled) {
+    background-color: #666;
 }
 
 .aside .list.active.purple > .aside-list-btn,
-button.purple:enabled,
-.button.purple:enabled,
-input[type=submit].purple:enabled,
-input[type=button].purple:enabled {
-    background: #945498;
+.button.purple:not(:disabled) {
+    background-color: #945498;
 }
-button.purple:hover:enabled,
-.button.purple:hover:enabled,
-input[type=submit].purple:hover:enabled,
-input[type=button].purple:hover:enabled,
-button.purple:active:enabled,
-.button.purple:active:enabled,
-input[type=submit].purple:active:enabled,
-input[type=button].purple:active:enabled,
-table.even-odd button.purple:hover:enabled,
-table.even-odd .button.purple:hover:enabled,
-table.even-odd input[type=submit].purple:hover:enabled,
-table.even-odd input[type=button].purple:hover:enabled,
-table.even-odd button.purple:active:enabled,
-table.even-odd .button.purple:active:enabled,
-table.even-odd input[type=submit].purple:active:enabled,
-table.even-odd input[type=button].purple:active:enabled {
-    background: #945498;
+.button.purple:hover:not(:disabled),
+.button.purple:active:not(:disabled),
+table.even-odd .button.purple:hover:not(:disabled),
+table.even-odd .button.purple:active:not(:disabled) {
+    background-color: #945498;
 }
-
 table tr.even > td,
 table.even-odd > tbody > tr:nth-child(even) > td,
 table.even-odd-2 > tbody > tr:nth-child(4n) > td,
 table.even-odd-2 > tbody > tr:nth-child(4n-1) > td {
-    background: rgba(220, 220, 220, 0.5);
+    background-color: rgba(220, 220, 220, 0.5);
 }
 table tr.odd > td,
 table.even-odd > tbody > tr:nth-child(odd) > td,
 table.even-odd-2 > tbody > tr:nth-child(4n-2) > td,
 table.even-odd-2 > tbody > tr:nth-child(4n-3) > td {
-    background: rgba(190, 190, 190, 0.5);
+    background-color: rgba(190, 190, 190, 0.5);
 }
 table tr.even.marked > td,
 table.even-odd > tbody > tr.marked:nth-child(even) > td,
 table.even-odd-2 > tbody > tr.marked:nth-child(4n) > td,
 table.even-odd-2 > tbody > tr.marked:nth-child(4n-1) > td {
-    background: rgba(255, 255, 200, 0.5);
+    background-color: rgba(255, 255, 200, 0.5);
 }
 table tr.odd.marked > td,
 table.even-odd > tbody > tr.marked:nth-child(odd) > td,
 table.even-odd-2 > tbody > tr.marked:nth-child(4n-2) > td,
 table.even-odd-2 > tbody > tr.marked:nth-child(4n-3) > td {
-    background: rgba(255, 255, 140, 0.5);
+    background-color: rgba(255, 255, 140, 0.5);
 }
 table tr.even.selected > td,
 table.even-odd > tbody > tr.selected:nth-child(even) > td,
 table.even-odd-2 > tbody > tr.selected:nth-child(4n) > td,
 table.even-odd-2 > tbody > tr.selected:nth-child(4n-1) > td {
-    background: rgba(205, 255, 205, 0.5);
+    background-color: rgba(205, 255, 205, 0.5);
 }
 table tr.odd.selected > td,
 table.even-odd > tbody > tr.selected:nth-child(odd) > td,
 table.even-odd-2 > tbody > tr.selected:nth-child(4n-2) > td,
 table.even-odd-2 > tbody > tr.selected:nth-child(4n-3) > td {
-    background: rgba(190, 255, 190, 0.5);
+    background-color: rgba(190, 255, 190, 0.5);
 }
 table.even-odd.hoverable > tbody > tr:hover > td,
 table.even-odd.hoverable > tbody > tr:hover.marked > td,
@@ -282,7 +167,7 @@ table.even-odd.hoverable > tbody > tr:hover.selected > td,
 table.even-odd-2.hoverable > tbody > tr:hover > td,
 table.even-odd-2.hoverable > tbody > tr:hover.marked > td,
 table.even-odd-2.hoverable > tbody > tr:hover.selected > td  {
-    background: rgba(170, 190, 240, 0.5);
+    background-color: rgba(170, 190, 240, 0.5);
 }
 table.even-odd.clickable > tbody > tr:hover > td,
 table.even-odd.clickable > tbody > tr:hover.marked > td,
@@ -290,22 +175,17 @@ table.even-odd.clickable > tbody > tr:hover.selected > td,
 table.even-odd-2.clickable > tbody > tr:hover > td,
 table.even-odd-2.clickable > tbody > tr:hover.marked > td,
 table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
-    background: rgba(170, 190, 240, 0.5);
+    background-color: rgba(170, 190, 240, 0.5);
 }
 table.even-odd.clickable  > tbody > tr.clicked {
-    background: rgba(170, 190, 240, 1);
+    background-color: rgba(170, 190, 240, 1);
 }
-button:disabled,
 .button:disabled,
-.button.disabled,
-input[type=submit]:disabled,
-input[type=button]:disabled,
-input:disabled,
-textarea:disabled {
-    background: #DDD;
+.button.disabled {
+    background-color: #DDD;
 }
 a.disabled {
-    background: inherit;
+    background-color: inherit;
 }
 /****** Borders ********/
 .form-section,
@@ -348,112 +228,50 @@ table tr {
 }
 .dropdown,
 .tooltip-overlay,
-input:enabled,
-select:enabled,
-textarea:enabled,
-.input-group input:last-child:enabled,
-.input-group button:last-child:enabled,
-button:enabled,
-.button:enabled,
-input[type=submit]:enabled,
-input[type=button]:enabled,
-button:hover:enabled,
-.button:hover:enabled,
-input[type=submit]:hover:enabled,
-input[type=button]:hover:enabled,
-button:active:enabled,
-.button:active:enabled,
-input[type=submit]:active:enabled,
-input[type=button]:active:enabled {
+.ubi-input:not(:disabled),
+.select:not(:disabled),
+.textarea:not(:disabled),
+.ubi-input-group .ubi-input:last-child:not(:disabled),
+.ubi-input-group .button:last-child:not(:disabled),
+.button:not(:disabled),
+.button:hover:not(:disabled),
+.button:active:not(:disabled) {
     border-color: #DEDEDE;
 }
-button.default,
 .button.default,
-input[type=submit].default,
-input[type=button].default,
-button.main,
 .button.main,
-input[type=submit].main,
-input[type=button].main,
-button.danger,
 .button.danger,
-input[type=submit].danger,
-input[type=button].danger,
-button.black,
 .button.black,
-input[type=submit].black,
-input[type=button].black,
-button.purple,
 .button.purple,
-input[type=submit].purple,
-input[type=button].purple,
-button.default:active,
 .button.default:active,
-input[type=submit].default:active,
-input[type=button].default:active,
-button.main:active,
 .button.main:active,
-input[type=submit].main:active,
-input[type=button].main:active,
-button.danger:active,
 .button.danger:active,
-input[type=submit].danger:active,
-input[type=button].danger:active,
-button.black:active,
 .button.black:active,
-input[type=submit].black:active,
-input[type=button].black:active,
-button.purple:active,
 .button.purple:active,
-input[type=submit].purple:active,
-input[type=button].purple:active,
-button.default:hover,
 .button.default:hover,
-input[type=submit].default:hover,
-input[type=button].default:hover,
-button.main:hover,
 .button.main:hover,
-input[type=submit].main:hover,
-input[type=button].main:hover,
-button.danger:hover,
 .button.danger:hover,
-input[type=submit].danger:hover,
-input[type=button].danger:hover,
-button.black:hover,
 .button.black:hover,
-input[type=submit].black:hover,
-input[type=button].black:hover,
-button.purple:hover,
-.button.purple:hover,
-input[type=submit].purple:hover,
-input[type=button].purple:hover {
+.button.purple:hover {
     border-color: transparent;
 }
-input[type="text"]:focus,
-textarea:focus,
-.input-group.focused button,
-.input-group.focused input[type="button"],
-.input-group.focused input[type="submit"],
+.ubi-input[type="text"]:focus,
+.textarea:focus,
+.ubi-input-group.focused .button,
 .tab-window .tab-button.active,
 .tab-window .tab-button:hover {
     border-color: #404040;
 }
 /****** Shadows ********/
-button:active:enabled,
-.button:active:enabled,
-input[type=submit]:active:enabled,
-input[type=button]:active:enabled {
+.button:active:not(:disabled) {
     -webkit-box-shadow: inset 0px 0px 5px -2px #999;
     -moz-box-shadow: inset 0px 0px 5px -2px #999;
     box-shadow: inset 0px 0px 5px -2px #999;
 }
 /****** Colors *********/
 html,
-button:enabled,
-.button:enabled,
-.button:hover:enabled,
-input[type=submit]:enabled,
-input[type=button]:enabled,
+.button:not(:disabled),
+.button:hover:not(:disabled),
 .tooltip-overlay,
 .black,
 .color-black,
@@ -500,66 +318,21 @@ a,
 .bg-hover-blue:hover,
 .bg-focus-blue:focus,
 .bg-active-blue:active,
-button.default:enabled,
-.button.default:enabled,
-input[type=submit].default:enabled,
-input[type=button].default:enabled,
-button.main:enabled,
-.button.main:enabled,
-input[type=submit].main:enabled,
-input[type=button].main:enabled,
-button.danger:enabled,
-.button.danger:enabled,
-input[type=submit].danger:enabled,
-input[type=button].danger:enabled,
-button.black:enabled,
-.button.black:enabled,
-input[type=submit].black:enabled,
-input[type=button].black:enabled,
-button.purple:enabled,
-.button.purple:enabled,
-input[type=submit].purple:enabled,
-input[type=button].purple:enabled,
-button.default:active:enabled,
-.button.default:active:enabled,
-input[type=submit].default:active:enabled,
-input[type=button].default:active:enabled,
-button.main:active:enabled,
-.button.main:active:enabled,
-input[type=submit].main:active:enabled,
-input[type=button].main:active:enabled,
-button.danger:active:enabled,
-.button.danger:active:enabled,
-input[type=submit].danger:active:enabled,
-input[type=button].danger:active:enabled,
-button.black:active:enabled,
-.button.black:active:enabled,
-input[type=submit].black:active:enabled,
-input[type=button].black:active:enabled,
-button.purple:active:enabled,
-.button.purple:active:enabled,
-input[type=submit].purple:active:enabled,
-input[type=button].purple:active:enabled,
-button.default:hover:enabled,
-.button.default:hover:enabled,
-input[type=submit].default:hover:enabled,
-input[type=button].default:hover:enabled,
-button.main:hover:enabled,
-.button.main:hover:enabled,
-input[type=submit].main:hover:enabled,
-input[type=button].main:hover:enabled,
-button.danger:hover:enabled,
-.button.danger:hover:enabled,
-input[type=submit].danger:hover:enabled,
-input[type=button].danger:hover:enabled,
-button.black:hover:enabled,
-.button.black:hover:enabled,
-input[type=submit].black:hover:enabled,
-input[type=button].black:hover:enabled,
-button.purple:hover:enabled,
-.button.purple:hover:enabled,
-input[type=submit].purple:hover:enabled,
-input[type=button].purple:hover:enabled,
+.button.default:not(:disabled),
+.button.main:not(:disabled),
+.button.danger:not(:disabled),
+.button.black:not(:disabled),
+.button.purple:not(:disabled),
+.button.default:active:not(:disabled),
+.button.main:active:not(:disabled),
+.button.danger:active:not(:disabled),
+.button.black:active:not(:disabled),
+.button.purple:active:not(:disabled),
+.button.default:hover:not(:disabled),
+.button.main:hover:not(:disabled),
+.button.danger:hover:not(:disabled),
+.button.black:hover:not(:disabled),
+.button.purple:hover:not(:disabled),
 nav.navbar .links .item:hover a,
 nav.navbar .links .item.active a,
 .aside .list.active.red > .aside-list-btn,
@@ -579,26 +352,24 @@ table th a:hover,
 table tfoot tr,
 table th.header a,
 table th.header a:hover,
-input:focus,
-select:focus,
-textarea:focus,
-.input-group.focused button,
-.input-group.focused input[type="button"],
-.input-group.focused input[type="submit"],
+.ubi-input:focus,
+.select:focus,
+.textarea:focus,
+.ubi-input-group.focused .button,
 .tab-window .tab-button.active,
 .tab-window .tab-button:hover {
     color: #FFF;
 }
 
-button:disabled,
 .button:disabled,
 .button.disabled,
-input[type=submit]:disabled,
-input[type=button]:disabled,
-input:disabled,
-textarea:disabled {
+.ubi-input:disabled,
+.textarea:disabled {
     color: #404040;
 }
 a.disabled {
     color: #DDD;
+}
+.ubi-input:disabled {
+    border-color: #ddd;
 }

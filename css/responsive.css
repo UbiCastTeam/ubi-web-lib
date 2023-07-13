@@ -126,12 +126,9 @@
         width: 1px;
     }
     .button,
-    button,
-    input,
-    input[type="button"],
-    input[type="submit"],
-    select,
-    textarea {
+    .input,
+    .select,
+    .textarea {
         padding: 3px 5px;
     }
 }
