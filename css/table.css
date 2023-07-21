@@ -1,65 +1,65 @@
 /* Table common style */
-table {
+.ubi-web-lib table {
     border-spacing: 0;
     border-collapse: collapse;
 }
-table caption {
+.ubi-web-lib table caption {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 3px;
 }
-table td,
-table th {
+.ubi-web-lib table td,
+.ubi-web-lib table th {
     padding: 4px 6px;
     border: 1px solid #fff;
 }
-.title-block,
-table th,
-table tfoot tr {
+.ubi-web-lib .title-block,
+.ubi-web-lib table th,
+.ubi-web-lib table tfoot tr {
     padding: 4px 6px;
     text-align: left;
     font-weight: bold;
     color: #FFF;
 }
-table th.header {
+.ubi-web-lib table th.header {
     cursor: pointer;
 }
-table th.header > a:before,
-table th.header > span:before,
-table th.headerSortDown > a:before,
-table th.headerSortDown > span:before,
-table th.headerSortUp > a:before,
-table th.headerSortUp > span:before {
+.ubi-web-lib table th.header > a:before,
+.ubi-web-lib table th.header > span:before,
+.ubi-web-lib table th.headerSortDown > a:before,
+.ubi-web-lib table th.headerSortDown > span:before,
+.ubi-web-lib table th.headerSortUp > a:before,
+.ubi-web-lib table th.headerSortUp > span:before {
     padding-right: 5px;
     content: "\f0dc"; /* fa-sort */
     font: normal normal normal 14px/1 FontAwesome;
 }
-table th.headerSortDown > a:before,
-table th.headerSortDown > span:before {
+.ubi-web-lib table th.headerSortDown > a:before,
+.ubi-web-lib table th.headerSortDown > span:before {
     content: "\f0dd"; /* fa-sort-down */
 }
-table th.headerSortUp > a:before,
-table th.headerSortUp > span:before {
+.ubi-web-lib table th.headerSortUp > a:before,
+.ubi-web-lib table th.headerSortUp > span:before {
     content: "\f0de"; /* fa-sort-up */
 }
-table.even-odd.clickable > tbody > tr:hover > td,
-table.even-odd.clickable > tbody > tr:hover.marked > td,
-table.even-odd.clickable > tbody > tr:hover.selected > td,
-table.even-odd-2.clickable > tbody > tr:hover > td,
-table.even-odd-2.clickable > tbody > tr:hover.marked > td,
-table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
+.ubi-web-lib table.even-odd.clickable > tbody > tr:hover > td,
+.ubi-web-lib table.even-odd.clickable > tbody > tr:hover.marked > td,
+.ubi-web-lib table.even-odd.clickable > tbody > tr:hover.selected > td,
+.ubi-web-lib table.even-odd-2.clickable > tbody > tr:hover > td,
+.ubi-web-lib table.even-odd-2.clickable > tbody > tr:hover.marked > td,
+.ubi-web-lib table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
     cursor: pointer;
 }
-table th.transparent,
-table td.transparent {
+.ubi-web-lib table th.transparent,
+.ubi-web-lib table td.transparent {
     background: transparent !important;
 }
-table td.input {
+.ubi-web-lib table td.input {
     vertical-align: middle;
     text-align: left;
     width: 100%;
 }
-table td.label {
+.ubi-web-lib table td.label {
     vertical-align: middle;
     text-align: right;
 }

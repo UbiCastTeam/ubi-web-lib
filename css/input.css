@@ -1,21 +1,21 @@
 /* css for buttons and inputs */
-input,
-select,
-.button,
-button {
+.ubi-web-lib input,
+.ubi-web-lib select,
+.ubi-web-lib .button,
+.ubi-web-lib button {
     vertical-align: middle;
 }
-textarea {
+.ubi-web-lib textarea {
     vertical-align: top;
     max-width: 100%;
 }
-input,
-select,
-textarea,
-button,
-.button,
-input[type=submit],
-input[type=button] {
+.ubi-web-lib input,
+.ubi-web-lib select,
+.ubi-web-lib textarea,
+.ubi-web-lib button,
+.ubi-web-lib .button,
+.ubi-web-lib input[type=submit],
+.ubi-web-lib input[type=button] {
     line-height: 1.5;
     border: 1px solid;
     cursor: pointer;
@@ -24,21 +24,21 @@ input[type=button] {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-input,
-textarea {
+.ubi-web-lib input,
+.ubi-web-lib textarea {
     padding: 3px 4px;
 }
-select,
-button,
-.button,
-input[type=submit],
-input[type=button] {
+.ubi-web-lib select,
+.ubi-web-lib button,
+.ubi-web-lib .button,
+.ubi-web-lib input[type=submit],
+.ubi-web-lib input[type=button] {
     padding: 3px 8px;
 }
-button,
-.button,
-input[type=submit],
-input[type=button] {
+.ubi-web-lib button,
+.ubi-web-lib .button,
+.ubi-web-lib input[type=submit],
+.ubi-web-lib input[type=button] {
     text-align: center;
     text-decoration: none !important;
     cursor: pointer;
@@ -50,80 +50,80 @@ input[type=button] {
     -moz-transition: background-color 0.2s, color 0.2s;
     -o-transition: background-color 0.2s, color 0.2s;
 }
-button i.fa-spin,
-.button i.fa-spin {
+.ubi-web-lib button i.fa-spin,
+.ubi-web-lib .button i.fa-spin {
     display: inline-block;
 }
-button:disabled,
-.button:disabled,
-.button.disabled,
-input[type=submit]:disabled,
-input[type=button]:disabled,
-input:disabled,
-textarea:disabled,
-select:disabled {
+.ubi-web-lib button:disabled,
+.ubi-web-lib .button:disabled,
+.ubi-web-lib .button.disabled,
+.ubi-web-lib input[type=submit]:disabled,
+.ubi-web-lib input[type=button]:disabled,
+.ubi-web-lib input:disabled,
+.ubi-web-lib textarea:disabled,
+.ubi-web-lib select:disabled {
     opacity: 0.6;
     cursor: default;
 }
-button.button-block,
-input[type=submit].button-block,
-input[type=button].button-block,
-.button.button-block {
+.ubi-web-lib button.button-block,
+.ubi-web-lib input[type=submit].button-block,
+.ubi-web-lib input[type=button].button-block,
+.ubi-web-lib .button.button-block {
     display: block;
     width: 100%;
 }
-button.button-block i:first-child,
-.button.button-block i:first-child,
-input[type=submit].button-block i:first-child,
-input[type=button].button-block i:first-child {
+.ubi-web-lib button.button-block i:first-child,
+.ubi-web-lib .button.button-block i:first-child,
+.ubi-web-lib input[type=submit].button-block i:first-child,
+.ubi-web-lib input[type=button].button-block i:first-child {
     padding: 0;
 }
 /******** button with only text effects *******/
-.button.button-text,
-.button-text {
+.ubi-web-lib .button.button-text,
+.ubi-web-lib .button-text {
     border: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     background: none;
 }
-.button.button-text:hover,
-.button-text:hover {
+.ubi-web-lib .button.button-text:hover,
+.ubi-web-lib .button-text:hover {
     background: none;
 }
-.button.button-text:active,
-.button-text:active {
+.ubi-web-lib .button.button-text:active,
+.ubi-web-lib .button-text:active {
     background: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
 }
 
-.label {
+.ubi-web-lib .label {
     line-height: 1.8;
     white-space: nowrap;
     vertical-align: top;
     font-weight: bold;
     text-align: right;
 }
-td.input { width: 100%; }
-input.small,
-textarea.small {
+.ubi-web-lib td.input { width: 100%; }
+.ubi-web-lib input.small,
+.ubi-web-lib textarea.small {
     width: 4em;
     text-align: center;
 }
-input.medium,
-textarea.medium {
+.ubi-web-lib input.medium,
+.ubi-web-lib textarea.medium {
     width: 20em;
 }
-input.large,
-textarea.large {
+.ubi-web-lib input.large,
+.ubi-web-lib textarea.large {
     width: 100%;
 }
-textarea.large {
+.ubi-web-lib textarea.large {
     height: 12em;
 }
-.select::after {
+.ubi-web-lib .select::after {
     position: absolute;
     right: 0.7em;
     top: 0.1em;
@@ -131,18 +131,18 @@ textarea.large {
     content: "\f107";
     pointer-events: none;
 }
-.select {
+.ubi-web-lib .select {
     position: relative;
 }
-.select select {
+.ubi-web-lib .select select {
     padding-right: 1.5em;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
 }
-.input-group input,
-.input-group button,
-.input-group a {
+.ubi-web-lib .input-group input,
+.ubi-web-lib .input-group button,
+.ubi-web-lib .input-group a {
     vertical-align: middle;
     margin-left: 0;
     margin-right: 0;
@@ -150,45 +150,45 @@ textarea.large {
     border-bottom-right-radius: 0;
     border-right: 0px;
 }
-.input-group input:last-child,
-.input-group button:last-child,
-.input-group a:last-child {
+.ubi-web-lib .input-group input:last-child,
+.ubi-web-lib .input-group button:last-child,
+.ubi-web-lib .input-group a:last-child {
     border-right: 1px solid;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
-.button.marged {
+.ubi-web-lib .button.marged {
     margin-left: 24px;
 }
-.button + .button,
-.button + form .button {
+.ubi-web-lib .button + .button,
+.ubi-web-lib .button + form .button {
     margin-left: 8px;
 }
-.button.right + .button {
+.ubi-web-lib .button.right + .button {
     margin-left: 0;
 }
-.button.right + .button.right,
-.button.right + form .button.right {
+.ubi-web-lib .button.right + .button.right,
+.ubi-web-lib .button.right + form .button.right {
     margin-left: 0;
     margin-right: 8px;
 }
-.full-input input[type=text],
-.full-input input[type=password],
-.full-input textarea { width: 100%; }
-.full-input textarea { height: 16em; }
+.ubi-web-lib .full-input input[type=text],
+.ubi-web-lib .full-input input[type=password],
+.ubi-web-lib .full-input textarea { width: 100%; }
+.ubi-web-lib .full-input textarea { height: 16em; }
 
-.tox .tox-statusbar .tox-statusbar__branding { display: none; }
+.ubi-web-lib .tox .tox-statusbar .tox-statusbar__branding { display: none; }
 
-.button-fixed-bottom-right button,
-.button-fixed-bottom-right input[type=submit],
-.button-fixed-bottom-right input[type=button],
-.button-fixed-bottom-right .button,
-.button-fixed-bottom-left button,
-.button-fixed-bottom-left input[type=submit],
-.button-fixed-bottom-left input[type=button],
-.button-fixed-bottom-left .button {
+.ubi-web-lib .button-fixed-bottom-right button,
+.ubi-web-lib .button-fixed-bottom-right input[type=submit],
+.ubi-web-lib .button-fixed-bottom-right input[type=button],
+.ubi-web-lib .button-fixed-bottom-right .button,
+.ubi-web-lib .button-fixed-bottom-left button,
+.ubi-web-lib .button-fixed-bottom-left input[type=submit],
+.ubi-web-lib .button-fixed-bottom-left input[type=button],
+.ubi-web-lib .button-fixed-bottom-left .button {
     padding: 10px;
     bottom: 0;
     position: fixed;
@@ -199,15 +199,15 @@ textarea.large {
     border-top-left-radius: 10px;
     z-index: 1;
 }
-.button-fixed-bottom-right button,
-.button-fixed-bottom-right input[type=submit],
-.button-fixed-bottom-right input[type=button],
-.button-fixed-bottom-right .button {
+.ubi-web-lib .button-fixed-bottom-right button,
+.ubi-web-lib .button-fixed-bottom-right input[type=submit],
+.ubi-web-lib .button-fixed-bottom-right input[type=button],
+.ubi-web-lib .button-fixed-bottom-right .button {
     right: 10%;
 }
-.button-fixed-bottom-left button,
-.button-fixed-bottom-left input[type=submit],
-.button-fixed-bottom-left input[type=button],
-.button-fixed-bottom-left .button {
+.ubi-web-lib .button-fixed-bottom-left button,
+.ubi-web-lib .button-fixed-bottom-left input[type=submit],
+.ubi-web-lib .button-fixed-bottom-left input[type=button],
+.ubi-web-lib .button-fixed-bottom-left .button {
     left: 10%;
 }

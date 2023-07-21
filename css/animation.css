@@ -1,11 +1,11 @@
-.animated {
+.ubi-web-lib .animated {
   -webkit-animation-duration: .3s;
   animation-duration: .3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.animated-slow,
-.animated.hinge {
+.ubi-web-lib .animated-slow,
+.ubi-web-lib .animated.hinge {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
@@ -19,7 +19,7 @@
   }
 }
 
-.flash-color {
+.ubi-web-lib .flash-color {
   animation-name: flash-color;
 }
 
@@ -33,7 +33,7 @@
   }
 }
 
-.flash-bg-color {
+.ubi-web-lib .flash-bg-color {
   animation-name: flash-bg-color;
 }
 
@@ -47,19 +47,19 @@
   }
 }
 
-.flash-border-color {
+.ubi-web-lib .flash-border-color {
   animation-name: flash-border-color;
 }
 
-.animated.flipOutX,
-.animated.flipOutY,
-.animated.bounceIn,
-.animated.bounceOut {
+.ubi-web-lib .animated.flipOutX,
+.ubi-web-lib .animated.flipOutY,
+.ubi-web-lib .animated.bounceIn,
+.ubi-web-lib .animated.bounceOut {
   -webkit-animation-duration: .25s;
   animation-duration: .25s;
 }
-.fa-rotate-90,
-.fa-rotate-180,
-.fa-rotate-270 {
+.ubi-web-lib .fa-rotate-90,
+.ubi-web-lib .fa-rotate-180,
+.ubi-web-lib .fa-rotate-270 {
     transition: all .5s;
 }

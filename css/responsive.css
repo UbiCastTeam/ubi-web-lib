@@ -2,7 +2,7 @@
 
 }
 @media (max-width: 1920px) {
-    .hidden-below-1920 {
+    .ubi-web-lib .hidden-below-1920 {
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -14,7 +14,7 @@
     }
 }
 @media (max-width: 1600px) {
-    .hidden-below-1600 {
+    .ubi-web-lib .hidden-below-1600 {
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -26,10 +26,10 @@
     }
 }
 @media (max-width: 1280px) {
-    header.header .header-logo {
+    .ubi-web-lib header.header .header-logo {
         max-width: 200px;
     }
-    .hidden-below-1280 {
+    .ubi-web-lib .hidden-below-1280 {
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -41,7 +41,7 @@
     }
 }
 @media (max-width: 960px) {
-    .hidden-below-960 {
+    .ubi-web-lib .hidden-below-960 {
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -53,21 +53,21 @@
     }
 }
 @media (max-width: 800px) {
-    header.header .header-logo-small {
+    .ubi-web-lib header.header .header-logo-small {
         display: inline-block;
         max-height: 40px;
         padding-left: 10px;
     }
-    header.header .header-logo {
+    .ubi-web-lib header.header .header-logo {
         display: none;
     }
-    .column-2 {
+    .ubi-web-lib .column-2 {
         width: 100%;
     }
-    .column-3 {
+    .ubi-web-lib .column-3 {
         width: 100%;
     }
-    .hidden-below-800 {
+    .ubi-web-lib .hidden-below-800 {
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -79,7 +79,7 @@
     }
 }
 @media (max-width: 600px) {
-    .hidden-below-600 {
+    .ubi-web-lib .hidden-below-600 {
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -89,7 +89,7 @@
         position: absolute;
         width: 1px;
     }
-    nav.navbar .links .item a span {
+    .ubi-web-lib nav.navbar .links .item a span {
         display: inline-block;
         line-height: 1;
         max-width: 95px;
@@ -100,7 +100,7 @@
     }
 }
 @media (max-width: 440px) {
-    .hidden-below-440 {
+    .ubi-web-lib .hidden-below-440 {
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -110,12 +110,12 @@
         position: absolute;
         width: 1px;
     }
-    .shown-below-440 {
+    .ubi-web-lib .shown-below-440 {
         display: block!important;
     }
 }
 @media (max-width: 340px) {
-    .hidden-below-340 {
+    .ubi-web-lib .hidden-below-340 {
         border: 0;
         clip: rect(0, 0, 0, 0);
         height: 1px;
@@ -125,13 +125,13 @@
         position: absolute;
         width: 1px;
     }
-    .button,
-    button,
-    input,
-    input[type="button"],
-    input[type="submit"],
-    select,
-    textarea {
+    .ubi-web-lib .button,
+    .ubi-web-lib button,
+    .ubi-web-lib input,
+    .ubi-web-lib input[type="button"],
+    .ubi-web-lib input[type="submit"],
+    .ubi-web-lib select,
+    .ubi-web-lib textarea {
         padding: 3px 5px;
     }
 }

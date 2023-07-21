@@ -14,591 +14,591 @@
     hover: #;
 */
 /**** Backgrounds ******/
-.dropdown,
-.tooltip-overlay,
-nav.navbar,
-header.header,
-.footer,
-.aside,
-input,
-select,
-textarea,
-button,
-.button,
-input[type=submit],
-input[type=button] {
+.ubi-web-lib .dropdown,
+.ubi-web-lib .tooltip-overlay,
+.ubi-web-lib nav.navbar,
+.ubi-web-lib header.header,
+.ubi-web-lib .footer,
+.ubi-web-lib .aside,
+.ubi-web-lib input,
+.ubi-web-lib select,
+.ubi-web-lib textarea,
+.ubi-web-lib button,
+.ubi-web-lib .button,
+.ubi-web-lib input[type=submit],
+.ubi-web-lib input[type=button] {
     background: #FFF;
 }
-button:hover,
-.button:hover,
-input[type=submit]:hover,
-input[type=button]:hover,
-.aside .aside-list-btn:hover,
-.aside .aside-list-btn:hover > button {
+.ubi-web-lib button:hover,
+.ubi-web-lib .button:hover,
+.ubi-web-lib input[type=submit]:hover,
+.ubi-web-lib input[type=button]:hover,
+.ubi-web-lib .aside .aside-list-btn:hover,
+.ubi-web-lib .aside .aside-list-btn:hover > button {
     background: #DDD;
 }
-button:active,
-.button:active,
-input[type=submit]:active,
-input[type=button]:active
-table th.header:active {
+.ubi-web-lib button:active,
+.ubi-web-lib .button:active,
+.ubi-web-lib input[type=submit]:active,
+.ubi-web-lib input[type=button]:active
+.ubi-web-lib table th.header:active {
     background: #CCC;
 }
-table.even-odd button:hover,
-table.even-odd .button:hover,
-table.even-odd input[type=submit]:hover,
-table.even-odd input[type=button]:hover {
+.ubi-web-lib table.even-odd button:hover,
+.ubi-web-lib table.even-odd .button:hover,
+.ubi-web-lib table.even-odd input[type=submit]:hover,
+.ubi-web-lib table.even-odd input[type=button]:hover {
     background: #FFF;
 }
-table.even-odd button:active,
-table.even-odd .button:active,
-table.even-odd input[type=submit]:active,
-table.even-odd input[type=button]:active
-table th.header:active {
+.ubi-web-lib table.even-odd button:active,
+.ubi-web-lib table.even-odd .button:active,
+.ubi-web-lib table.even-odd input[type=submit]:active,
+.ubi-web-lib table.even-odd input[type=button]:active
+.ubi-web-lib table th.header:active {
     background: #FFF;
 }
-table th.header:hover {
+.ubi-web-lib table th.header:hover {
     background: #666;
 }
-.title-block,
-table th,
-table tfoot tr {
+.ubi-web-lib .title-block,
+.ubi-web-lib table th,
+.ubi-web-lib table tfoot tr {
     background: #333;
 }
-.bg-gray {
+.ubi-web-lib .bg-gray {
     background: #D4D4D4;
 }
-input:focus,
-textarea:focus,
-select:focus,
-.input-group.focused button,
-.input-group.focused input[type="button"],
-.input-group.focused input[type="submit"],
-.tab-window .tab-button.active,
-.tab-window .tab-button:hover,
-.aside .list.active.black > .aside-list-btn,
-button.black,
-.button.black,
-input[type=submit].black,
-input[type=button].black {
+.ubi-web-lib input:focus,
+.ubi-web-lib textarea:focus,
+.ubi-web-lib select:focus,
+.ubi-web-lib .input-group.focused button,
+.ubi-web-lib .input-group.focused input[type="button"],
+.ubi-web-lib .input-group.focused input[type="submit"],
+.ubi-web-lib .tab-window .tab-button.active,
+.ubi-web-lib .tab-window .tab-button:hover,
+.ubi-web-lib .aside .list.active.black > .aside-list-btn,
+.ubi-web-lib button.black,
+.ubi-web-lib .button.black,
+.ubi-web-lib input[type=submit].black,
+.ubi-web-lib input[type=button].black {
     background: #404040;
 }
-.message.info,
-.aside .list.active.blue > .aside-list-btn,
-button.default,
-.button.default,
-input[type=submit].default,
-input[type=button].default,
-nav.navbar .links .item:hover,
-nav.navbar .links .item.active,
-.bg-blue {
+.ubi-web-lib .message.info,
+.ubi-web-lib .aside .list.active.blue > .aside-list-btn,
+.ubi-web-lib button.default,
+.ubi-web-lib .button.default,
+.ubi-web-lib input[type=submit].default,
+.ubi-web-lib input[type=button].default,
+.ubi-web-lib nav.navbar .links .item:hover,
+.ubi-web-lib nav.navbar .links .item.active,
+.ubi-web-lib .bg-blue {
     background: #274BB1;
 }
-button.default:hover,
-.button.default:hover,
-input[type=submit].default:hover,
-input[type=button].default:hover,
-.bg-hover-blue:hover,
-.bg-focus-blue:focus,
-button.default:active,
-.button.default:active,
-input[type=submit].default:active,
-input[type=button].default:active,
-.bg-active-blue:active,
-table.even-odd button.default:hover,
-table.even-odd .button.default:hover,
-table.even-odd input[type=submit].default:hover,
-table.even-odd input[type=button].default:hover
-table.even-odd button.default:active,
-table.even-odd .button.default:active,
-table.even-odd input[type=submit].default:active,
-table.even-odd input[type=button].default:active {
+.ubi-web-lib button.default:hover,
+.ubi-web-lib .button.default:hover,
+.ubi-web-lib input[type=submit].default:hover,
+.ubi-web-lib input[type=button].default:hover,
+.ubi-web-lib .bg-hover-blue:hover,
+.ubi-web-lib .bg-focus-blue:focus,
+.ubi-web-lib button.default:active,
+.ubi-web-lib .button.default:active,
+.ubi-web-lib input[type=submit].default:active,
+.ubi-web-lib input[type=button].default:active,
+.ubi-web-lib .bg-active-blue:active,
+.ubi-web-lib table.even-odd button.default:hover,
+.ubi-web-lib table.even-odd .button.default:hover,
+.ubi-web-lib table.even-odd input[type=submit].default:hover,
+.ubi-web-lib table.even-odd input[type=button].default:hover
+.ubi-web-lib table.even-odd button.default:active,
+.ubi-web-lib table.even-odd .button.default:active,
+.ubi-web-lib table.even-odd input[type=submit].default:active,
+.ubi-web-lib table.even-odd input[type=button].default:active {
     background: #000F32;
 }
-.message.success,
-.aside .list.active.green > .aside-list-btn,
-button.main,
-.button.main,
-input[type=submit].main,
-input[type=button].main {
+.ubi-web-lib .message.success,
+.ubi-web-lib .aside .list.active.green > .aside-list-btn,
+.ubi-web-lib button.main,
+.ubi-web-lib .button.main,
+.ubi-web-lib input[type=submit].main,
+.ubi-web-lib input[type=button].main {
     background: #008750;
 }
-button.main:hover,
-.button.main:hover,
-input[type=submit].main:hover,
-input[type=button].main:hover,
-button.main:active,
-.button.main:active,
-input[type=submit].main:active,
-input[type=button].main:active,
-table.even-odd button.main:hover,
-table.even-odd .button.main:hover,
-table.even-odd input[type=submit].main:hover,
-table.even-odd input[type=button].main:hover
-table.even-odd button.main:active,
-table.even-odd .button.main:active,
-table.even-odd input[type=submit].main:active,
-table.even-odd input[type=button].main:active {
+.ubi-web-lib button.main:hover,
+.ubi-web-lib .button.main:hover,
+.ubi-web-lib input[type=submit].main:hover,
+.ubi-web-lib input[type=button].main:hover,
+.ubi-web-lib button.main:active,
+.ubi-web-lib .button.main:active,
+.ubi-web-lib input[type=submit].main:active,
+.ubi-web-lib input[type=button].main:active,
+.ubi-web-lib table.even-odd button.main:hover,
+.ubi-web-lib table.even-odd .button.main:hover,
+.ubi-web-lib table.even-odd input[type=submit].main:hover,
+.ubi-web-lib table.even-odd input[type=button].main:hover
+.ubi-web-lib table.even-odd button.main:active,
+.ubi-web-lib table.even-odd .button.main:active,
+.ubi-web-lib table.even-odd input[type=submit].main:active,
+.ubi-web-lib table.even-odd input[type=button].main:active {
     background: #00AF66;
 }
-.message.error,
-.aside .list.active.red > .aside-list-btn,
-button.danger,
-.button.danger,
-input[type=submit].danger,
-input[type=button].danger {
+.ubi-web-lib .message.error,
+.ubi-web-lib .aside .list.active.red > .aside-list-btn,
+.ubi-web-lib button.danger,
+.ubi-web-lib .button.danger,
+.ubi-web-lib input[type=submit].danger,
+.ubi-web-lib input[type=button].danger {
     background: #DB263D;
 }
-button.danger:hover,
-.button.danger:hover,
-input[type=submit].danger:hover,
-input[type=button].danger:hover,
-button.danger:active,
-.button.danger:active,
-input[type=submit].danger:active,
-input[type=button].danger:active,
-table.even-odd button.danger:hover,
-table.even-odd .button.danger:hover,
-table.even-odd input[type=submit].danger:hover,
-table.even-odd input[type=button].danger:hover
-table.even-odd button.danger:active,
-table.even-odd .button.danger:active,
-table.even-odd input[type=submit].danger:active,
-table.even-odd input[type=button].danger:active {
+.ubi-web-lib button.danger:hover,
+.ubi-web-lib .button.danger:hover,
+.ubi-web-lib input[type=submit].danger:hover,
+.ubi-web-lib input[type=button].danger:hover,
+.ubi-web-lib button.danger:active,
+.ubi-web-lib .button.danger:active,
+.ubi-web-lib input[type=submit].danger:active,
+.ubi-web-lib input[type=button].danger:active,
+.ubi-web-lib table.even-odd button.danger:hover,
+.ubi-web-lib table.even-odd .button.danger:hover,
+.ubi-web-lib table.even-odd input[type=submit].danger:hover,
+.ubi-web-lib table.even-odd input[type=button].danger:hover
+.ubi-web-lib table.even-odd button.danger:active,
+.ubi-web-lib table.even-odd .button.danger:active,
+.ubi-web-lib table.even-odd input[type=submit].danger:active,
+.ubi-web-lib table.even-odd input[type=button].danger:active {
     background: #9B1B2B;
 }
-.message.warning,
-.aside .list.active.orange > .aside-list-btn,
-button.warning,
-.button.warning,
-input[type=submit].warning,
-input[type=button].warning {
+.ubi-web-lib .message.warning,
+.ubi-web-lib .aside .list.active.orange > .aside-list-btn,
+.ubi-web-lib button.warning,
+.ubi-web-lib .button.warning,
+.ubi-web-lib input[type=submit].warning,
+.ubi-web-lib input[type=button].warning {
     background: #F7B407;
 }
 
-button.warning:hover,
-.button.warning:hover,
-input[type=submit].warning:hover,
-input[type=button].warning:hover,
-button.warning:active,
-.button.warning:active,
-input[type=submit].warning:active,
-input[type=button].warning:active,
-table.even-odd button.warning:hover,
-table.even-odd .button.warning:hover,
-table.even-odd input[type=submit].warning:hover,
-table.even-odd input[type=button].warning:hover
-table.even-odd button.warning:active,
-table.even-odd .button.warning:active,
-table.even-odd input[type=submit].warning:active,
-table.even-odd input[type=button].warning:active {
+.ubi-web-lib button.warning:hover,
+.ubi-web-lib .button.warning:hover,
+.ubi-web-lib input[type=submit].warning:hover,
+.ubi-web-lib input[type=button].warning:hover,
+.ubi-web-lib button.warning:active,
+.ubi-web-lib .button.warning:active,
+.ubi-web-lib input[type=submit].warning:active,
+.ubi-web-lib input[type=button].warning:active,
+.ubi-web-lib table.even-odd button.warning:hover,
+.ubi-web-lib table.even-odd .button.warning:hover,
+.ubi-web-lib table.even-odd input[type=submit].warning:hover,
+.ubi-web-lib table.even-odd input[type=button].warning:hover
+.ubi-web-lib table.even-odd button.warning:active,
+.ubi-web-lib table.even-odd .button.warning:active,
+.ubi-web-lib table.even-odd input[type=submit].warning:active,
+.ubi-web-lib table.even-odd input[type=button].warning:active {
     background: #FCD280;
 }
 
-button.black:hover,
-.button.black:hover,
-input[type=submit].black:hover,
-input[type=button].black:hover,
-button.black:active,
-.button.black:active,
-input[type=submit].black:active,
-input[type=button].black:active,
-table.even-odd button.black:hover,
-table.even-odd .button.black:hover,
-table.even-odd input[type=submit].black:hover,
-table.even-odd input[type=button].black:hover
-table.even-odd button.black:active,
-table.even-odd .button.black:active,
-table.even-odd input[type=submit].black:active,
-table.even-odd input[type=button].black:active {
+.ubi-web-lib button.black:hover,
+.ubi-web-lib .button.black:hover,
+.ubi-web-lib input[type=submit].black:hover,
+.ubi-web-lib input[type=button].black:hover,
+.ubi-web-lib button.black:active,
+.ubi-web-lib .button.black:active,
+.ubi-web-lib input[type=submit].black:active,
+.ubi-web-lib input[type=button].black:active,
+.ubi-web-lib table.even-odd button.black:hover,
+.ubi-web-lib table.even-odd .button.black:hover,
+.ubi-web-lib table.even-odd input[type=submit].black:hover,
+.ubi-web-lib table.even-odd input[type=button].black:hover
+.ubi-web-lib table.even-odd button.black:active,
+.ubi-web-lib table.even-odd .button.black:active,
+.ubi-web-lib table.even-odd input[type=submit].black:active,
+.ubi-web-lib table.even-odd input[type=button].black:active {
     background: #666;
 }
 
-.aside .list.active.purple > .aside-list-btn,
-button.purple,
-.button.purple,
-input[type=submit].purple,
-input[type=button].purple {
+.ubi-web-lib .aside .list.active.purple > .aside-list-btn,
+.ubi-web-lib button.purple,
+.ubi-web-lib .button.purple,
+.ubi-web-lib input[type=submit].purple,
+.ubi-web-lib input[type=button].purple {
     background: #945498;
 }
-button.purple:hover,
-.button.purple:hover,
-input[type=submit].purple:hover,
-input[type=button].purple:hover,
-button.purple:active,
-.button.purple:active,
-input[type=submit].purple:active,
-input[type=button].purple:active,
-table.even-odd button.purple:hover,
-table.even-odd .button.purple:hover,
-table.even-odd input[type=submit].purple:hover,
-table.even-odd input[type=button].purple:hover
-table.even-odd button.purple:active,
-table.even-odd .button.purple:active,
-table.even-odd input[type=submit].purple:active,
-table.even-odd input[type=button].purple:active {
+.ubi-web-lib button.purple:hover,
+.ubi-web-lib .button.purple:hover,
+.ubi-web-lib input[type=submit].purple:hover,
+.ubi-web-lib input[type=button].purple:hover,
+.ubi-web-lib button.purple:active,
+.ubi-web-lib .button.purple:active,
+.ubi-web-lib input[type=submit].purple:active,
+.ubi-web-lib input[type=button].purple:active,
+.ubi-web-lib table.even-odd button.purple:hover,
+.ubi-web-lib table.even-odd .button.purple:hover,
+.ubi-web-lib table.even-odd input[type=submit].purple:hover,
+.ubi-web-lib table.even-odd input[type=button].purple:hover
+.ubi-web-lib table.even-odd button.purple:active,
+.ubi-web-lib table.even-odd .button.purple:active,
+.ubi-web-lib table.even-odd input[type=submit].purple:active,
+.ubi-web-lib table.even-odd input[type=button].purple:active {
     background: #945498;
 }
 
-table tr.even > td,
-table.even-odd > tbody > tr:nth-child(even) > td,
-table.even-odd-2 > tbody > tr:nth-child(4n) > td,
-table.even-odd-2 > tbody > tr:nth-child(4n-1) > td {
+.ubi-web-lib table tr.even > td,
+.ubi-web-lib table.even-odd > tbody > tr:nth-child(even) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr:nth-child(4n) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr:nth-child(4n-1) > td {
     background: rgba(220, 220, 220, 0.5);
 }
-table tr.odd > td,
-table.even-odd > tbody > tr:nth-child(odd) > td,
-table.even-odd-2 > tbody > tr:nth-child(4n-2) > td,
-table.even-odd-2 > tbody > tr:nth-child(4n-3) > td {
+.ubi-web-lib table tr.odd > td,
+.ubi-web-lib table.even-odd > tbody > tr:nth-child(odd) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr:nth-child(4n-2) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr:nth-child(4n-3) > td {
     background: rgba(190, 190, 190, 0.5);
 }
-table tr.even.marked > td,
-table.even-odd > tbody > tr.marked:nth-child(even) > td,
-table.even-odd-2 > tbody > tr.marked:nth-child(4n) > td,
-table.even-odd-2 > tbody > tr.marked:nth-child(4n-1) > td {
+.ubi-web-lib table tr.even.marked > td,
+.ubi-web-lib table.even-odd > tbody > tr.marked:nth-child(even) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr.marked:nth-child(4n) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr.marked:nth-child(4n-1) > td {
     background: rgba(255, 255, 200, 0.5);
 }
-table tr.odd.marked > td,
-table.even-odd > tbody > tr.marked:nth-child(odd) > td,
-table.even-odd-2 > tbody > tr.marked:nth-child(4n-2) > td,
-table.even-odd-2 > tbody > tr.marked:nth-child(4n-3) > td {
+.ubi-web-lib table tr.odd.marked > td,
+.ubi-web-lib table.even-odd > tbody > tr.marked:nth-child(odd) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr.marked:nth-child(4n-2) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr.marked:nth-child(4n-3) > td {
     background: rgba(255, 255, 140, 0.5);
 }
-table tr.even.selected > td,
-table.even-odd > tbody > tr.selected:nth-child(even) > td,
-table.even-odd-2 > tbody > tr.selected:nth-child(4n) > td,
-table.even-odd-2 > tbody > tr.selected:nth-child(4n-1) > td {
+.ubi-web-lib table tr.even.selected > td,
+.ubi-web-lib table.even-odd > tbody > tr.selected:nth-child(even) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr.selected:nth-child(4n) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr.selected:nth-child(4n-1) > td {
     background: rgba(205, 255, 205, 0.5);
 }
-table tr.odd.selected > td,
-table.even-odd > tbody > tr.selected:nth-child(odd) > td,
-table.even-odd-2 > tbody > tr.selected:nth-child(4n-2) > td,
-table.even-odd-2 > tbody > tr.selected:nth-child(4n-3) > td {
+.ubi-web-lib table tr.odd.selected > td,
+.ubi-web-lib table.even-odd > tbody > tr.selected:nth-child(odd) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr.selected:nth-child(4n-2) > td,
+.ubi-web-lib table.even-odd-2 > tbody > tr.selected:nth-child(4n-3) > td {
     background: rgba(190, 255, 190, 0.5);
 }
-table.even-odd.hoverable > tbody > tr:hover > td,
-table.even-odd.hoverable > tbody > tr:hover.marked > td,
-table.even-odd.hoverable > tbody > tr:hover.selected > td,
-table.even-odd-2.hoverable > tbody > tr:hover > td,
-table.even-odd-2.hoverable > tbody > tr:hover.marked > td,
-table.even-odd-2.hoverable > tbody > tr:hover.selected > td  {
+.ubi-web-lib table.even-odd.hoverable > tbody > tr:hover > td,
+.ubi-web-lib table.even-odd.hoverable > tbody > tr:hover.marked > td,
+.ubi-web-lib table.even-odd.hoverable > tbody > tr:hover.selected > td,
+.ubi-web-lib table.even-odd-2.hoverable > tbody > tr:hover > td,
+.ubi-web-lib table.even-odd-2.hoverable > tbody > tr:hover.marked > td,
+.ubi-web-lib table.even-odd-2.hoverable > tbody > tr:hover.selected > td  {
     background: rgba(170, 190, 240, 0.5);
 }
-table.even-odd.clickable > tbody > tr:hover > td,
-table.even-odd.clickable > tbody > tr:hover.marked > td,
-table.even-odd.clickable > tbody > tr:hover.selected > td,
-table.even-odd-2.clickable > tbody > tr:hover > td,
-table.even-odd-2.clickable > tbody > tr:hover.marked > td,
-table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
+.ubi-web-lib table.even-odd.clickable > tbody > tr:hover > td,
+.ubi-web-lib table.even-odd.clickable > tbody > tr:hover.marked > td,
+.ubi-web-lib table.even-odd.clickable > tbody > tr:hover.selected > td,
+.ubi-web-lib table.even-odd-2.clickable > tbody > tr:hover > td,
+.ubi-web-lib table.even-odd-2.clickable > tbody > tr:hover.marked > td,
+.ubi-web-lib table.even-odd-2.clickable > tbody > tr:hover.selected > td  {
     background: rgba(170, 190, 240, 0.5);
 }
-table.even-odd.clickable  > tbody > tr.clicked {
+.ubi-web-lib table.even-odd.clickable  > tbody > tr.clicked {
     background: rgba(170, 190, 240, 1);
 }
-button:disabled,
-.button:disabled,
-.button.disabled,
-input[type=submit]:disabled,
-input[type=button]:disabled,
-input:disabled,
-textarea:disabled {
+.ubi-web-lib button:disabled,
+.ubi-web-lib .button:disabled,
+.ubi-web-lib .button.disabled,
+.ubi-web-lib input[type=submit]:disabled,
+.ubi-web-lib input[type=button]:disabled,
+.ubi-web-lib input:disabled,
+.ubi-web-lib textarea:disabled {
     background: #DDD !important;
 }
-a.disabled {
+.ubi-web-lib a.disabled {
     background: inherit !important;
 }
 /****** Borders ********/
-.form-section,
-table th.form-section {
+.ubi-web-lib .form-section,
+.ubi-web-lib table th.form-section {
     border-color: #000;
 }
-nav.navbar,
-header.header,
-.container .title,
-.aside.aside-left,
-.aside.aside-right,
-.footer {
+.ubi-web-lib nav.navbar,
+.ubi-web-lib header.header,
+.ubi-web-lib .container .title,
+.ubi-web-lib .aside.aside-left,
+.ubi-web-lib .aside.aside-right,
+.ubi-web-lib .footer {
     border-color: #DDD;
 }
-table td,
-table th,
-table tr {
+.ubi-web-lib table td,
+.ubi-web-lib table th,
+.ubi-web-lib table tr {
     border-color: #FFF;
 }
-.border-color-red {
+.ubi-web-lib .border-color-red {
     border-color: #DB263D;
 }
-.border-color-blue {
+.ubi-web-lib .border-color-blue {
     border-color: #274BB1;
 }
-.border-color-green {
+.ubi-web-lib .border-color-green {
     border-color: #008750;
 }
-.border-color-purple {
+.ubi-web-lib .border-color-purple {
     border-color: #945498;
 }
-.border-color-orange {
+.ubi-web-lib .border-color-orange {
     border-color: #F7B407;
 }
-.border-color-black {
+.ubi-web-lib .border-color-black {
     border-color: #404040;
 }
-.border-color-gray {
+.ubi-web-lib .border-color-gray {
     border-color: #D4D4D4;
 }
-.dropdown,
-.tooltip-overlay,
-input,
-select,
-textarea,
-.input-group input:last-child,
-.input-group button:last-child,
-button,
-.button,
-input[type=submit],
-input[type=button],
-button:hover,
-.button:hover,
-input[type=submit]:hover,
-input[type=button]:hover,
-button:active,
-.button:active,
-input[type=submit]:active,
-input[type=button]:active {
+.ubi-web-lib .dropdown,
+.ubi-web-lib .tooltip-overlay,
+.ubi-web-lib input,
+.ubi-web-lib select,
+.ubi-web-lib textarea,
+.ubi-web-lib .input-group input:last-child,
+.ubi-web-lib .input-group button:last-child,
+.ubi-web-lib button,
+.ubi-web-lib .button,
+.ubi-web-lib input[type=submit],
+.ubi-web-lib input[type=button],
+.ubi-web-lib button:hover,
+.ubi-web-lib .button:hover,
+.ubi-web-lib input[type=submit]:hover,
+.ubi-web-lib input[type=button]:hover,
+.ubi-web-lib button:active,
+.ubi-web-lib .button:active,
+.ubi-web-lib input[type=submit]:active,
+.ubi-web-lib input[type=button]:active {
     border-color: #DEDEDE;
 }
-button.default,
-.button.default,
-input[type=submit].default,
-input[type=button].default,
-button.main,
-.button.main,
-input[type=submit].main,
-input[type=button].main,
-button.danger,
-.button.danger,
-input[type=submit].danger,
-input[type=button].danger,
-button.black,
-.button.black,
-input[type=submit].black,
-input[type=button].black,
-button.purple,
-.button.purple,
-input[type=submit].purple,
-input[type=button].purple,
-button.default:active,
-.button.default:active,
-input[type=submit].default:active,
-input[type=button].default:active,
-button.main:active,
-.button.main:active,
-input[type=submit].main:active,
-input[type=button].main:active,
-button.danger:active,
-.button.danger:active,
-input[type=submit].danger:active,
-input[type=button].danger:active,
-button.black:active,
-.button.black:active,
-input[type=submit].black:active,
-input[type=button].black:active,
-button.purple:active,
-.button.purple:active,
-input[type=submit].purple:active,
-input[type=button].purple:active,
-button.default:hover,
-.button.default:hover,
-input[type=submit].default:hover,
-input[type=button].default:hover,
-button.main:hover,
-.button.main:hover,
-input[type=submit].main:hover,
-input[type=button].main:hover,
-button.danger:hover,
-.button.danger:hover,
-input[type=submit].danger:hover,
-input[type=button].danger:hover,
-button.black:hover,
-.button.black:hover,
-input[type=submit].black:hover,
-input[type=button].black:hover,
-button.purple:hover,
-.button.purple:hover,
-input[type=submit].purple:hover,
-input[type=button].purple:hover {
+.ubi-web-lib button.default,
+.ubi-web-lib .button.default,
+.ubi-web-lib input[type=submit].default,
+.ubi-web-lib input[type=button].default,
+.ubi-web-lib button.main,
+.ubi-web-lib .button.main,
+.ubi-web-lib input[type=submit].main,
+.ubi-web-lib input[type=button].main,
+.ubi-web-lib button.danger,
+.ubi-web-lib .button.danger,
+.ubi-web-lib input[type=submit].danger,
+.ubi-web-lib input[type=button].danger,
+.ubi-web-lib button.black,
+.ubi-web-lib .button.black,
+.ubi-web-lib input[type=submit].black,
+.ubi-web-lib input[type=button].black,
+.ubi-web-lib button.purple,
+.ubi-web-lib .button.purple,
+.ubi-web-lib input[type=submit].purple,
+.ubi-web-lib input[type=button].purple,
+.ubi-web-lib button.default:active,
+.ubi-web-lib .button.default:active,
+.ubi-web-lib input[type=submit].default:active,
+.ubi-web-lib input[type=button].default:active,
+.ubi-web-lib button.main:active,
+.ubi-web-lib .button.main:active,
+.ubi-web-lib input[type=submit].main:active,
+.ubi-web-lib input[type=button].main:active,
+.ubi-web-lib button.danger:active,
+.ubi-web-lib .button.danger:active,
+.ubi-web-lib input[type=submit].danger:active,
+.ubi-web-lib input[type=button].danger:active,
+.ubi-web-lib button.black:active,
+.ubi-web-lib .button.black:active,
+.ubi-web-lib input[type=submit].black:active,
+.ubi-web-lib input[type=button].black:active,
+.ubi-web-lib button.purple:active,
+.ubi-web-lib .button.purple:active,
+.ubi-web-lib input[type=submit].purple:active,
+.ubi-web-lib input[type=button].purple:active,
+.ubi-web-lib button.default:hover,
+.ubi-web-lib .button.default:hover,
+.ubi-web-lib input[type=submit].default:hover,
+.ubi-web-lib input[type=button].default:hover,
+.ubi-web-lib button.main:hover,
+.ubi-web-lib .button.main:hover,
+.ubi-web-lib input[type=submit].main:hover,
+.ubi-web-lib input[type=button].main:hover,
+.ubi-web-lib button.danger:hover,
+.ubi-web-lib .button.danger:hover,
+.ubi-web-lib input[type=submit].danger:hover,
+.ubi-web-lib input[type=button].danger:hover,
+.ubi-web-lib button.black:hover,
+.ubi-web-lib .button.black:hover,
+.ubi-web-lib input[type=submit].black:hover,
+.ubi-web-lib input[type=button].black:hover,
+.ubi-web-lib button.purple:hover,
+.ubi-web-lib .button.purple:hover,
+.ubi-web-lib input[type=submit].purple:hover,
+.ubi-web-lib input[type=button].purple:hover {
     border-color: transparent;
 }
-input[type="text"]:focus,
-textarea:focus,
-.input-group.focused button,
-.input-group.focused input[type="button"],
-.input-group.focused input[type="submit"],
-.tab-window .tab-button.active,
-.tab-window .tab-button:hover {
+.ubi-web-lib input[type="text"]:focus,
+.ubi-web-lib textarea:focus,
+.ubi-web-lib .input-group.focused button,
+.ubi-web-lib .input-group.focused input[type="button"],
+.ubi-web-lib .input-group.focused input[type="submit"],
+.ubi-web-lib .tab-window .tab-button.active,
+.ubi-web-lib .tab-window .tab-button:hover {
     border-color: #404040;
 }
 /****** Shadows ********/
-button:active,
-.button:active,
-input[type=submit]:active,
-input[type=button]:active {
+.ubi-web-lib button:active,
+.ubi-web-lib .button:active,
+.ubi-web-lib input[type=submit]:active,
+.ubi-web-lib input[type=button]:active {
     -webkit-box-shadow: inset 0px 0px 5px -2px #999;
     -moz-box-shadow: inset 0px 0px 5px -2px #999;
     box-shadow: inset 0px 0px 5px -2px #999;
 }
 /****** Colors *********/
 html,
-button,
-.button,
-.button:hover,
-input[type=submit],
-input[type=button],
-.tooltip-overlay,
-.black,
-.color-black,
-.dropdown,
-.message.warning a {
+.ubi-web-lib button,
+.ubi-web-lib .button,
+.ubi-web-lib .button:hover,
+.ubi-web-lib input[type=submit],
+.ubi-web-lib input[type=button],
+.ubi-web-lib .tooltip-overlay,
+.ubi-web-lib .black,
+.ubi-web-lib .color-black,
+.ubi-web-lib .dropdown,
+.ubi-web-lib .message.warning a {
     color: #404040;
 }
-h1 small {
+.ubi-web-lib h1 small {
     color: #666;
 }
-.color-gray {
+.ubi-web-lib .color-gray {
     color: #D4D4D4;
 }
-a:hover {
+.ubi-web-lib a:hover {
     color: #000F32;
 }
-a,
-.blue,
-.color-blue {
+.ubi-web-lib a,
+.ubi-web-lib .blue,
+.ubi-web-lib .color-blue {
     color: #274BB1;
 }
 .green,
 .color-green {
     color: #008750;
 }
-.red,
-.color-red {
+.ubi-web-lib .red,
+.ubi-web-lib .color-red {
     color: #DB263D;
 }
-.orange,
-.color-orange {
+.ubi-web-lib .orange,
+.ubi-web-lib .color-orange {
     color: #F7B407;
 }
-.message.info,
-.message.info a,
-.message.info .button-text,
-.message.error,
-.message.error a,
-.message.error .button-text,
-.message.success,
-.message.success a,
-.message.success .button-text,
-.bg-blue,
-.bg-hover-blue:hover,
-.bg-focus-blue:focus,
-.bg-active-blue:active,
-button.default,
-.button.default,
-input[type=submit].default,
-input[type=button].default,
-button.main,
-.button.main,
-input[type=submit].main,
-input[type=button].main,
-button.danger,
-.button.danger,
-input[type=submit].danger,
-input[type=button].danger,
-button.black,
-.button.black,
-input[type=submit].black,
-input[type=button].black,
-button.purple,
-.button.purple,
-input[type=submit].purple,
-input[type=button].purple,
-button.default:active,
-.button.default:active,
-input[type=submit].default:active,
-input[type=button].default:active,
-button.main:active,
-.button.main:active,
-input[type=submit].main:active,
-input[type=button].main:active,
-button.danger:active,
-.button.danger:active,
-input[type=submit].danger:active,
-input[type=button].danger:active,
-button.black:active,
-.button.black:active,
-input[type=submit].black:active,
-input[type=button].black:active,
-button.purple:active,
-.button.purple:active,
-input[type=submit].purple:active,
-input[type=button].purple:active,
-button.default:hover,
-.button.default:hover,
-input[type=submit].default:hover,
-input[type=button].default:hover,
-button.main:hover,
-.button.main:hover,
-input[type=submit].main:hover,
-input[type=button].main:hover,
-button.danger:hover,
-.button.danger:hover,
-input[type=submit].danger:hover,
-input[type=button].danger:hover,
-button.black:hover,
-.button.black:hover,
-input[type=submit].black:hover,
-input[type=button].black:hover,
-button.purple:hover,
-.button.purple:hover,
-input[type=submit].purple:hover,
-input[type=button].purple:hover,
-nav.navbar .links .item:hover a,
-nav.navbar .links .item.active a,
-.aside .list.active.red > .aside-list-btn,
-.aside .list.active.blue > .aside-list-btn,
-.aside .list.active.purple > .aside-list-btn,
-.aside .list.active.green > .aside-list-btn,
-.aside .list.active.black > .aside-list-btn,
-.aside .list.active.red > .aside-list-btn > a,
-.aside .list.active.blue > .aside-list-btn > a,
-.aside .list.active.purple > .aside-list-btn > a,
-.aside .list.active.green > .aside-list-btn > a,
-.aside .list.active.black > .aside-list-btn > a,
-.title-block,
-table th,
-table th a,
-table th a:hover,
-table tfoot tr,
-table th.header a,
-table th.header a:hover,
-input:focus,
-select:focus,
-textarea:focus,
-.input-group.focused button,
-.input-group.focused input[type="button"],
-.input-group.focused input[type="submit"],
-.tab-window .tab-button.active,
-.tab-window .tab-button:hover {
+.ubi-web-lib .message.info,
+.ubi-web-lib .message.info a,
+.ubi-web-lib .message.info .button-text,
+.ubi-web-lib .message.error,
+.ubi-web-lib .message.error a,
+.ubi-web-lib .message.error .button-text,
+.ubi-web-lib .message.success,
+.ubi-web-lib .message.success a,
+.ubi-web-lib .message.success .button-text,
+.ubi-web-lib .bg-blue,
+.ubi-web-lib .bg-hover-blue:hover,
+.ubi-web-lib .bg-focus-blue:focus,
+.ubi-web-lib .bg-active-blue:active,
+.ubi-web-lib button.default,
+.ubi-web-lib .button.default,
+.ubi-web-lib input[type=submit].default,
+.ubi-web-lib input[type=button].default,
+.ubi-web-lib button.main,
+.ubi-web-lib .button.main,
+.ubi-web-lib input[type=submit].main,
+.ubi-web-lib input[type=button].main,
+.ubi-web-lib button.danger,
+.ubi-web-lib .button.danger,
+.ubi-web-lib input[type=submit].danger,
+.ubi-web-lib input[type=button].danger,
+.ubi-web-lib button.black,
+.ubi-web-lib .button.black,
+.ubi-web-lib input[type=submit].black,
+.ubi-web-lib input[type=button].black,
+.ubi-web-lib button.purple,
+.ubi-web-lib .button.purple,
+.ubi-web-lib input[type=submit].purple,
+.ubi-web-lib input[type=button].purple,
+.ubi-web-lib button.default:active,
+.ubi-web-lib .button.default:active,
+.ubi-web-lib input[type=submit].default:active,
+.ubi-web-lib input[type=button].default:active,
+.ubi-web-lib button.main:active,
+.ubi-web-lib .button.main:active,
+.ubi-web-lib input[type=submit].main:active,
+.ubi-web-lib input[type=button].main:active,
+.ubi-web-lib button.danger:active,
+.ubi-web-lib .button.danger:active,
+.ubi-web-lib input[type=submit].danger:active,
+.ubi-web-lib input[type=button].danger:active,
+.ubi-web-lib button.black:active,
+.ubi-web-lib .button.black:active,
+.ubi-web-lib input[type=submit].black:active,
+.ubi-web-lib input[type=button].black:active,
+.ubi-web-lib button.purple:active,
+.ubi-web-lib .button.purple:active,
+.ubi-web-lib input[type=submit].purple:active,
+.ubi-web-lib input[type=button].purple:active,
+.ubi-web-lib button.default:hover,
+.ubi-web-lib .button.default:hover,
+.ubi-web-lib input[type=submit].default:hover,
+.ubi-web-lib input[type=button].default:hover,
+.ubi-web-lib button.main:hover,
+.ubi-web-lib .button.main:hover,
+.ubi-web-lib input[type=submit].main:hover,
+.ubi-web-lib input[type=button].main:hover,
+.ubi-web-lib button.danger:hover,
+.ubi-web-lib .button.danger:hover,
+.ubi-web-lib input[type=submit].danger:hover,
+.ubi-web-lib input[type=button].danger:hover,
+.ubi-web-lib button.black:hover,
+.ubi-web-lib .button.black:hover,
+.ubi-web-lib input[type=submit].black:hover,
+.ubi-web-lib input[type=button].black:hover,
+.ubi-web-lib button.purple:hover,
+.ubi-web-lib .button.purple:hover,
+.ubi-web-lib input[type=submit].purple:hover,
+.ubi-web-lib input[type=button].purple:hover,
+.ubi-web-lib nav.navbar .links .item:hover a,
+.ubi-web-lib nav.navbar .links .item.active a,
+.ubi-web-lib .aside .list.active.red > .aside-list-btn,
+.ubi-web-lib .aside .list.active.blue > .aside-list-btn,
+.ubi-web-lib .aside .list.active.purple > .aside-list-btn,
+.ubi-web-lib .aside .list.active.green > .aside-list-btn,
+.ubi-web-lib .aside .list.active.black > .aside-list-btn,
+.ubi-web-lib .aside .list.active.red > .aside-list-btn > a,
+.ubi-web-lib .aside .list.active.blue > .aside-list-btn > a,
+.ubi-web-lib .aside .list.active.purple > .aside-list-btn > a,
+.ubi-web-lib .aside .list.active.green > .aside-list-btn > a,
+.ubi-web-lib .aside .list.active.black > .aside-list-btn > a,
+.ubi-web-lib .title-block,
+.ubi-web-lib table th,
+.ubi-web-lib table th a,
+.ubi-web-lib table th a:hover,
+.ubi-web-lib table tfoot tr,
+.ubi-web-lib table th.header a,
+.ubi-web-lib table th.header a:hover,
+.ubi-web-lib input:focus,
+.ubi-web-lib select:focus,
+.ubi-web-lib textarea:focus,
+.ubi-web-lib .input-group.focused button,
+.ubi-web-lib .input-group.focused input[type="button"],
+.ubi-web-lib .input-group.focused input[type="submit"],
+.ubi-web-lib .tab-window .tab-button.active,
+.ubi-web-lib .tab-window .tab-button:hover {
     color: #FFF;
 }
 
-button:disabled,
-.button:disabled,
-.button.disabled,
-input[type=submit]:disabled,
-input[type=button]:disabled,
-input:disabled,
-textarea:disabled {
+.ubi-web-lib button:disabled,
+.ubi-web-lib .button:disabled,
+.ubi-web-lib .button.disabled,
+.ubi-web-lib input[type=submit]:disabled,
+.ubi-web-lib input[type=button]:disabled,
+.ubi-web-lib input:disabled,
+.ubi-web-lib textarea:disabled {
     color: #404040 !important;
 }
-a.disabled {
+.ubi-web-lib a.disabled {
     color: #DDD !important;
 }
