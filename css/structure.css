@@ -1,8 +1,4 @@
 /* Structure stylesheet - Used in non iframe pages */
-html {
-    position: relative;
-    min-height: 100%;
-}
 /* header */
 .ubi-web-lib .container,
 .ubi-web-lib nav.navbar {

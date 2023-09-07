@@ -1,71 +1,138 @@
 /* Base stylesheet - Used in every templates */
-html, body, div, table, h1, h2, h3, h4, tr, th, td, img, ul, ol, li, form, pre { margin: 0; padding: 0; }
+.ubi-web-lib div,
+.ubi-web-lib table,
+.ubi-web-lib h1,
+.ubi-web-lib h2,
+.ubi-web-lib h3,
+.ubi-web-lib h4,
+.ubi-web-lib tr,
+.ubi-web-lib th,
+.ubi-web-lib td,
+.ubi-web-lib img,
+.ubi-web-lib ul,
+.ubi-web-lib ol,
+.ubi-web-lib li,
+.ubi-web-lib form,
+.ubi-web-lib pre {
+    margin: 0;
+    padding: 0;
+}
 
-html {
+.ubi-web-lib {
     background: white;
     font-size: 14px;
     font-family: Arial, sans-serif;
 }
-.ubi-web-lib
+
 .ubi-web-lib h1 {
     padding: 10px;
     font-size: 2.2em;
 }
+
 .ubi-web-lib h2 {
     margin-bottom: 10px;
     font-size: 1.6em;
 }
+
 .ubi-web-lib h3 {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px 10px;
     font-size: 1.4em;
 }
+
 .ubi-web-lib :focus {
     outline: none;
 }
+
 .ubi-web-lib .keyboard-navigation :focus {
     outline: 2px solid #000F32;
 }
-.ubi-web-lib a { text-decoration: none; }
-.ubi-web-lib a:hover { text-decoration: underline; }
-.ubi-web-lib a.disabled { text-decoration: line-through; }
 
-.ubi-web-lib img { vertical-align: middle; border: 0 none; }
+.ubi-web-lib a {
+    text-decoration: none;
+}
 
-.ubi-web-lib ul, ol { padding-left: 24px; }
+.ubi-web-lib a:hover {
+    text-decoration: underline;
+}
 
-.ubi-web-lib li { margin-top: 4px; margin-bottom: 4px; }
+.ubi-web-lib a.disabled {
+    text-decoration: line-through;
+}
 
-.ubi-web-lib p { margin-top: 8px; margin-bottom: 8px; }
+.ubi-web-lib img {
+    vertical-align: middle;
+    border: 0 none;
+}
+
+.ubi-web-lib ul,
+ol {
+    padding-left: 24px;
+}
+
+.ubi-web-lib li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.ubi-web-lib p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
 
 .ubi-web-lib object,
-.ubi-web-lib embed { vertical-align: top; }
+.ubi-web-lib embed {
+    vertical-align: top;
+}
 
 .ubi-web-lib fieldset {
     margin: 8px 0;
     border-radius: 6px;
 }
+
 .ubi-web-lib legend {
     padding: 0 4px;
     font-weight: bold;
 }
+
 .ubi-web-lib legend h1,
 .ubi-web-lib legend h2,
-.ubi-web-lib legend h3 { margin: 0; }
+.ubi-web-lib legend h3 {
+    margin: 0;
+}
 
 .ubi-web-lib .hidden {
-    display: none!important;
+    display: none !important;
 }
+
 .ubi-web-lib .not-visible {
-    visibility: hidden!important;
+    visibility: hidden !important;
 }
+
 /* common display styles */
-.ubi-web-lib .left { display: block; float: left; }
-.ubi-web-lib .right { display: block; float: right; }
-.ubi-web-lib .inline { display: inline; }
-.ubi-web-lib .inline-block { display: inline-block; }
-.ubi-web-lib .block { display: block; }
+.ubi-web-lib .left {
+    display: block;
+    float: left;
+}
+
+.ubi-web-lib .right {
+    display: block;
+    float: right;
+}
+
+.ubi-web-lib .inline {
+    display: inline;
+}
+
+.ubi-web-lib .inline-block {
+    display: inline-block;
+}
+
+.ubi-web-lib .block {
+    display: block;
+}
+
 .ubi-web-lib .column-2 {
     margin: 0;
     padding: 0;
@@ -73,6 +140,7 @@ html {
     display: inline-block;
     vertical-align: top;
 }
+
 .ubi-web-lib .column-3 {
     margin: 0;
     padding: 0;
@@ -80,29 +148,101 @@ html {
     display: inline-block;
     vertical-align: top;
 }
-.ubi-web-lib .first { margin-top: 0; padding-top: 0; }
-.ubi-web-lib .no-background { background: transparent; }
-.ubi-web-lib .no-margin { margin: 0; }
-.ubi-web-lib .no-padding { padding: 0; }
-.ubi-web-lib .no-border { border: none; border-radius: 0;}
-.ubi-web-lib .marged { margin-left: 24px; }
-.ubi-web-lib .padded { padding-left: 24px; }
-.ubi-web-lib .margin-auto { margin: 0 auto; }
-.ubi-web-lib .margin-8 { margin: 8px; }
-.ubi-web-lib .margin-32 { margin: 32px; }
-.ubi-web-lib .padding-8 { padding: 8px; }
-.ubi-web-lib .padding-32 { padding: 32px; }
-.ubi-web-lib .top { vertical-align: top; }
-.ubi-web-lib .bottom { vertical-align: bottom; }
-.ubi-web-lib .nowrap { white-space: nowrap; }
-.ubi-web-lib .center { text-align: center; }
-.ubi-web-lib .align-left { text-align: left; }
-.ubi-web-lib .align-right { text-align: right; }
-.ubi-web-lib .full { width: 100%; }
-.ubi-web-lib .half { width: 50%; }
-.ubi-web-lib .relative { position: relative; }
-.ubi-web-lib .mono { font-family: monospace; }
-.ubi-web-lib .rounded { border-radius: 100%; }
+
+.ubi-web-lib .first {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.ubi-web-lib .no-background {
+    background: transparent;
+}
+
+.ubi-web-lib .no-margin {
+    margin: 0;
+}
+
+.ubi-web-lib .no-padding {
+    padding: 0;
+}
+
+.ubi-web-lib .no-border {
+    border: none;
+    border-radius: 0;
+}
+
+.ubi-web-lib .marged {
+    margin-left: 24px;
+}
+
+.ubi-web-lib .padded {
+    padding-left: 24px;
+}
+
+.ubi-web-lib .margin-auto {
+    margin: 0 auto;
+}
+
+.ubi-web-lib .margin-8 {
+    margin: 8px;
+}
+
+.ubi-web-lib .margin-32 {
+    margin: 32px;
+}
+
+.ubi-web-lib .padding-8 {
+    padding: 8px;
+}
+
+.ubi-web-lib .padding-32 {
+    padding: 32px;
+}
+
+.ubi-web-lib .top {
+    vertical-align: top;
+}
+
+.ubi-web-lib .bottom {
+    vertical-align: bottom;
+}
+
+.ubi-web-lib .nowrap {
+    white-space: nowrap;
+}
+
+.ubi-web-lib .center {
+    text-align: center;
+}
+
+.ubi-web-lib .align-left {
+    text-align: left;
+}
+
+.ubi-web-lib .align-right {
+    text-align: right;
+}
+
+.ubi-web-lib .full {
+    width: 100%;
+}
+
+.ubi-web-lib .half {
+    width: 50%;
+}
+
+.ubi-web-lib .relative {
+    position: relative;
+}
+
+.ubi-web-lib .mono {
+    font-family: monospace;
+}
+
+.ubi-web-lib .rounded {
+    border-radius: 100%;
+}
+
 .ubi-web-lib .margin-fix {
     margin-bottom: -1px;
     display: block;
@@ -110,40 +250,57 @@ html {
     width: 100%;
     clear: both;
 }
+
 .ubi-web-lib .separator {
     display: block;
     width: 100%;
     height: 1px;
 }
+
 .ubi-web-lib .section {
     margin-left: 24px;
     margin-right: 24px;
 }
+
 .ubi-web-lib .paragraph {
     margin-left: 24px;
     margin-right: 24px;
     margin-top: 6px;
     margin-bottom: 12px;
 }
+
 .ubi-web-lib .btn-bar,
 .ubi-web-lib .top-bar,
-.ubi-web-lib .bottom-bar { line-height: 24px; }
-.ubi-web-lib .top-bar { margin-bottom: 8px; }
-.ubi-web-lib .bottom-bar { margin-top: 8px; }
+.ubi-web-lib .bottom-bar {
+    line-height: 24px;
+}
+
+.ubi-web-lib .top-bar {
+    margin-bottom: 8px;
+}
+
+.ubi-web-lib .bottom-bar {
+    margin-top: 8px;
+}
+
 .ubi-web-lib .messages {
     margin: 10px 0;
 }
+
 .ubi-web-lib .messages ul {
     padding: 0;
 }
+
 .ubi-web-lib .message {
     padding: 5px;
     text-align: center;
     overflow: auto;
 }
+
 .ubi-web-lib .message a {
     text-decoration: underline;
 }
+
 .ubi-web-lib li.message {
     list-style: none;
 }
