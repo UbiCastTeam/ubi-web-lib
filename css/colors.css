@@ -14,8 +14,8 @@
     hover: #;
 */
 /**** Backgrounds ******/
-.ubi-web-lib .dropdown,
-.ubi-web-lib .tooltip-overlay,
+.ubi-web-lib-dropdown,
+.ubi-web-lib-tooltip-overlay,
 .ubi-web-lib nav.navbar,
 .ubi-web-lib header.header,
 .ubi-web-lib .footer,
@@ -346,8 +346,8 @@
 .ubi-web-lib .border-color-gray {
     border-color: #D4D4D4;
 }
-.ubi-web-lib .dropdown,
-.ubi-web-lib .tooltip-overlay,
+.ubi-web-lib-dropdown,
+.ubi-web-lib-tooltip-overlay,
 .ubi-web-lib input,
 .ubi-web-lib select,
 .ubi-web-lib textarea,
@@ -454,10 +454,10 @@ html,
 .ubi-web-lib .button:hover,
 .ubi-web-lib input[type=submit],
 .ubi-web-lib input[type=button],
-.ubi-web-lib .tooltip-overlay,
+.ubi-web-lib-tooltip-overlay,
 .ubi-web-lib .black,
 .ubi-web-lib .color-black,
-.ubi-web-lib .dropdown,
+.ubi-web-lib-dropdown,
 .ubi-web-lib .message.warning a {
     color: #404040;
 }

@@ -66,8 +66,8 @@
     border: 0 none;
 }
 
-.ubi-web-lib ul,
-ol {
+.ubi-web-lib ul:not(.ubi-web-lib-dropdown),
+.ubi-web-lib ol {
     padding-left: 24px;
 }
 
